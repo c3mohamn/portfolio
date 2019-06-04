@@ -4,7 +4,11 @@
   "description": "Online portfolio for Nasir Mohammad",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client-dev": "cd app-nm && npm run ng serve",
+    "server-dev": "cd server && cross-env npm run server-dev",
+    "start": "cd server && cross-env npm run server-prod",
+    "all-dev": "concurrently \"npm:client-dev\" \"npm:server-dev\"",
+    "test-ng": "cd app-nm && npm run test"
   },
   "repository": {
     "type": "git",
