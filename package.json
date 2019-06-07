@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "client-dev": "cd app-nm && npm run ng serve",
+    "client-prod": "cd app-nm && npm run build-prod",
     "server-dev": "cd server && cross-env npm run server-dev",
-    "start": "cd server && cross-env npm run server-prod",
+    "server-prod": "cd server && cross-env npm run server-prod",
     "all-dev": "concurrently \"npm:client-dev\" \"npm:server-dev\"",
+    "all-prod": "concurrently \"npm:client-prod\" \"npm:server-prod\"",
+    "start": "cd server && npm start",
     "test-ng": "cd app-nm && npm run test"
   },
   "repository": {
