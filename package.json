@@ -16,8 +16,7 @@
     "test-ng": "cd app-nm && npm run test",
     "install-client": "cd app-nm && npm install",
     "install-server": "cd server && npm install",
-    "preinstall": "npm run install-server && npm run install-client",
-    "postinstall": "npm run build-client && npm run build-server"
+    "preinstall": "npm run install-server && npm run install-client"
   },
   "repository": {
     "type": "git",
