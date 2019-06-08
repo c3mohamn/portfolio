@@ -7,11 +7,16 @@
     "client-dev": "cd app-nm && npm run ng serve",
     "client-prod": "cd app-nm && npm run build-prod",
     "server-dev": "cd server && cross-env npm run server-dev",
-    "server-prod": "cd server && cross-env npm run server-prod",
+    "server-prod": "cd server && npm run server-prod",
+    "build-client": "cd app-nm && npm run build-prod",
+    "build-server": "cd server && npm run build",
     "all-dev": "concurrently \"npm:client-dev\" \"npm:server-dev\"",
     "all-prod": "concurrently \"npm:client-prod\" \"npm:server-prod\"",
-    "start": "cd server && npm start",
-    "test-ng": "cd app-nm && npm run test"
+    "start": "npm run server-prod",
+    "test-ng": "cd app-nm && npm run test",
+    "install-client": "cd app-nm && npm install",
+    "install-server": "cd server && npm install",
+    "install-all": "npm install && concurrently \"npm:install-client\" \"npm:install-server\""
   },
   "repository": {
     "type": "git",
@@ -36,6 +41,9 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/c3mohamn/portfolio/issues"
+  },
+  "engines": {
+    "node": "11.x"
   },
   "homepage": "https://github.com/c3mohamn/portfolio#readme",
   "devDependencies": {
