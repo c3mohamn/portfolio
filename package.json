@@ -12,7 +12,7 @@
     "build-server": "cd server && npm run build",
     "all-dev": "concurrently \"npm:client-dev\" \"npm:server-dev\"",
     "all-prod": "concurrently \"npm:client-prod\" \"npm:server-prod\"",
-    "start": "npm run server-prod",
+    "start": "cd server && npm start",
     "test-ng": "cd app-nm && npm run test",
     "install-client": "cd app-nm && npm install",
     "install-server": "cd server && npm install",
