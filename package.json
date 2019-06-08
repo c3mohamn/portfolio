@@ -17,7 +17,7 @@
     "install-client": "cd app-nm && npm install",
     "install-server": "cd server && npm install",
     "preinstall": "npm run install-server && npm run install-client",
-    "heroku-postbuild": "npm run build-client && npm run build-server"
+    "postinstall": "npm run build-client && npm run build-server"
   },
   "repository": {
     "type": "git",
