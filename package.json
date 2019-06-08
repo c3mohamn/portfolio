@@ -16,7 +16,8 @@
     "test-ng": "cd app-nm && npm run test",
     "install-client": "cd app-nm && npm install",
     "install-server": "cd server && npm install",
-    "install-all": "npm install && concurrently \"npm:install-client\" \"npm:install-server\""
+    "preinstall": "npm run install-server && npm run install-client",
+    "heroku-postbuild": "npm run build-client && npm run build-server"
   },
   "repository": {
     "type": "git",
