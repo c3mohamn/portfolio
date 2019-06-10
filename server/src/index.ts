@@ -1,3 +1,4 @@
+import 'newrelic';
 import express, { Application, Request, Response, NextFunction } from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
