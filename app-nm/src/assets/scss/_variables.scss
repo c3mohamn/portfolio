@@ -1,0 +1,32 @@
+// Colours
+$nm-primary: #263238;
+$nm-primary-light: #4f5b62;
+$nm-primary-dark: #000a12;
+$nm-secondary: #ff6f00;
+$nm-secondary-light: #ffa040;
+$nm-secondary-verylight: lighten($nm-secondary-light, 20%);
+$nm-secondary-dark: #c43e00;
+$nm-green: #00cf81;
+$nm-red: #ff002b;
+$nm-black: #2d2d2d;
+$nm-gray: #f7f7f7;
+
+// Shadows
+$nm-boxshadow-0: 1px 1px 3px 1px rgba($nm-primary-dark, 0.3);
+$nm-boxshadow-1: 1px 1px 6px 1px rgba($nm-primary-dark, 0.5);
+$nm-boxshadow-2: 2px 2px 6px 2px rgba($nm-primary-dark, 0.5);
+$nm-boxshadow-black-1: 1px 1px 3px 1px rgba($nm-primary-dark, 0.6);
+$nm-boxshadow-black-1-1: 1px 1px 3px 1px rgba($nm-primary-dark, 1);
+$nm-boxshadow-black-2: 2px 2px 6px 2px rgba($nm-primary-dark, 0.6);
+$nm-boxshadow-black-3: 5px 5px 10px 15px rgba($nm-primary-dark, 1);
+$nm-boxshadow-black-4: 0 0 30px 3px $nm-primary-dark;
+$nm-inset-boxshadow-white: inset 0px 0px 3px 3px rgba(lightblue, 0.8);
+$nm-boxshadow-above-1: 0 -1px 3px 1px rgba($nm-primary-dark, 0.6);
+$nm-boxshadow-above-2: 0 -2px 6px 2px rgba($nm-primary-dark, 0.6);
+$nm-boxshadow-inset-1: inset 0 0 50px 3px rgba($nm-primary-dark, 0.6);
+
+// Transitions
+$nm-transition-slow: 0.6s ease;
+$nm-transition-medium: 0.3s ease;
+$nm-transition-fast: 0.2s ease;
+$nm-transition-faster: 0.1s ease;
