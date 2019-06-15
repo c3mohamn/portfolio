@@ -31,7 +31,6 @@
     "express": "^4.17.1",
     "mongodb": "^3.2.7",
     "mongoose": "^5.5.12",
-    "newrelic": "^5.9.1",
     "typescript": "^3.5.1"
   }
 }
