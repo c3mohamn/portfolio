@@ -1,6 +1,9 @@
 @import 'variables';
 
 .body-container {
-  // background: blue;
   padding: 2rem;
+
+  .body-container-inner {
+    max-width: 1080px;
+  }
 }
