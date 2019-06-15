@@ -16,6 +16,15 @@ const routes: Routes = [
     path: 'resume',
     loadChildren: './resume/resume.module#ResumeModule',
     data: { title: 'Resume' }
+  },
+  {
+    path: 'contact',
+    loadChildren: './contact/contact.module#ContactModule',
+    data: { title: 'Contact' }
+  },
+  {
+    path: '*',
+    redirectTo: ''
   }
 ];
 
