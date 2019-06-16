@@ -5,19 +5,44 @@
   height: 6rem;
   padding: 1rem;
 
+  //override header margin
+  h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+  }
+
   .title-container {
     padding-left: 1rem;
   }
+}
 
-  .nav-container {
-    padding: 0 1rem;
-    cursor: pointer;
-    
-    &:hover {
-      h5 {
-        color: $nm-primary-light;
-        transition: $nm-transition-faster;
-      }
+.nav-link {
+  color: $nm-secondary;
+  cursor: pointer;
+  
+  &:hover {
+    h5 {
+      color: $nm-primary-light;
+      transition: $nm-transition-faster;
+    }
+  }
+}
+
+.mobile-menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: darken($nm-primary, 10);
+  z-index: 10;
+
+  .mobile-menu-container-inner {
+    position: relative;
+
+    .mobile-menu-close {
+      padding: 1rem;
+      height: 6rem;
+      width: 100%;
     }
   }
 }

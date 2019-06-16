@@ -1,18 +1,48 @@
 <div class="header-container grid-x align-middle">
-  <div class="title-container cell shrink">
+  <div class="title-container cell shrink disable-select">
     <h3>Nasir Mohammad</h3>
   </div>
   <div class="cell auto"></div>
-  <div class="nav-container cell shrink" (click)="navigate('')">
-    <h5>Home</h5>
+
+  <div class="nav-links-container-large-screen grid-x grid-margin-x show-for-medium">
+    <div class="nav-link cell shrink disable-select" (click)="navigate('')">
+      <h5>Home</h5>
+    </div>
+    <div class="nav-link cell shrink disable-select" (click)="navigate('resume')">
+      <h5>Resume</h5>
+    </div>
+    <div class="nav-link cell shrink disable-select" (click)="navigate('about')">
+      <h5>About</h5>
+    </div>
+    <div class="nav-link cell shrink disable-select" (click)="navigate('contact')">
+      <h5>Contact</h5>
+    </div>
   </div>
-  <div class="nav-container cell shrink" (click)="navigate('resume')">
-    <h5>Resume</h5>
+
+  <div class="nav-links-container-mobile-screen grid-x hide-for-medium">
+    <i class="material-icons menu-icon nav-link disable-select" (click)="toggleMobileMenu()">menu</i>
   </div>
-  <div class="nav-container cell shrink" (click)="navigate('about')">
-    <h5>About</h5>
-  </div>
-  <div class="nav-container cell shrink" (click)="navigate('contact')">
-    <h5>Contact</h5>
+</div>
+
+<div class="mobile-menu-container" [hidden]="!showMobileMenu">
+  <div class="mobile-menu-container-inner grid-y align-middle align-center">
+    <div class="cell mobile-menu-close grid-x align-middle">
+      <div class="cell auto"></div>
+      <div class="cell shrink">
+        <i class="material-icons nav-link disable-select" (click)="toggleMobileMenu()">close</i>
+      </div>
+    </div>
+    <div class="nav-link cell shrink disable-select" (click)="navigate('')">
+      <h5>Home</h5>
+    </div>
+    <div class="nav-link cell shrink disable-select" (click)="navigate('resume')">
+      <h5>Resume</h5>
+    </div>
+    <div class="nav-link cell shrink disable-select" (click)="navigate('about')">
+      <h5>About</h5>
+    </div>
+    <div class="nav-link cell shrink disable-select" (click)="navigate('contact')">
+      <h5>Contact</h5>
+    </div>
   </div>
 </div>

@@ -2,4 +2,27 @@
 
 .footer-container {
   padding: 2rem;
+  
+  .footer-main-text {
+    opacity: .5;
+  }
+
+  .footer-social-icons {
+    margin-top: 1rem;
+  }
+
+  .footer-social-icon-container {
+    width: 24px;
+    cursor: pointer;
+
+    .footer-social-icon {
+      fill: white;
+      opacity: .8;
+      transition: $nm-transition-faster;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
 }
