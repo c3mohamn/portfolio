@@ -6,6 +6,7 @@
   "scripts": {
     "client-dev": "cd app-nm && npm run ng serve",
     "client-prod": "cd app-nm && npm run build-prod",
+    "client-link": "cd app-nm && ng lint",
     "server-dev": "cd server && cross-env npm run server-dev",
     "server-prod": "cd server && npm run server-prod",
     "build-client": "cd app-nm && npm run build-prod",
@@ -14,6 +15,7 @@
     "all-prod": "concurrently \"npm:client-prod\" \"npm:server-prod\"",
     "start": "cd server && npm start",
     "test-ng": "cd app-nm && npm run test",
+    "test-ci": "cd app-nm && npm run test-headless",
     "install-client": "cd app-nm && npm install",
     "install-server": "cd server && npm install",
     "preinstall": "npm run install-server && npm run install-client"
