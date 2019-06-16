@@ -1,9 +1,11 @@
 @import 'variables';
 
 .body-container {
-  padding: 4rem 2rem 2rem 2rem;
+  height: 100%;
+  padding: 6rem 2rem 2rem 2rem;
 
   .body-container-inner {
     max-width: 1080px;
+    margin: 2rem 1rem;
   }
 }

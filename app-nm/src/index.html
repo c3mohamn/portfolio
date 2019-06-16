@@ -3,16 +3,20 @@
 
 <head>
   <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-M74CPMC');</script>
+  <script>
+    var host = window.location.hostname;
+    if (host != "localhost") {
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start':
+            new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-M74CPMC');
+    }
+  </script>
   <!-- End Google Tag Manager -->
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142189875-1"></script>
   <script>
@@ -24,9 +28,27 @@
   </script>
 
   <meta charset="utf-8">
-  <title>nasir.m</title>
+  <title>nasir mohammad</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#263238">
+
+  <!-- SEO Tags -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Nasir Mohammad Portfolio" />
+  <meta property="og:description"
+    content="Website portfolio for Nasir Mohammad, a Software Developer with a passion for solving problems, creating cool apps, learning new things." />
+  <meta property="og:image" content="https://www.nasirm.ca/assets/images/nasir-1.png" />
+  <meta property="og:url" content="https://www.nasirm.ca/" />
+  <meta property="og:site_name" content="Nasir Mohammad Portfolio" />
+  <meta name="twitter:title" content="Nasir Mohammad Portfolio">
+  <meta name="twitter:description"
+    content="Website portfolio for Nasir Mohammad, a Software Developer with a passion for solving problems, creating cool apps, learning new things.">
+  <meta name="twitter:image" content="https://www.nasirm.ca/assets/images/nasir-1.png">
+  <meta name="twitter:site" content="@nasirm23">
+  <meta name="twitter:creator" content="@nasirm23">
+  <!-- END SEO Tags -->
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
