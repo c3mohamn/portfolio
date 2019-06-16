@@ -12,6 +12,7 @@ $nm-black: #2d2d2d;
 $nm-gray: #888888;
 $nm-gray-light: lighten($nm-gray, 20);
 
+// Brand colours
 $facebook: #3b5998;
 $angular: #b52e31;
 $github: #333;
@@ -22,9 +23,7 @@ $nodejs: #215732;
 $sass: #bf4080;
 $trello: #0079bf;
 $typescript: #007acc;
-
-
-
+$cloudflare: #f38020;
 
 // Shadows
 $nm-boxshadow-0: 1px 1px 3px 1px rgba($nm-primary-dark, 0.3);
