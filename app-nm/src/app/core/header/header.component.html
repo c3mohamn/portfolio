@@ -1,8 +1,9 @@
-<div class="header-container grid-x align-middle">
-  <div class="title-container cell shrink disable-select">
+<div class="header-container grid-x align-middle"
+  [ngClass]="{'align-right': isSmallScreen, 'align-center': !isSmallScreen}">
+  <!-- <div class="title-container cell shrink disable-select">
     <h3>Nasir Mohammad</h3>
-  </div>
-  <div class="cell auto"></div>
+  </div> -->
+  <!-- <div class="cell auto"></div> -->
 
   <div class="nav-links-container-large-screen grid-x grid-margin-x show-for-medium">
     <div class="nav-link cell shrink disable-select" (click)="navigate('')">

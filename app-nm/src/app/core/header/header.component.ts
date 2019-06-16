@@ -8,8 +8,11 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   showMobileMenu = false;
+  isSmallScreen = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    this.listenScreenSize();
+  }
 
   ngOnInit() {
   }
@@ -34,6 +37,9 @@ export class HeaderComponent implements OnInit {
     // Close mobile menu when screen size is greater than medium width
     if (screenWidth > 640) {
       this.toggleMobileMenu(false);
+      this.isSmallScreen = false;
+    } else {
+      this.isSmallScreen = true;
     }
   }
 }
