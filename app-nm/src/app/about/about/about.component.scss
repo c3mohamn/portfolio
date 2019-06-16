@@ -53,7 +53,9 @@
       &.trello {
         fill: $trello;
       }
-
+      &.cloudflare {
+        fill: $cloudflare;
+      }
     }
   }
 }
