@@ -3,7 +3,8 @@
 
   <div class="grid-x grid-margin-x grid-margin-y footer-social-icons align-center align-middle">
     <div class="cell footer-social-icon-container" *ngFor="let item of socialMediaList" title="{{item.title}}">
-      <a href="{{item.link}}" target="{{item.media !== 'microsoft-outlook' ? '_blank' : ''}}" rel="noopener">
+      <a href="{{item.link}}" target="{{item.media !== 'microsoft-outlook' ? '_blank' : ''}}" rel="noopener"
+        aria-label="Go to Nasir's social media profile page" alt="social media icon">
         <svg-icon src="assets/icons/{{item.media}}.svg" class="footer-social-icon"></svg-icon>
       </a>
     </div>
