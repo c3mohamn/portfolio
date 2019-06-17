@@ -23,12 +23,17 @@
   }
 }
 
+.menu-icon {
+  fill: $nm-secondary;
+  margin-right: 1rem;
+}
+
 .nav-link {
   color: $nm-secondary;
   cursor: pointer;
   
   &:hover {
-    h5 {
+    h4, h5 {
       color: $nm-primary-light;
       transition: $nm-transition-faster;
     }
