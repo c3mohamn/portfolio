@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'foundation-styles';
 
 .about-container {
   width: 100%;
@@ -21,9 +21,49 @@
     padding: 1rem;
   }
 
+  .about-icon-description {
+    transition: $nm-transition-slow;
+    border: solid 2px $nm-secondary;
+    padding: 0;
+    margin: 2rem 0;
+
+    p {
+      padding: 0;
+      margin: 0;
+      opacity: 0;
+      transition: $nm-transition-slow;
+    }
+
+    &.show {
+      padding: 2rem;
+
+      p {
+        opacity: 1;
+      }
+    }
+  }
+
   .about-icon-container {
     width: 64px;
+    opacity: .8;
     cursor: pointer;
+    transition: $nm-transition-fast;
+
+    @include breakpoint(640px down) {
+      width: 32px;
+    }
+
+    &.selected {
+      width: 86px;
+
+      @include breakpoint(640px down) {
+        width: 40px;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+    }
 
     .about-icon {
       &.typescript {
