@@ -2,19 +2,16 @@ import { AboutIcon } from '../models/about-icon.model.ts';
 
 export const iconList: AboutIcon[] = [
   {
+    title: 'Visual Studio Code', class: 'vscode'
+  },
+  {
     title: 'Angular', class: 'angular'
   },
   {
     title: 'Node', class: 'node'
   },
   {
-    title: 'Typescript', class: 'typescript'
-  },
-  {
-    title: 'Javascript', class: 'javascript'
-  },
-  {
-    title: 'Sass', class: 'sass'
+    title: 'Foundation', class: 'foundation'
   },
   {
     title: 'Material Design', class: 'material-design'
@@ -39,5 +36,17 @@ export const iconList: AboutIcon[] = [
   },
   {
     title: 'Travis', class: 'travis'
+  },
+  {
+    title: 'HTML', class: 'html'
+  },
+  {
+    title: 'Typescript', class: 'typescript'
+  },
+  {
+    title: 'Javascript', class: 'javascript'
+  },
+  {
+    title: 'Sass', class: 'sass'
   }
 ];

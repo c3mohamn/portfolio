@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'foundation-styles';
 
 .about-container {
   width: 100%;
@@ -24,6 +24,11 @@
   .about-icon-container {
     width: 64px;
     cursor: pointer;
+    transition: $nm-transition-medium;
+
+    @include breakpoint(640px down) {
+      width: 32px;
+    }
 
     .about-icon {
       &.typescript {
