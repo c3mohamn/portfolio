@@ -1,8 +1,13 @@
-@import 'variables';
+@import 'foundation-styles';
 
 .body-container {
   height: 100%;
   padding: 6rem 2rem 2rem 2rem;
+  transition: $nm-transition-fast;
+
+  @include breakpoint(640px down) {
+    padding: 2rem 2rem 2rem 1rem;
+  }
 
   .body-container-inner {
     max-width: 1080px;
