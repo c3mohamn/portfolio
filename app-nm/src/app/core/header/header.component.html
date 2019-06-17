@@ -21,29 +21,32 @@
   </div>
 
   <div class="nav-links-container-mobile-screen grid-x hide-for-medium">
-    <i class="material-icons menu-icon nav-link disable-select" (click)="toggleMobileMenu()">menu</i>
+    <svg-icon src="assets/icons/menu.svg" class="nav-link menu-icon disable-select" [svgStyle]="{'width.px': 32}"
+      (click)="toggleMobileMenu()">
+    </svg-icon>
   </div>
 </div>
 
 <div class="mobile-menu-container" [hidden]="!showMobileMenu">
-  <div class="mobile-menu-container-inner grid-y align-middle align-center">
+  <div class="mobile-menu-container-inner grid-y grid-margin-y align-middle align-center">
     <div class="cell mobile-menu-close grid-x align-middle">
       <div class="cell auto"></div>
       <div class="cell shrink">
-        <i class="material-icons nav-link disable-select" (click)="toggleMobileMenu()">close</i>
+        <svg-icon src="assets/icons/close.svg" class="nav-link menu-icon disable-select" [svgStyle]="{'width.px': 32}"
+          (click)="toggleMobileMenu()"></svg-icon>
       </div>
     </div>
     <div class="nav-link cell shrink disable-select" (click)="navigate('')">
-      <h5>Home</h5>
+      <h4>Home</h4>
     </div>
     <div class="nav-link cell shrink disable-select" (click)="navigate('resume')">
-      <h5>Resume</h5>
+      <h4>Resume</h4>
     </div>
     <div class="nav-link cell shrink disable-select" (click)="navigate('about')">
-      <h5>About</h5>
+      <h4>About</h4>
     </div>
     <div class="nav-link cell shrink disable-select" (click)="navigate('contact')">
-      <h5>Contact</h5>
+      <h4>Contact</h4>
     </div>
   </div>
 </div>
