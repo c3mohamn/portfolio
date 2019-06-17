@@ -26,22 +26,13 @@
     cursor: pointer;
 
     .about-icon {
-      &.angular {
-        fill: $angular;
-      }
-      &.node {
-        fill: $nodejs;
-      }
       &.typescript {
         fill: $typescript;
       }
       &.javascript {
         fill: $javascript;
       }
-      &.sass {
-        fill: $sass;
-      }
-      &.material {
+      &.material-design {
         fill: $material;
       }
       &.github {
@@ -49,9 +40,6 @@
       }
       &.heroku {
         fill: $heroku;
-      }
-      &.trello {
-        fill: $trello;
       }
       &.cloudflare {
         fill: $cloudflare;
