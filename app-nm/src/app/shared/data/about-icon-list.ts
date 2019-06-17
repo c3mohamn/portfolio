@@ -1,4 +1,6 @@
-export const iconList: any[] = [
+import { AboutIcon } from '../models/about-icon.model.ts';
+
+export const iconList: AboutIcon[] = [
   {
     title: 'Angular', class: 'angular'
   },
