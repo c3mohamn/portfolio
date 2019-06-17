@@ -3,6 +3,13 @@
 
 module.exports = function (config) {
   config.set({
+    files: [
+      { pattern: 'assets/**/*.svg', watched: false, included: false, served: true, nocache: false },
+      { pattern: 'assets/**/*.png', watched: false, included: false, served: true, nocache: false }
+    ],
+    proxies: {
+      "/assets/": "/base/assets/"
+    },
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
