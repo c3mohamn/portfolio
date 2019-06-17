@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/c3mohamn/portfolio.svg?branch=master)](https://travis-ci.com/c3mohamn/portfolio)
+
 # Portfolio
 
 This is the source code for Nasir's portfolio website.
