@@ -20,44 +20,8 @@
     </p>
   </div>
   <div class="cell grid-x grid-margin-x grid-margin-y about-body">
-    <div class="cell about-icon-container" title="Angular Icon">
-      <svg-icon src="assets/icons/angular.svg" class="about-icon angular"></svg-icon>
-    </div>
-    <div class="cell about-icon-container" title="Nodejs Icon">
-      <svg-icon src="assets/icons/node.svg" class="about-icon node"></svg-icon>
-    </div>
-    <div class="cell about-icon-container">
-      <svg-icon src="assets/icons/typescript.svg" class="about-icon typescript"></svg-icon>
-    </div>
-    <div class="cell about-icon-container">
-      <svg-icon src="assets/icons/javascript.svg" class="about-icon javascript"></svg-icon>
-    </div>
-    <div class="cell about-icon-container" title="Sass Icon">
-      <svg-icon src="assets/icons/sass.svg" class="about-icon sass"></svg-icon>
-    </div>
-    <div class="cell about-icon-container">
-      <svg-icon src="assets/icons/materialdesign.svg" class="about-icon material"></svg-icon>
-    </div>
-    <div class="cell about-icon-container">
-      <svg-icon src="assets/icons/github.svg" class="about-icon github"></svg-icon>
-    </div>
-    <div class="cell about-icon-container">
-      <svg-icon src="assets/icons/heroku.svg" class="about-icon heroku"></svg-icon>
-    </div>
-    <div class="cell about-icon-container">
-      <svg-icon src="assets/icons/cloudflare.svg" class="about-icon cloudflare"></svg-icon>
-    </div>
-    <div class="cell about-icon-container" title="Trello Icon">
-      <svg-icon src="assets/icons/trello.svg" class="about-icon trello"></svg-icon>
-    </div>
-    <div class="cell about-icon-container" title="Google Analytics Icon">
-      <svg-icon src="assets/icons/googleanalytics.svg" class="about-icon google-analytics"></svg-icon>
-    </div>
-    <div class="cell about-icon-container" title="Google Tag Manager Icon">
-      <svg-icon src="assets/icons/googletagmanager.svg" class="about-icon google-tag-manager"></svg-icon>
-    </div>
-    <div class="cell about-icon-container" title="Photoshop Icon">
-      <svg-icon src="assets/icons/photoshop.svg" class="about-icon photoshop"></svg-icon>
+    <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{icon.title}}">
+      <svg-icon src="assets/icons/{{icon.class}}.svg" class="about-icon {{icon.class}}"></svg-icon>
     </div>
   </div>
   <h5 class="about-header-2"><small>Other resources</small></h5>
