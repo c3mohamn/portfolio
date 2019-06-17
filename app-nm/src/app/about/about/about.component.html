@@ -20,9 +20,15 @@
     </p>
   </div>
   <div class="cell grid-x grid-margin-x grid-margin-y about-body">
-    <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{icon.title}}">
+    <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{icon.title}}"
+      (click)="showDescriptionFor(icon)" [ngClass]="{'selected': selected === icon.class}">
       <svg-icon src="assets/icons/{{icon.class}}.svg" class="about-icon {{icon.class}}"></svg-icon>
     </div>
+  </div>
+  <div class="about-body about-icon-description" [ngClass]="{'show': description}">
+    <p>
+      {{description}}
+    </p>
   </div>
   <h5 class="about-header-2"><small>Other resources</small></h5>
   <div class="about-body">

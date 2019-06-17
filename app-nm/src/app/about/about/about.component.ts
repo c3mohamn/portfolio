@@ -9,9 +9,21 @@ import { AboutIcon } from 'src/app/shared/models/about-icon.model.ts';
 })
 export class AboutComponent implements OnInit {
   iconList: AboutIcon[] = iconList;
+  description = '';
+  selected = '';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  showDescriptionFor(icon: AboutIcon): void {
+    if (this.selected === icon.class) {
+      this.selected = '';
+      this.description = '';
+    } else if (icon.description) {
+      this.description = icon.description;
+      this.selected = icon.class;
+    }
   }
 }
