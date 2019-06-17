@@ -22,8 +22,22 @@ describe('HeaderComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
+  
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('showMobileMenu should be false on init', () => {
+    expect(component.showMobileMenu).toEqual(false);
+  });
+
+  it('showMobileMenu should become true on first toggle', () => {
+    component.toggleMobileMenu();
+    expect(component.showMobileMenu).toEqual(true);
+  });
+
+  it('showMobileMenu should be stay false with false parameter', () => {
+    component.toggleMobileMenu(false);
+    expect(component.showMobileMenu).toEqual(false);
   });
 });
