@@ -1,0 +1,30 @@
+{
+  "short_name": "nasirm",
+  "name": "Nasir Mohammad Portfolio",
+  "icons": [
+    {
+      "src": "/assets/images/nasir-1-128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/assets/images/nasir-1-152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/assets/images/nasir-1-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/assets/images/nasir-1-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#263238",
+  "display": "standalone",
+  "theme_color": "#263238"
+}
