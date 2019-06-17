@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { iconList } from 'src/app/shared/data/about-icon-list';
+import { AboutIcon } from 'src/app/shared/models/about-icon.model.ts';
 
 @Component({
   selector: 'nm-about',
@@ -7,7 +8,7 @@ import { iconList } from 'src/app/shared/data/about-icon-list';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  iconList = iconList;
+  iconList: AboutIcon[] = iconList;
 
   constructor() { }
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialMediaLink } from 'src/app/shared/models/social-media.model';
+import { socialMedia } from 'src/app/shared/data/footer-social-media-list';
 
 @Component({
   selector: 'nm-footer',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  socialMediaList: SocialMediaLink[] = socialMedia;
 
   constructor() { }
 
