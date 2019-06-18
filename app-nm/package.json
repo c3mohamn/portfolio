@@ -10,7 +10,7 @@
     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "npm run build-prod",
+    "heroku-postbuild": "npm run build-prod",
     "all-tests": "ng lint && npm run test-headless && ng e2e --protractor-config='e2e/protractor.ci.conf.js'"
   },
   "private": true,
