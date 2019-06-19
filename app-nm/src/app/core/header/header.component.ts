@@ -10,6 +10,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
   showMobileMenu = false;
   isSmallScreen = false;
   isScrolledDown = false;
+  pages = [
+    { name: 'home', url: '' },
+    { name: 'projects', url: 'projects' },
+    { name: 'about', url: 'about' },
+    { name: 'resume', url: 'resume' },
+    { name: 'contact', url: 'contact' }
+  ];
 
   constructor(private router: Router) {
     this.onWindowResize();
@@ -58,5 +65,4 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.isSmallScreen = true;
     }
   }
-
 }

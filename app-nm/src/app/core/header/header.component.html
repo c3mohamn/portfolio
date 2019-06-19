@@ -1,32 +1,19 @@
 <div class="header-container grid-x align-middle"
   [ngClass]="{'align-right': isSmallScreen, 'align-center': !isSmallScreen, 'scrolled-down': isScrolledDown}">
-  <!-- <div class="title-container cell shrink disable-select">
-    <h3>Nasir Mohammad</h3>
-  </div> -->
-  <!-- <div class="cell auto"></div> -->
-
+  <!-- Large Screen Navigation -->
   <div class="nav-links-container-large-screen grid-x grid-margin-x show-for-medium">
-    <div class="nav-link cell shrink disable-select" (click)="navigate('')">
-      <h5>Home</h5>
-    </div>
-    <div class="nav-link cell shrink disable-select" (click)="navigate('resume')">
-      <h5>Resume</h5>
-    </div>
-    <div class="nav-link cell shrink disable-select" (click)="navigate('about')">
-      <h5>About</h5>
-    </div>
-    <div class="nav-link cell shrink disable-select" (click)="navigate('contact')">
-      <h5>Contact</h5>
+    <div class="nav-link cell shrink disable-select" *ngFor="let page of pages" (click)="navigate(page.url)">
+      <h5>{{page.name}}</h5>
     </div>
   </div>
-
+  <!-- Mobile Burger Menu -->
   <div class="nav-links-container-mobile-screen grid-x hide-for-medium">
     <svg-icon src="assets/icons/menu.svg" class="nav-link menu-icon disable-select" [svgStyle]="{'width.px': 32}"
       (click)="toggleMobileMenu()">
     </svg-icon>
   </div>
 </div>
-
+<!-- Mobile Screen Navigation -->
 <div class="mobile-menu-container" [hidden]="!showMobileMenu">
   <div class="mobile-menu-container-inner grid-y grid-margin-y align-middle align-center">
     <div class="cell mobile-menu-close grid-x align-middle">
@@ -36,17 +23,8 @@
           (click)="toggleMobileMenu()"></svg-icon>
       </div>
     </div>
-    <div class="nav-link cell shrink disable-select" (click)="navigate('')">
-      <h4>Home</h4>
-    </div>
-    <div class="nav-link cell shrink disable-select" (click)="navigate('resume')">
-      <h4>Resume</h4>
-    </div>
-    <div class="nav-link cell shrink disable-select" (click)="navigate('about')">
-      <h4>About</h4>
-    </div>
-    <div class="nav-link cell shrink disable-select" (click)="navigate('contact')">
-      <h4>Contact</h4>
+    <div class="nav-link cell shrink disable-select" *ngFor="let page of pages" (click)="navigate(page.url)">
+      <h4>{{page.name}}</h4>
     </div>
   </div>
 </div>

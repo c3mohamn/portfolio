@@ -14,4 +14,4 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ]
 })
-export class HomeModule { }
+export class HomeModule {}

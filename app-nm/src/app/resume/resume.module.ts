@@ -5,9 +5,6 @@ import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [ResumeComponent],
-  imports: [
-    CommonModule,
-    ResumeRoutingModule
-  ]
+  imports: [CommonModule, ResumeRoutingModule]
 })
-export class ResumeModule { }
+export class ResumeModule {}
