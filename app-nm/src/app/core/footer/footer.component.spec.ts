@@ -12,8 +12,7 @@ describe('FooterComponent', () => {
     TestBed.configureTestingModule({
       imports: [AngularSvgIconModule, HttpClientModule],
       declarations: [FooterComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

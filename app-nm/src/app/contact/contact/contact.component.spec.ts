@@ -11,8 +11,7 @@ describe('ContactComponent', () => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
       declarations: [ContactComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

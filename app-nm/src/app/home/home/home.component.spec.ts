@@ -12,8 +12,7 @@ describe('HomeComponent', () => {
     TestBed.configureTestingModule({
       imports: [AngularSvgIconModule, HttpClientModule],
       declarations: [HomeComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

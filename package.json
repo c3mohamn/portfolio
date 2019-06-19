@@ -18,7 +18,8 @@
     "test-ci": "cd app-nm && npm run test-headless",
     "install-client": "cd app-nm && npm install",
     "install-server": "cd server && npm install",
-    "preinstall": "npm run install-server && npm run install-client"
+    "preinstall": "npm run install-server && npm run install-client",
+    "prettier-format": "prettier --print-width 80 --single-quote --trailing-comma none --write **/*.ts"
   },
   "repository": {
     "type": "git",

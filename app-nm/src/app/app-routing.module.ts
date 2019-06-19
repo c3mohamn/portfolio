@@ -14,12 +14,14 @@ const routes: Routes = [
   },
   {
     path: 'resume',
-    loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule),
+    loadChildren: () =>
+      import('./resume/resume.module').then(m => m.ResumeModule),
     data: { title: 'Resume' }
   },
   {
     path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule),
+    loadChildren: () =>
+      import('./contact/contact.module').then(m => m.ContactModule),
     data: { title: 'Contact' }
   },
   {
@@ -32,4 +34,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

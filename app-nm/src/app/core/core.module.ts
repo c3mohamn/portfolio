@@ -7,9 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
-  imports: [
-    CommonModule, AngularSvgIconModule, HttpClientModule
-  ],
+  imports: [CommonModule, AngularSvgIconModule, HttpClientModule],
   exports: [HeaderComponent, FooterComponent]
 })
-export class CoreModule { }
+export class CoreModule {}

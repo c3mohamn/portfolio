@@ -58,5 +58,4 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.isSmallScreen = true;
     }
   }
-
 }

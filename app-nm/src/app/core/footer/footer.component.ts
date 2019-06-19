@@ -10,9 +10,7 @@ import { socialMedia } from 'src/app/shared/data/footer-social-media-list';
 export class FooterComponent implements OnInit {
   socialMediaList: SocialMediaLink[] = socialMedia;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

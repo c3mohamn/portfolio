@@ -3,7 +3,7 @@ export const aboutMe = {
   I am an Afghan Canadian. My parents are both from Afghanistan and I was born in Pakistan where my father worked
     in the UN. I came to Canada when I was five years old, and have been living in the GTA ever since. I have gone
     from Scarborough to Toronto and now Brampton. Maybe Kitchener is next.`,
-  school: `I went to University of Toronto, downtown campus, for Computer Science. The first four years of university did not go so well. 
+  school: `I went to University of Toronto, downtown campus, for Computer Science. The first four years of university did not go so well.
   I had lost most of my highschool friends and moved from Toronto to Brampton which turned my commute from 30
   minutes to two hours. So obviously I skipped a lot of class and was very behind in credits. Fortunately, UofT has a
   program called Personal Experience Year (PEY). It's an 12-16 month internship program for Engineering and Computer Science

@@ -12,8 +12,7 @@ describe('AboutComponent', () => {
     TestBed.configureTestingModule({
       imports: [AngularSvgIconModule, HttpClientModule],
       declarations: [AboutComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
