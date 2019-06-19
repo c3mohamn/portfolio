@@ -25,6 +25,12 @@ const routes: Routes = [
     data: { title: 'Contact' }
   },
   {
+    path: 'projects',
+    loadChildren: () =>
+      import('./projects/projects.module').then(m => m.ProjectsModule),
+    data: { title: 'Projects' }
+  },
+  {
     path: '*',
     redirectTo: ''
   }

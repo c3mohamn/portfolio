@@ -1,63 +1,77 @@
 <div class="about-container grid-y">
   <!-- About me -->
-  <div class="about-section">
-    <h5 class="about-header-1">About me</h5>
-    <h5 class="about-header-2"><small>Background</small></h5>
-    <div class="about-body grid-x grid-margin-x align-center">
-      <div class="cell small-12 medium-shrink">
-        <img class="about-background-image" src="/assets/images/nasir-2-512.png" alt="Nasir Image">
+  <div class="nm-section">
+    <h5 class="nm-header-1">About me</h5>
+    <div class="nm-sub-section">
+      <h5 class="nm-header-2"><small>Background</small></h5>
+      <div class="nm-body grid-x grid-margin-x align-center">
+        <div class="cell small-12 medium-shrink">
+          <img class="about-background-image" src="/assets/images/nasir-2-512.png" alt="Nasir Image">
+        </div>
+        <div class="cell small-12 medium-auto" [innerHtml]="aboutMe.background"></div>
       </div>
-      <div class="cell small-12 medium-auto" [innerHtml]="aboutMe.background"></div>
     </div>
-    <h5 class="about-header-2"><small>School</small></h5>
-    <div class="about-body" [innerHtml]="aboutMe.school"></div>
-    <h5 class="about-header-2"><small>Work</small></h5>
-    <div class="about-body" [innerHtml]="aboutMe.work"></div>
-    <h5 class="about-header-2"><small>Interests</small></h5>
-    <div class="about-body">
-      <div [innerHtml]="aboutMe.interests"></div>
+    <div class="nm-sub-section">
+      <h5 class="nm-header-2"><small>School</small></h5>
+      <div class="nm-body" [innerHtml]="aboutMe.school"></div>
+    </div>
+    <div class="nm-sub-section">
+      <h5 class="nm-header-2"><small>Work</small></h5>
+      <div class="nm-body" [innerHtml]="aboutMe.work"></div>
+    </div>
+    <div class="nm-sub-section">
+      <h5 class="nm-header-2"><small>Interests</small></h5>
+      <div class="nm-body" [innerHtml]="aboutMe.interests"></div>
     </div>
   </div>
   <!-- About website -->
-  <div class="about-section">
-    <h5 class="about-header-1">About this website</h5>
-    <h5 class="about-header-2"><small>How it started</small></h5>
-    <div class="about-body" [innerHtml]="howItStarted"></div>
-    <h5 class="about-header-2"><small>What I used</small></h5>
-    <div class="about-body">
-      Here is a list of technologies, languages, tools that I used for this website.
+  <div class="nm-section">
+    <h5 class="nm-header-1">About this website</h5>
+    <div class="nm-sub-section">
+      <h5 class="nm-header-2"><small>How it started</small></h5>
+      <div class="nm-body" [innerHtml]="howItStarted"></div>
     </div>
-    <div class="cell grid-x grid-margin-x grid-margin-y about-body">
-      <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{ icon.title }}"
-        (click)="showDescriptionFor(icon)" [ngClass]="{ selected: selected === icon.class }">
-        <svg-icon src="assets/icons/{{ icon.class }}.svg" class="about-icon {{ icon.class }}"></svg-icon>
+    <div class="nm-sub-section">
+      <h5 class="nm-header-2"><small>What I used</small></h5>
+      <div class="nm-body">
+        Here is a list of technologies, languages, tools that I used for this website.
       </div>
     </div>
-    <div class="about-body about-icon-description-container" [ngClass]="{ show: description }">
-      <div class="about-icon-description">
-        {{ description }}
+    <div class="nm-sub-section">
+      <div class="cell grid-x grid-margin-x grid-margin-y nm-body">
+        <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{ icon.title }}"
+          (click)="showDescriptionFor(icon)" [ngClass]="{ selected: selected === icon.class }">
+          <svg-icon src="assets/icons/{{ icon.class }}.svg" class="about-icon {{ icon.class }}"></svg-icon>
+        </div>
+      </div>
+      <div class="nm-body about-icon-description-container" [ngClass]="{ show: description }">
+        <div class="about-icon-description">
+          {{ description }}
+        </div>
       </div>
     </div>
-    <h5 class="about-header-2"><small>Other resources</small></h5>
-    <div class="about-body">
-      <ul>
-        <li>
-          <a href="https://brandcolors.net/" target="_blank" rel="noopener"
-            aria-label="Go to Brand Colors webpage">BrandColors</a>
-        </li>
-        <li>
-          <a href="https://picsvg.com/" target="_blank" rel="noopener" aria-label="Go to Picsvg webpage">Picsvg</a>
-        </li>
-        <li>
-          <a href="https://simpleicons.org/" target="_blank" rel="noopener"
-            aria-label="Go to Simple Icons webpage">Simple
-            Icons</a>
-        </li>
-        <li>
-          <a href="https://worldvectorlogo.com" target="_blank" rel="noopener"
-            aria-label="Go to World Vector Logo webpage">WORLDVECTORLOGO</a>
-        </li>
-      </ul>
+    <div class="nm-sub-section">
+      <h5 class="nm-header-2"><small>Other resources</small></h5>
+      <div class="nm-body">
+        <ul>
+          <li>
+            <a href="https://brandcolors.net/" target="_blank" rel="noopener"
+              aria-label="Go to Brand Colors webpage">BrandColors</a>
+          </li>
+          <li>
+            <a href="https://picsvg.com/" target="_blank" rel="noopener" aria-label="Go to Picsvg webpage">Picsvg</a>
+          </li>
+          <li>
+            <a href="https://simpleicons.org/" target="_blank" rel="noopener"
+              aria-label="Go to Simple Icons webpage">Simple
+              Icons</a>
+          </li>
+          <li>
+            <a href="https://worldvectorlogo.com" target="_blank" rel="noopener"
+              aria-label="Go to World Vector Logo webpage">WORLDVECTORLOGO</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

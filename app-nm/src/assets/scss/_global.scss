@@ -1,31 +1,43 @@
 @import 'variables';
 
 .disable-select {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-     -moz-user-select: none; /* Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
-          user-select: none; /* Non-prefixed version, currently
-                                supported by Chrome and Opera */
+  user-select: none;
+}
+
+.nm-header-1 {
+  padding-bottom: 0.5rem;
+  padding-left: 0.25rem;
+  margin-top: 1rem;
+  font-weight: 300;
+  border-bottom: 2px solid $nm-secondary;
+}
+
+.nm-header-2 {
+  margin: 1rem 0;
+  padding-left: 0.25rem;
+}
+
+.nm-body {
+  padding: 1rem;
+  text-align: justify;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: .5rem;
+  width: 0.5rem;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $nm-gray-light; 
+  background: $nm-gray-light;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $nm-primary-light; 
+  background: $nm-primary-light;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $nm-primary; 
+  background: $nm-primary;
 }

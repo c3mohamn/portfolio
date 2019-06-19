@@ -1,0 +1,10 @@
+@import 'foundation-styles';
+
+.projects-container {
+  width: 100%;
+
+  // override nm-header-1 from global
+  .nm-header-1 {
+    margin-bottom: 2rem;
+  }
+}
