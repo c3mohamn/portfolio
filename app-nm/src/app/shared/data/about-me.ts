@@ -3,8 +3,8 @@ export const aboutMe = {
   I am an Afghan Canadian. My parents are both from Afghanistan and I was born in Pakistan where my father worked
     in the UN. I came to Canada when I was five years old, and have been living in the GTA ever since. I have gone
     from Scarborough to Toronto and now Brampton. Maybe Kitchener is next.`,
-  school: `I went to University of Toronto, downtown campus, for Computer Science. Things did not go so well the first
-  four years. I had most of my highschool friends and moved from Toronto to Brampton which turned my commute from 30
+  school: `I went to University of Toronto, downtown campus, for Computer Science. The first four years of university did not go so well. 
+  I had lost most of my highschool friends and moved from Toronto to Brampton which turned my commute from 30
   minutes to two hours. So obviously I skipped a lot of class and was very behind in credits. Fortunately, UofT has a
   program called Personal Experience Year (PEY). It's an 12-16 month internship program for Engineering and Computer Science
   students. After applying to dozens of jobs, I finally landed a position with a company called Reportin. After 14 months
@@ -37,12 +37,12 @@ export const aboutMe = {
     5), three of which had to be 400 level courses (requirement for a specialist). After a lot of sleepless nights and
     actually attending lectures, I completed all my credits with marks that better represented my capabilities.
     `,
-  work: `Over the years I have worked in a fast food restaurant, call center, as a server, busboy, labourer and once even
+  work: `Over the years I have worked in a fast food restaurant, call center, as a server, busboy, labourer, and once even
   modelled for an artist who had me hold fake bones (I think) while shirtless and looking deeply into the skull's eyeless
   eyes as if it were a loved one.<br><br>
   My most rewarding experience was my internship as a Junior Software Developer at a startup company called Reportin (now
-    called Source). There I learned a fast amount of technical skills, as well as gaining opportunities to lead
-    and take ownership of projects. My co-workers were extremely smart and taught me the importance of communication between
+    called Source). There I learned a vast amount of technical skills and had opportunities to lead
+    and take ownership of different projects. My co-workers were extremely smart and taught me the importance of communication between
     clients, teams, and peers. I was offered a part time position during my last year at University, but chose
     to focus on finishing my credits. Now, I want to see what else is out there.`,
   work_long: `
@@ -58,8 +58,8 @@ export const aboutMe = {
    Finally, I got a job in my field. A job that was not just a job, but the start to my career. It was my internship
    with the startup company called Reportin (now called Source).
   `,
-  interests: `I am a very competitive person at times, which is why I have always liked playing sports and games. I have played
-  on school basketball and volleyball teams from elementary to highschool. As a kid I was out so much in the sun my legs looked
+  interests: `I am a very competitive person at times, which is why I have always liked playing sports and video games. I have played
+  on the school basketball and volleyball teams from elementary to highschool. As a kid I was out so much in the sun my legs looked
   like a rainbow from the tan marks my different-length socks gave me. At home we had a Nintendo 64, then a Gamecube. I have fond memories
   playing Need for Speed, Mario Kart, Super Mario 64 and Super Smash Bros. On the computer I played Warcraft III, Dota then
   World of Warcraft (which I still play sometimes).
@@ -68,7 +68,7 @@ export const aboutMe = {
   siblings about black holes, animals, and plants. During university I took several electives in Greek history, mythology and
   terminology. I also enjoy reading fantasy by authors such as GRRM, Tolkien, and Stephen King.
   <br><br>
-  In regards to my field, my interests lie in designing and creating cool things. I enjoy figuring out how I will make my new website,
-  what it will look like, then actually making it. I enjoyed making this website, and hopefully it is more complete by the time
+  In regards to my field, my interests lie in designing and creating cool things. I enjoy figuring out how I will make a new app,
+  what it will look like, then actually making it. I enjoyed working on this website, and hopefully it is more complete by the time
   you read this.`
 };
