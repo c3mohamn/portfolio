@@ -5,8 +5,8 @@
   height: 100%;
 
   .about-header-1 {
-    padding-bottom: .5rem;
-    padding-left: .25rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.25rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
     font-weight: 300;
@@ -15,29 +15,41 @@
 
   .about-header-2 {
     margin: 1rem 0;
+    padding-left: 0.25rem;
   }
 
   .about-body {
     padding: 1rem;
+    text-align: justify;
   }
 
-  .about-icon-description {
+  .about-background-image {
+    max-width: 256px;
+    height: auto;
+    box-shadow: $nm-boxshadow-2;
+
+    @include breakpoint(640px down) {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .about-icon-description-container {
     transition: $nm-transition-slow;
     border: solid 2px $nm-secondary;
     padding: 0;
     margin: 2rem 0;
 
-    p {
-      padding: 0;
-      margin: 0;
+    .about-icon-description {
       opacity: 0;
       transition: $nm-transition-slow;
     }
 
     &.show {
-      padding: 2rem;
+      padding: 1rem;
 
-      p {
+      .about-icon-description {
         opacity: 1;
       }
     }
@@ -45,7 +57,7 @@
 
   .about-icon-container {
     width: 64px;
-    opacity: .8;
+    opacity: 0.8;
     cursor: pointer;
     transition: $nm-transition-fast;
 

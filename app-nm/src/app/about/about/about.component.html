@@ -1,53 +1,63 @@
 <div class="about-container grid-y">
-  <!-- About website -->
-  <h5 class="about-header-1">About this website</h5>
-  <h5 class="about-header-2"><small>How it started</small></h5>
-  <div class="about-body">
-    <p>
-      After finishing my undergraduate degree and beginning my job hunt, I came to the realization that like artists,
-      web developers can also have portfolios.
-      <br><br>
-      Even though I might be lacking in content - as my journey has only begun - I figured I should start building my
-      own portfolio, adding on to it as I developed more skills and experiences. It could be a place for me to easily
-      showcase who I am and what I apsire to be. A place where I could keep a log of everything I learn. Hopefully it
-      captures, to some extent, who I am and what I have to offer.
-    </p>
-  </div>
-  <h5 class="about-header-2"><small>What I used</small></h5>
-  <div class="about-body">
-    <p>
-      Here is a list of technologies, languages, tools that I used for this website.
-    </p>
-  </div>
-  <div class="cell grid-x grid-margin-x grid-margin-y about-body">
-    <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{icon.title}}"
-      (click)="showDescriptionFor(icon)" [ngClass]="{'selected': selected === icon.class}">
-      <svg-icon src="assets/icons/{{icon.class}}.svg" class="about-icon {{icon.class}}"></svg-icon>
+  <!-- About me -->
+  <div class="about-section">
+    <h5 class="about-header-1">About me</h5>
+    <h5 class="about-header-2"><small>Background</small></h5>
+    <div class="about-body grid-x grid-margin-x align-center">
+      <div class="cell small-12 medium-shrink">
+        <img class="about-background-image" src="/assets/images/nasir-2-512.png" alt="Nasir Image">
+      </div>
+      <div class="cell small-12 medium-auto" [innerHtml]="aboutMe.background"></div>
+    </div>
+    <h5 class="about-header-2"><small>School</small></h5>
+    <div class="about-body" [innerHtml]="aboutMe.school"></div>
+    <h5 class="about-header-2"><small>Work</small></h5>
+    <div class="about-body" [innerHtml]="aboutMe.work"></div>
+    <h5 class="about-header-2"><small>Interests</small></h5>
+    <div class="about-body">
+      <div [innerHtml]="aboutMe.interests"></div>
     </div>
   </div>
-  <div class="about-body about-icon-description" [ngClass]="{'show': description}">
-    <p>
-      {{description}}
-    </p>
-  </div>
-  <h5 class="about-header-2"><small>Other resources</small></h5>
-  <div class="about-body">
-    <ul>
-      <li>
-        <a href="https://brandcolors.net/" target="_blank" rel="noopener"
-          aria-label="Go to Brand Colors webpage">BrandColors</a>
-      </li>
-      <li>
-        <a href="https://picsvg.com/" target="_blank" rel="noopener" aria-label="Go to Picsvg webpage">Picsvg</a>
-      </li>
-      <li>
-        <a href="https://simpleicons.org/" target="_blank" rel="noopener" aria-label="Go to Simple Icons webpage">Simple
-          Icons</a>
-      </li>
-      <li>
-        <a href="https://worldvectorlogo.com" target="_blank" rel="noopener"
-          aria-label="Go to World Vector Logo webpage">WORLDVECTORLOGO</a>
-      </li>
-    </ul>
+  <!-- About website -->
+  <div class="about-section">
+    <h5 class="about-header-1">About this website</h5>
+    <h5 class="about-header-2"><small>How it started</small></h5>
+    <div class="about-body" [innerHtml]="howItStarted"></div>
+    <h5 class="about-header-2"><small>What I used</small></h5>
+    <div class="about-body">
+      Here is a list of technologies, languages, tools that I used for this website.
+    </div>
+    <div class="cell grid-x grid-margin-x grid-margin-y about-body">
+      <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{ icon.title }}"
+        (click)="showDescriptionFor(icon)" [ngClass]="{ selected: selected === icon.class }">
+        <svg-icon src="assets/icons/{{ icon.class }}.svg" class="about-icon {{ icon.class }}"></svg-icon>
+      </div>
+    </div>
+    <div class="about-body about-icon-description-container" [ngClass]="{ show: description }">
+      <div class="about-icon-description">
+        {{ description }}
+      </div>
+    </div>
+    <h5 class="about-header-2"><small>Other resources</small></h5>
+    <div class="about-body">
+      <ul>
+        <li>
+          <a href="https://brandcolors.net/" target="_blank" rel="noopener"
+            aria-label="Go to Brand Colors webpage">BrandColors</a>
+        </li>
+        <li>
+          <a href="https://picsvg.com/" target="_blank" rel="noopener" aria-label="Go to Picsvg webpage">Picsvg</a>
+        </li>
+        <li>
+          <a href="https://simpleicons.org/" target="_blank" rel="noopener"
+            aria-label="Go to Simple Icons webpage">Simple
+            Icons</a>
+        </li>
+        <li>
+          <a href="https://worldvectorlogo.com" target="_blank" rel="noopener"
+            aria-label="Go to World Vector Logo webpage">WORLDVECTORLOGO</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-export interface AboutIcon {
+export interface TechIcon {
   title: string;
   class: string;
   description?: string;

@@ -6,7 +6,7 @@ This is the source code for Nasir's portfolio website.
 
 ## Commands
 
-`npm run install` installs packages in all directories using `preinstall`.
+`npm install` installs packages in all directories using `preinstall`.
 
 `npm run client-dev` starts the angular client on port 4200.
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { iconList } from 'src/app/shared/data/about-icon-list';
-import { AboutIcon } from 'src/app/shared/models/about-icon.model.ts';
+import { iconList, howItStarted } from 'src/app/shared/data/about-website';
+import { TechIcon } from 'src/app/shared/models/about-tech.model';
+import { aboutMe } from 'src/app/shared/data/about-me';
 
 @Component({
   selector: 'nm-about',
@@ -8,16 +9,17 @@ import { AboutIcon } from 'src/app/shared/models/about-icon.model.ts';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  iconList: AboutIcon[] = iconList;
+  iconList: TechIcon[] = iconList;
+  howItStarted: string = howItStarted;
   description = '';
   selected = '';
+  aboutMe: any = aboutMe;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  showDescriptionFor(icon: AboutIcon): void {
+  showDescriptionFor(icon: TechIcon): void {
     if (this.selected === icon.class) {
       this.selected = '';
       this.description = '';

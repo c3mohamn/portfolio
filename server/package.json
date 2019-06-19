@@ -11,7 +11,7 @@
     "build": "tsc -p .",
     "server-prod": "tsc -p . && node dist/index.js",
     "server-dev": "nodemon src/index.ts",
-    "postinstall": "npm run tsc"
+    "heroku-postbuild": "npm run tsc"
   },
   "keywords": [],
   "author": "",
