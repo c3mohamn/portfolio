@@ -22,6 +22,13 @@
   text-align: justify;
 }
 
+.last-modified-text {
+  font-style: italic;
+  font-size: 1rem;
+  color: $nm-gray;
+  font-weight: 100;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 0.5rem;
