@@ -17,9 +17,26 @@
   padding-left: 0.25rem;
 }
 
+.nm-section-list-container {
+  p {
+    margin: 0 0 0.5rem 0.5rem;
+  }
+
+  .nm-section-list {
+    margin-left: 1rem;
+  }
+}
+
 .nm-body {
   padding: 1rem;
   text-align: justify;
+}
+
+.last-modified-text {
+  font-style: italic;
+  font-size: 1rem;
+  color: $nm-gray;
+  font-weight: 100;
 }
 
 /* width */
