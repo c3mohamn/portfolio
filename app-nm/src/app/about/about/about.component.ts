@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { iconList, howItStarted } from 'src/app/shared/data/about-website';
 import { TechIcon } from 'src/app/shared/models/about-tech.model';
-import { aboutMe } from 'src/app/shared/data/about-me';
+import { aboutMeText } from 'src/app/shared/data/about-me';
 
 @Component({
   selector: 'nm-about',
@@ -13,7 +13,7 @@ export class AboutComponent implements OnInit {
   howItStarted: string = howItStarted;
   description = '';
   selected = '';
-  aboutMe: any = aboutMe;
+  aboutMe: any = aboutMeText;
 
   constructor() {}
 
