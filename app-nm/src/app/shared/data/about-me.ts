@@ -1,4 +1,4 @@
-export const aboutMe = {
+export const aboutMeText = {
   background: `
   I am an Afghan Canadian. My parents are both from Afghanistan while I was born in Pakistan where my father worked
     in the UN. I came to Canada when I was five years old, and have been living in the GTA ever since. I have gone
