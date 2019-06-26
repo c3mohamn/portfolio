@@ -5,26 +5,15 @@
 }
 
 .nm-header-1 {
-  padding-bottom: 0.5rem;
-  padding-left: 0.25rem;
-  margin-top: 1rem;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
   font-weight: 300;
-  border-bottom: 2px solid $nm-secondary;
+  // border-bottom: 2px solid $nm-secondary;
 }
 
 .nm-header-2 {
-  margin: 1rem 0;
-  padding-left: 0.25rem;
-}
-
-.nm-section-list-container {
-  p {
-    margin: 0 0 0.5rem 0.5rem;
-  }
-
-  .nm-section-list {
-    margin-left: 1rem;
-  }
+  padding: 0.5rem 0;
+  margin: 0;
 }
 
 .nm-body {

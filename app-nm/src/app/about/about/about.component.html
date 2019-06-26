@@ -1,30 +1,18 @@
 <div class="about-container grid-y">
-  <div class="nm-section-list-container">
-    <p>Content</p>
-    <div class="nm-section-list">
-      <h6><small><a href="about#website" aria-label="Go to about website section"
-            title="Go to about website section">About website</a></small></h6>
-      <h6><small><a href="about#me" aria-label="Go to about me section" title="Go to about me section">About
-            me</a></small></h6>
-    </div>
-  </div>
   <!-- About website -->
-  <div class="nm-section" id="website">
-    <h5 class="nm-header-1">About this website</h5>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>How it started</small></h5>
+  <div class="nm-section">
+    <div class="nm-section">
+      <h5 class="nm-header-1">How it started</h5>
       <div class="nm-body" [innerHtml]="howItStarted"></div>
     </div>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>What I used</small></h5>
+    <div class="nm-section">
+      <h5 class="nm-header-1">What I used</h5>
       <div class="nm-body">
         Here is a list of technologies, languages, tools that I used for this website.
         <br><br>
         Click on the icons for a description! <span style="margin-left:0.5rem; color:gray;"><small><i>Images and links
               will be added soon.</i></small></span>
       </div>
-    </div>
-    <div class="nm-sub-section">
       <div class="cell grid-x grid-margin-x grid-margin-y nm-body">
         <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{ icon.title }}"
           (click)="showDescriptionFor(icon)" [ngClass]="{ selected: selected === icon.class }">
@@ -37,8 +25,8 @@
         </div>
       </div>
     </div>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Other resources</small></h5>
+    <div class="nm-section">
+      <h5 class="nm-header-1">Other resources</h5>
       <div class="nm-body">
         <ul>
           <li>
@@ -63,31 +51,5 @@
     </div>
   </div>
   <!-- ENDOF About website -->
-  <!-- About me -->
-  <div class="nm-section" id="me">
-    <h5 class="nm-header-1">About me</h5>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Background</small></h5>
-      <div class="nm-body grid-x grid-margin-x align-center">
-        <div class="cell small-12 medium-shrink">
-          <img class="about-background-image" src="/assets/images/nasir-2-512.png" alt="Nasir Image">
-        </div>
-        <div class="cell small-12 medium-auto" [innerHtml]="aboutMe.background"></div>
-      </div>
-    </div>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>School</small></h5>
-      <div class="nm-body" [innerHtml]="aboutMe.school"></div>
-    </div>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Work</small></h5>
-      <div class="nm-body" [innerHtml]="aboutMe.work"></div>
-    </div>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Interests</small></h5>
-      <div class="nm-body" [innerHtml]="aboutMe.interests"></div>
-    </div>
-  </div>
-  <!-- ENDOF About me -->
-  <p class="last-modified-text">Last Modified June 25, 2019</p>
+  <p class="last-modified-text">Last Modified June 26, 2019</p>
 </div>

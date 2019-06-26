@@ -4,8 +4,7 @@ export const howItStarted = `
       After finishing my undergraduate degree and beginning my job hunt, I came to the realization
       that like artists, web developers can also have portfolios.
       <br /><br />
-      Even though I might be lacking in content - as my journey has only begun - I figured I should
-      start building my own portfolio, adding on to it as I developed more skills and experiences.
+      I figured I should start building my own portfolio, adding on to it as I developed more skills and experiences.
       It could be a place for me to easily showcase who I am and what I apsire to be. A place where
       I could keep a log of everything I learn. Hopefully it captures, to some extent, who I am and
       what I have to offer.
