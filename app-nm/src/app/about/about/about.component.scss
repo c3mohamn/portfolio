@@ -59,7 +59,7 @@
       }
     }
 
-    &:hover {
+    &:hover, &.selected {
       opacity: 1;
     }
 
