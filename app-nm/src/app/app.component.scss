@@ -5,8 +5,18 @@
   padding: 6rem 2rem 2rem 2rem;
   transition: $nm-transition-fast;
 
+  .body-top-border {
+    width: 85%;
+    max-width: 1024px;
+    border-top: solid 1px $nm-primary-light;
+  }
+
   @include breakpoint(640px down) {
     padding: 2rem 2rem 2rem 1rem;
+
+    .body-top-border {
+      border-top: none;
+    }
   }
 
   .body-container-inner {
