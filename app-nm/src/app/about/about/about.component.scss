@@ -18,7 +18,7 @@
 
   .about-icon-description-container {
     transition: $nm-transition-slow;
-    border: solid 2px $nm-secondary;
+    border: solid 1px $nm-secondary;
     padding: 0;
     margin: 2rem 0;
 
@@ -29,6 +29,7 @@
 
     &.show {
       padding: 1rem;
+      border-width: 2px;
 
       .about-icon-description {
         opacity: 1;
