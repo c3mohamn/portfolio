@@ -25,6 +25,13 @@ export const iconList: TechIcon[] = [
      framework, and tons of support and resources.`
   },
   {
+    title: 'Angular Redux',
+    class: 'ngrx',
+    description: `Redux is an open-source Javascript library for managing application state.
+     Angular Redux uses RxJs observables to select and transform data on its way out of the store.
+     Download Redux Devtools to see what is in the store currently for this website!`
+  },
+  {
     title: 'Nodejs',
     class: 'node',
     description: `Nodejs is an open-source, cross-platform
