@@ -9,7 +9,12 @@
   transition: $nm-transition-medium;
 
   //override header margin
-  h1,h2,h3,h4,h5,h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin: 0;
   }
 
@@ -18,7 +23,7 @@
   }
 
   &.scrolled-down {
-    background: rgba(darken($nm-primary, 5), .95);
+    background: rgba(darken($nm-primary, 5), 0.95);
     box-shadow: 0 5px 5px -2px $nm-primary-dark;
   }
 }
@@ -29,13 +34,16 @@
 }
 
 .nav-link {
-  color: $nm-secondary;
-  cursor: pointer;
-  
-  &:hover {
-    h4, h5 {
-      color: $nm-primary-light;
-      transition: $nm-transition-faster;
+  h4,
+  h5 {
+    color: $nm-primary-light;
+    cursor: pointer;
+    font-family: 'Oswald';
+    transition: $nm-transition-faster;
+
+    &:hover,
+    &.selected {
+      color: $nm-secondary;
     }
   }
 }
