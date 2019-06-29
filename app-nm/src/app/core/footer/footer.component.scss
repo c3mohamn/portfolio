@@ -2,9 +2,9 @@
 
 .footer-container {
   padding: 2rem;
-  
+
   .footer-main-text {
-    opacity: .5;
+    opacity: 0.5;
   }
 
   .footer-social-icons {
@@ -16,12 +16,11 @@
     cursor: pointer;
 
     .footer-social-icon {
-      fill: white;
-      opacity: .8;
+      fill: $nm-primary-light;
       transition: $nm-transition-faster;
 
       &:hover {
-        opacity: 1;
+        fill: $nm-secondary;
       }
     }
   }
