@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Actions } from '@ngrx/effects';
 import { Observable } from 'rxjs';
 import { RouterStateUrl } from './router-state.custom-serializer';
 import { RouterStateSelector, RouterState } from './router-state.selector';
 
 @Injectable()
 export class RouterStateService {
-  constructor(private actions$: Actions, private store: Store<RouterState>) {}
+  constructor(private store: Store<RouterState>) {}
 
   /**
    * Returns current router state.

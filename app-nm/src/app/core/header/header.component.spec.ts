@@ -4,6 +4,9 @@ import { HeaderComponent } from './header.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { RouterStateService } from 'src/app/state/router-state/router-state.service';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from 'src/app/state';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -11,7 +14,13 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, HttpClientModule, AngularSvgIconModule],
+      imports: [
+        RouterTestingModule,
+        HttpClientModule,
+        AngularSvgIconModule,
+        StoreModule.forRoot(reducers)
+      ],
+      providers: [RouterStateService],
       declarations: [HeaderComponent]
     }).compileComponents();
   }));
