@@ -32,11 +32,14 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true);
 
-    this.routeService.getCurrentPageTitle().pipe(takeUntil(this.ngUnsubscribe)).subscribe(data => {
-      if (data) {
-        this.currentPageTitle = data.toLowerCase();
-      }
-    });
+    this.routeService
+      .getCurrentPageTitle()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
+        if (data) {
+          this.currentPageTitle = data.toLowerCase();
+        }
+      });
   }
 
   ngOnDestroy() {
@@ -53,7 +56,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     } else {
       this.isScrolledDown = false;
     }
-  }
+  };
 
   navigate(page: string): void {
     this.router.navigate([page]);

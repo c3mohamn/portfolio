@@ -6,7 +6,7 @@ import { RouterStateSelector, RouterState } from './router-state.selector';
 
 @Injectable()
 export class RouterStateService {
-  constructor(private store: Store<RouterState>) { }
+  constructor(private store: Store<RouterState>) {}
 
   /**
    * Returns current router state.

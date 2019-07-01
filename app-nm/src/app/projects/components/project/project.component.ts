@@ -15,15 +15,18 @@ export class ProjectComponent implements OnInit, OnDestroy {
   projects: Project[] = projects;
   project: Project;
 
-  constructor(private routeService: RouterStateService) { }
+  constructor(private routeService: RouterStateService) {}
 
   ngOnInit() {
-    this.routeService.getCurrentParams().pipe(takeUntil(this.ngUnsubscribe)).subscribe(data => {
-      const projectName = data && data.project;
-      if (projectName) {
-        this.project = projects.find(p => p.name === projectName);
-      }
-    });
+    this.routeService
+      .getCurrentParams()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
+        const projectName = data && data.project;
+        if (projectName) {
+          this.project = projects.find(p => p.name === projectName);
+        }
+      });
   }
 
   ngOnDestroy(): void {

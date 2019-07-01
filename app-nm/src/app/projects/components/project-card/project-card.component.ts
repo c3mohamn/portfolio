@@ -9,8 +9,7 @@ import { Project } from 'src/app/shared/models/project.model';
 export class ProjectCardComponent implements OnInit {
   @Input() project: Project;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

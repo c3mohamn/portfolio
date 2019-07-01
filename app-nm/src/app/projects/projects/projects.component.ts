@@ -13,7 +13,7 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = projects;
   selectedProject = false;
 
-  constructor(@Inject(DOCUMENT) private document: any) { }
+  constructor(@Inject(DOCUMENT) private document: any) {}
 
   ngOnInit() {
     const fullPath = this.document.location.href;

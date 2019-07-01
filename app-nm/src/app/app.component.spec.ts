@@ -16,7 +16,13 @@ describe('AppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, HttpClientModule, AngularSvgIconModule, StoreModule.forRoot(reducers), BrowserAnimationsModule],
+      imports: [
+        RouterTestingModule,
+        HttpClientModule,
+        AngularSvgIconModule,
+        StoreModule.forRoot(reducers),
+        BrowserAnimationsModule
+      ],
       declarations: [AppComponent, HeaderComponent, FooterComponent],
       providers: [RouterStateService]
     }).compileComponents();

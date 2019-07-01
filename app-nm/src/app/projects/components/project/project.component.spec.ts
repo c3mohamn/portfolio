@@ -14,11 +14,15 @@ describe('ProjectComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [AngularSvgIconModule, HttpClientModule, StoreModule.forRoot(reducers), RouterTestingModule],
+      imports: [
+        AngularSvgIconModule,
+        HttpClientModule,
+        StoreModule.forRoot(reducers),
+        RouterTestingModule
+      ],
       providers: [RouterStateService],
       declarations: [ProjectComponent]
-    })
-      .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
