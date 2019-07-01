@@ -24,7 +24,7 @@ export class CustomSerializer implements RouterStateSerializer<RouterStateUrl> {
     const { params } = route;
 
     const title = route.data.title || '';
-    const index = route.data.index || -1;
+    const index = route.data.index;
 
     return { url, title, index, params, queryParams };
   }

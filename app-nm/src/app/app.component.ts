@@ -14,13 +14,11 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class AppComponent implements OnDestroy {
   private ngUnsubscribe: Subject<any> = new Subject();
-  currentRouteIndex = -1;
+  currentRouteIndex = 0;
 
   constructor(private routeService: RouterStateService) {
     routeService.getCurrentPageIndex().pipe(takeUntil(this.ngUnsubscribe)).subscribe(data => {
-      if (data && data > -1) {
-        this.currentRouteIndex = data;
-      }
+      this.currentRouteIndex = data;
     });
   }
 
