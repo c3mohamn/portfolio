@@ -40,6 +40,7 @@
     cursor: pointer;
     font-family: 'Oswald';
     transition: $nm-transition-faster;
+    letter-spacing: 0.25rem;
 
     &:hover,
     &.selected {
