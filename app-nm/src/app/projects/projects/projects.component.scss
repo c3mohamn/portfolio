@@ -2,4 +2,25 @@
 
 .projects-container {
   width: 100%;
+
+  .main-text-container {
+    margin: 6rem 0;
+
+    @include breakpoint(640px down) {
+      margin: 3rem 0;
+    }
+
+    .main-subtitle {
+      opacity: .5;
+    }
+  
+    .main-body {
+      font-size: 1.5rem;
+    }
+  }
+
+  .projects-header {
+    border-bottom: solid 1px $nm-primary;
+    padding-bottom: 1rem;
+  }
 }

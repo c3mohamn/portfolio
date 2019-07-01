@@ -1,12 +1,14 @@
-<div class="contact-container grid-y align-center align-middle">
+<div class="contact-container grid-y">
 
   <div class="cell">
-    <h4 class="text-center"><small>Feel free to contact me if you have any questions, advice, or for any opportunities
-        :)</small></h4>
+    <p>Feel free to contact me if you have any questions, advice, or for any opportunities
+      :)
+    </p>
+    <div *ngFor="let item of socialMediaList">
+      <a href="{{item.link}}" class="social-media-links" target="{{item.media !== 'microsoft-outlook' ? '_blank' : ''}}"
+        rel="noopener" aria-label="Go to Nasir's social media profile page" title="{{item.title}}">
+        {{item.title}}
+      </a>
+    </div>
   </div>
-
-  <a href="mailto:nasir.m23@hotmail.com" class="button contact-button" rel="noopener"
-    aria-label="Send an email to Nasir">
-    Contact Me
-  </a>
 </div>

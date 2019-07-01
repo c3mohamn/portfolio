@@ -5,10 +5,17 @@
   padding: 6rem 2rem 2rem 2rem;
   transition: $nm-transition-fast;
 
-  .body-top-border {
-    width: 85%;
+  .body-top-border, .body-bottom-border {
+    width: 100%;
     max-width: 1024px;
+  }
+
+  .body-top-border {
     border-top: solid 1px $nm-primary-light;
+  }
+
+  .body-bottom-border {
+    border-bottom: solid 1px $nm-primary;
   }
 
   @include breakpoint(640px down) {
@@ -20,7 +27,9 @@
   }
 
   .body-container-inner {
+    position: relative;
     max-width: 1024px;
+    width: 100%;
     margin: 2rem 1rem;
   }
 }

@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import './assets/scss/foundation-styles';
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Oswald&display=swap');
 
 html,
 body {
@@ -9,7 +9,8 @@ body {
   padding: 0;
   overflow: auto;
   position: relative;
-  background-image: linear-gradient($nm-primary, $nm-primary-dark);
+  background: $nm-primary;
+  background: linear-gradient($nm-primary, $nm-primary-dark);
 
   h1,
   h2,
@@ -19,4 +20,9 @@ body {
   h6 {
     text-transform: uppercase;
   }
+}
+
+// Remove underline when using anchor element with button class
+.button {
+  text-decoration: none;
 }

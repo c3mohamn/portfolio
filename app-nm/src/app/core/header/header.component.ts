@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
+import { RouterStateService } from 'src/app/state/router-state/router-state.service';
 
 @Component({
   selector: 'nm-header',
@@ -10,20 +11,30 @@ export class HeaderComponent implements OnInit, OnDestroy {
   showMobileMenu = false;
   isSmallScreen = false;
   isScrolledDown = false;
+  currentPageTitle = '';
   pages = [
-    { name: 'home', url: '' },
-    { name: 'projects', url: 'projects' },
-    { name: 'about', url: 'about' },
-    { name: 'resume', url: 'resume' },
-    { name: 'contact', url: 'contact' }
+    // { name: 'home', url: '' },
+    { name: 'projects', url: '/projects' },
+    { name: 'about', url: '/about' },
+    { name: 'resume', url: '/resume' },
+    { name: 'contact', url: '/contact' }
   ];
 
-  constructor(private router: Router) {
+  constructor(
+    private router: Router,
+    private routeService: RouterStateService
+  ) {
     this.onWindowResize();
   }
 
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true);
+
+    this.routeService.getCurrentPageTitle().subscribe(data => {
+      if (data) {
+        this.currentPageTitle = data.toLowerCase();
+      }
+    });
   }
 
   ngOnDestroy() {

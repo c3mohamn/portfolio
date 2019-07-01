@@ -1,27 +1,32 @@
 @import 'variables';
 
+:host {
+  width: 100%;
+}
+
 .footer-container {
-  padding: 2rem;
-  
+  width: 100%;
+  padding: 2rem 1rem 0 1rem;
+
   .footer-main-text {
-    opacity: .5;
+    color: $nm-primary-light;
   }
 
   .footer-social-icons {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .footer-social-icon-container {
     width: 24px;
+    margin: 0.5rem;
     cursor: pointer;
 
     .footer-social-icon {
-      fill: white;
-      opacity: .8;
+      fill: $nm-primary-light;
       transition: $nm-transition-faster;
 
       &:hover {
-        opacity: 1;
+        fill: $nm-secondary;
       }
     }
   }

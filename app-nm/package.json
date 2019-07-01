@@ -28,6 +28,10 @@
     "@angular/pwa": "^0.800.4",
     "@angular/router": "^8.0.2",
     "@angular/service-worker": "^8.0.2",
+    "@ngrx/effects": "^8.0.1",
+    "@ngrx/router-store": "^8.0.1",
+    "@ngrx/store": "^8.0.0",
+    "@ngrx/store-devtools": "^8.0.1",
     "angular-svg-icon": "^7.2.1",
     "core-js": "^2.5.4",
     "foundation-sites": "^6.5.3",
@@ -38,6 +42,7 @@
   },
   "devDependencies": {
     "@angular/language-service": "^8.0.2",
+    "@ngrx/schematics": "^8.0.1",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
