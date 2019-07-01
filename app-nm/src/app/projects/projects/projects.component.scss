@@ -19,8 +19,27 @@
     }
   }
 
+  .project-container {
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    transition: $nm-transition-medium;
+    opacity: 0;
+    z-index: 1;
+
+    &.has-project {
+      min-height: 300px;
+      opacity: 1;
+    }
+  }
+
   .projects-header {
     border-bottom: solid 1px $nm-primary;
     padding-bottom: 1rem;
+  }
+
+  .project-cards-list {
+    z-index: 2;
+    transition: all 2s ease-in;
   }
 }

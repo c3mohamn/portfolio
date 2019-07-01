@@ -3,7 +3,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProjectsComponent } from './projects.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ProjectCardComponent } from '../components/project-card/project-card.component';
-import { RouterModule } from '@angular/router';
+import { RouterStateService } from 'src/app/state/router-state/router-state.service';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from 'src/app/state';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -11,8 +14,9 @@ describe('ProjectsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [ProjectsComponent, ProjectCardComponent]
+      imports: [RouterTestingModule, StoreModule.forRoot(reducers), BrowserAnimationsModule],
+      declarations: [ProjectsComponent, ProjectCardComponent],
+      providers: [RouterStateService]
     }).compileComponents();
   }));
 

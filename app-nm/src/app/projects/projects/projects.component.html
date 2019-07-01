@@ -27,11 +27,15 @@
     <p>Meanwhile, feel free to checkout the <a [routerLink]="[ '/about']">About</a> page!</p>
   </div>
 
-  <router-outlet></router-outlet>
+  <div class="project-container" [ngClass]="{'has-project': selectedProject}">
+    <router-outlet></router-outlet>
+  </div>
 
-  <div class="cell small-12 grid-x grid-margin-x grid-margin-y margin-top-2">
-    <div class="cell small-12 medium-6 large-4" *ngFor="let project of projects" [routerLink]="[ project.name ]">
-      <nm-project-card [project]="project"></nm-project-card>
+  <div [@listFadeAnimation]="projects.length" class="project-cards-list">
+    <div class="cell small-12 grid-x grid-margin-x grid-margin-y margin-top-2">
+      <div class="cell small-12 medium-6 large-4" *ngFor="let project of projects" [routerLink]="[ project.name ]">
+        <nm-project-card [project]="project"></nm-project-card>
+      </div>
     </div>
   </div>
 </div>
