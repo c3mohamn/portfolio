@@ -1,66 +1,37 @@
 <div class="projects-container grid-y">
+  <div class="cell main-text-container">
+    <p style="color: red;" [hidden]="!isHerokuDomain">
+      Go to the <a href="https://nasirm.ca" rel="noopener" aria-label="Go to official website domain"
+        title="Link to official website">official website.</a>
+    </p>
+    <h1 class="main-title">Nasir Mohammad</h1>
+    <h3 class="main-subtitle"><small>Software Developer</small></h3>
+    <p class="main-body margin-vertical-2">
+      This website is still a work in progress. You can see that progress on my <a
+        href="https://github.com/c3mohamn/portfolio" target="_blank" rel="noopener"
+        aria-label="Go to Nasir's Github repository for this website" title="Link to portfolio Github repo">Github</a>
+      and
+      <a href="https://trello.com/b/hoS9NAOg/portfolio-ideas" target="_blank" rel="noopener"
+        aria-label="Go to Nasir's Trello board for this website" title="Link to portfolio Trello board">Trello</a> page.
+    </p>
+  </div>
+
+  <h1 class="projects-header margin-bottom-2"><small>Projects</small></h1>
+
   <!-- Temp -->
-  <div class="grid-y align-middle align-center">
+  <div class="cell">
     <iframe src="https://giphy.com/embed/FIxjQGnjmNt5u" width="400" height="300" frameBorder="0" class="giphy-embed"
       allowFullScreen></iframe>
     <p><a href="https://giphy.com/gifs/funny-writing-assignment-FIxjQGnjmNt5u">via GIPHY</a></p>
-    <h6 style="opacity: .7;"><small>This page is not done... but I have my writer working overtime!</small></h6>
+    <p>Content is not finished for projects... but I have my writer working overtime!</p>
     <p>Meanwhile, feel free to checkout the <a [routerLink]="[ '/about']">About</a> page!</p>
   </div>
-  <!-- Work Projects -->
-  <div class="nm-section" id="work">
-    <h5 class="nm-header-1">Work</h5>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Source Waitlist</small></h5>
-      <div class="nm-body">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non molestiae temporibus minus, saepe corporis totam
-        possimus nihil qui ut minima nisi nemo perferendis quasi atque dolor esse, et officia aspernatur?
-      </div>
+
+  <router-outlet></router-outlet>
+
+  <div class="cell small-12 grid-x grid-margin-x grid-margin-y margin-top-2">
+    <div class="cell small-12 medium-6 large-4" *ngFor="let project of projects" [routerLink]="[ project.name ]">
+      <nm-project-card [project]="project"></nm-project-card>
     </div>
   </div>
-  <!-- School Projects -->
-  <div class="nm-section" id="school">
-    <h5 class="nm-header-1">School</h5>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Office Hour Scheduler</small></h5>
-      <div class="nm-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse a, assumenda soluta
-        necessitatibus nisi molestiae quibusdam quis minima officiis voluptates repudiandae dignissimos consequatur ipsa
-        quos earum fuga! Perferendis, ipsum pariatur?</div>
-    </div>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Course Correct</small></h5>
-      <div class="nm-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse a, assumenda soluta
-        necessitatibus nisi molestiae quibusdam quis minima officiis voluptates repudiandae dignissimos consequatur ipsa
-        quos earum fuga! Perferendis, ipsum pariatur?</div>
-    </div>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Hands for Mental Health</small></h5>
-      <div class="nm-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse a, assumenda soluta
-        necessitatibus nisi molestiae quibusdam quis minima officiis voluptates repudiandae dignissimos consequatur ipsa
-        quos earum fuga! Perferendis, ipsum pariatur?</div>
-    </div>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Cineplex Usability Test</small></h5>
-      <div class="nm-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse a, assumenda soluta
-        necessitatibus nisi molestiae quibusdam quis minima officiis voluptates repudiandae dignissimos consequatur ipsa
-        quos earum fuga! Perferendis, ipsum pariatur?</div>
-    </div>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Smart Watch Keyboard Usability Test</small></h5>
-      <div class="nm-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse a, assumenda soluta
-        necessitatibus nisi molestiae quibusdam quis minima officiis voluptates repudiandae dignissimos consequatur ipsa
-        quos earum fuga! Perferendis, ipsum pariatur?</div>
-    </div>
-  </div>
-  <!-- Personal -->
-  <div class="nm-section" id="personal">
-    <h5 class="nm-header-1">Personal</h5>
-    <div class="nm-sub-section">
-      <h5 class="nm-header-2"><small>Warmains</small></h5>
-      <div class="nm-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse a, assumenda soluta
-        necessitatibus nisi molestiae quibusdam quis minima officiis voluptates repudiandae dignissimos consequatur ipsa
-        quos earum fuga! Perferendis, ipsum pariatur?</div>
-    </div>
-  </div>
-  <p class="last-modified-text">Last Modified June 19, 2019</p>
 </div>

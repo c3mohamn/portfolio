@@ -4,7 +4,9 @@ import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+    redirectTo: 'projects',
+    pathMatch: 'full',
+    // loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
     data: { title: 'Home', index: 0 }
   },
   {
@@ -32,7 +34,8 @@ const routes: Routes = [
   },
   {
     path: '*',
-    redirectTo: ''
+    redirectTo: 'projects',
+    pathMatch: 'full',
   }
 ];
 

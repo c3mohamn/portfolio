@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { routerTransition } from './shared/animations/router.animation';
 import { RouterStateService } from './state/router-state/router-state.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'nm-root',
@@ -10,10 +12,20 @@ import { RouterStateService } from './state/router-state/router-state.service';
     routerTransition
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
+  private ngUnsubscribe: Subject<any> = new Subject();
   currentRouteIndex = -1;
 
   constructor(private routeService: RouterStateService) {
-    routeService.getCurrentPageIndex().subscribe(data => this.currentRouteIndex = data || -1);
+    routeService.getCurrentPageIndex().pipe(takeUntil(this.ngUnsubscribe)).subscribe(data => {
+      if (data && data > -1) {
+        this.currentRouteIndex = data;
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 }

@@ -13,11 +13,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   isScrolledDown = false;
   currentPageTitle = '';
   pages = [
-    { name: 'home', url: '' },
-    { name: 'projects', url: 'projects' },
-    { name: 'about', url: 'about' },
-    { name: 'resume', url: 'resume' },
-    { name: 'contact', url: 'contact' }
+    // { name: 'home', url: '' },
+    { name: 'projects', url: '/projects' },
+    { name: 'about', url: '/about' },
+    { name: 'resume', url: '/resume' },
+    { name: 'contact', url: '/contact' }
   ];
 
   constructor(

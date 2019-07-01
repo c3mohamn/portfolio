@@ -1,0 +1,13 @@
+<div class="project-container grid-y grid-margin-y" *ngIf="project">
+  <div class="cell project-header grid-x grid-margin-x align-middle">
+    <div class="cell shrink back-arrow-container" [routerLink]="[ '' ]">
+      <svg-icon src="assets/icons/arrow-back.svg" class="back-arrow"></svg-icon>
+    </div>
+    <div class="cell auto"></div>
+    <div class="cell shrink">
+      <h2>{{project?.title}}</h2>
+    </div>
+  </div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio hic quo debitis beatae sit. Ratione sit laudantium,
+    doloremque minus non alias modi, ipsam vitae vero dignissimos molestiae quisquam at recusandae?</p>
+</div>

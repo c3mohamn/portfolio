@@ -1,0 +1,20 @@
+@import 'variables';
+
+.project-container {
+  transition: all 200ms ease-in;
+}
+
+.back-arrow-container {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+
+  .back-arrow {
+    fill: lighten($nm-primary-light, 20);
+    transition: fill 200ms ease-in;
+
+    &:hover{ 
+      fill: $nm-primary-light;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import 'variables';
+
+.project-card-container {
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: $nm-boxshadow-3;
+  transition: box-shadow 300ms ease-in;
+  transition: opacity 300ms ease-in;
+
+  &:hover {
+    box-shadow: none;
+    opacity: 1;
+  }
+
+  .project-card-header-container {
+    padding: 1rem;
+  }
+
+  .project-card-body-container {
+    padding: 0 1rem 0.5rem 1rem;
+  }
+
+  .project-card-footer-container {
+    width: 100%;
+    padding: 0.5rem;
+    background: $nm-primary-light;
+  }
+}
