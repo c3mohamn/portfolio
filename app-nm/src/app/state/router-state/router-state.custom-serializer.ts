@@ -4,6 +4,7 @@ import { RouterStateSerializer } from '@ngrx/router-store';
 export interface RouterStateUrl {
   url: string;
   title: string;
+  index: number;
   params: Params;
   queryParams: Params;
 }
@@ -23,9 +24,8 @@ export class CustomSerializer implements RouterStateSerializer<RouterStateUrl> {
     const { params } = route;
 
     const title = route.data.title || '';
+    const index = route.data.index || -1;
 
-    // Only return an object including the URL, params and query params
-    // instead of the entire snapshot
-    return { url, title, params, queryParams };
+    return { url, title, index, params, queryParams };
   }
 }

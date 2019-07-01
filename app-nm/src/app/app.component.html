@@ -2,7 +2,9 @@
 <div class="body-container grid-y align-middle">
   <div class="cell body-top-border"></div>
   <div class="body-container-inner cell shrink">
-    <router-outlet></router-outlet>
+    <div [@routerTransition]="currentRouteIndex">
+      <router-outlet></router-outlet>
+    </div>
   </div>
   <div class="cell auto"></div>
   <div class="cell body-bottom-border"></div>

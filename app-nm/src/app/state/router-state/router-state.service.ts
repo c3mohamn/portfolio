@@ -6,7 +6,7 @@ import { RouterStateSelector, RouterState } from './router-state.selector';
 
 @Injectable()
 export class RouterStateService {
-  constructor(private store: Store<RouterState>) {}
+  constructor(private store: Store<RouterState>) { }
 
   /**
    * Returns current router state.
@@ -23,10 +23,17 @@ export class RouterStateService {
   }
 
   /**
-   * Returns title of current page according to app routing.
+   * Returns title of current page.
    */
   getCurrentPageTitle(): Observable<string> {
     return this.store.select(RouterStateSelector.getCurrentPageTitle);
+  }
+
+  /**
+   * Returns index of current page.
+   */
+  getCurrentPageIndex(): Observable<number> {
+    return this.store.select(RouterStateSelector.getCurrentPageIndex);
   }
 
   /**

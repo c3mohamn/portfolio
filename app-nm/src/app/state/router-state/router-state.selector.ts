@@ -25,6 +25,11 @@ export namespace RouterStateSelector {
     state => state && state.state && state.state.title
   );
 
+  export const getCurrentPageIndex = createSelector(
+    getRouterState,
+    state => state && state.state && state.state.index
+  )
+
   export const getCurrentParams = createSelector(
     getRouterState,
     state => state && state.state && state.state.params
