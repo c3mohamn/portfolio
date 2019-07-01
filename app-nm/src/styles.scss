@@ -21,3 +21,8 @@ body {
     text-transform: uppercase;
   }
 }
+
+// Remove underline when using anchor element with button class
+.button {
+  text-decoration: none;
+}

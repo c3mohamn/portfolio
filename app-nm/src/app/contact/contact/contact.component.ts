@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialMediaLink } from 'src/app/shared/models/social-media.model';
+import { socialMedia } from 'src/app/shared/data/footer-social-media-list';
 
 @Component({
   selector: 'nm-contact',
@@ -6,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  constructor() {}
+  socialMediaList: SocialMediaLink[] = socialMedia;
+  
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
