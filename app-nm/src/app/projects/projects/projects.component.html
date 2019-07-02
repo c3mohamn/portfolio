@@ -8,28 +8,20 @@
     <h1 class="main-title">Nasir Mohammad</h1>
     <h3 class="main-subtitle"><small>Software Developer</small></h3>
     <p class="main-body margin-vertical-2">
-      This website is still a work in progress. You can see that progress on my <a
+      This website is still a <b>work in progress</b>. You can see that progress on my <a
         href="https://github.com/c3mohamn/portfolio" target="_blank" rel="noopener"
         aria-label="Go to Nasir's Github repository for this website" title="Link to portfolio Github repo">Github</a>
       and
       <a href="https://trello.com/b/hoS9NAOg/portfolio-ideas" target="_blank" rel="noopener"
         aria-label="Go to Nasir's Trello board for this website" title="Link to portfolio Trello board">Trello</a> page.
+      <br>
+      Feel free to browse around!
     </p>
   </div>
   <!-- Projects Header -->
   <div class="cell text-right" [hidden]="selectedProject">
     <h1 class="projects-header margin-bottom-2 margin-right-1"><small>Projects</small></h1>
   </div>
-
-  <!-- Temp -->
-  <!-- <div class="cell">
-    <iframe src="https://giphy.com/embed/FIxjQGnjmNt5u" width="400" height="300" frameBorder="0" class="giphy-embed"
-      allowFullScreen></iframe>
-    <p><a href="https://giphy.com/gifs/funny-writing-assignment-FIxjQGnjmNt5u">via GIPHY</a></p>
-    <p>Content is not finished for projects... but I have my writer working overtime!</p>
-    <p>Meanwhile, feel free to checkout the <a [routerLink]="[ '/about']">About</a> page!</p>
-  </div> -->
-
   <!-- Project -->
   <div class="project-container" [ngClass]="{'has-project': selectedProject}">
     <router-outlet></router-outlet>

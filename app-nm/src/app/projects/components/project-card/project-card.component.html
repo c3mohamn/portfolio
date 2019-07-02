@@ -1,13 +1,17 @@
-<div class="project-card-container">
-  <div class="project-card-header-container">
-    <h6>{{project?.title}}</h6>
+<div class="project-card-container grid-y">
+  <div class="project-card-preview-container" [style.backgroundImage]="'url(' + project?.previewPhotoPath + ')'">
   </div>
-  <div class="project-card-body-container">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, distinctio unde. Eligendi, sit consequuntur?
-    Earum harum voluptatibus facilis nam delectus voluptatem ducimus, non, sunt ad eum laborum exercitationem temporibus
-    impedit.
+  <div class="cell project-card-header-container">
+    <h4 class="project-title">{{project?.title}}</h4>
   </div>
-  <!-- <div class="project-card-footer-container">
-    Footer
-  </div> -->
+  <div class="cell auto project-card-body-container grid-y align-middle align-center">
+    <div class="cell project-card-logo-container {{ project?.name }}" *ngIf="project && project.svgLogoPath.length">
+      <svg-icon src="{{project.svgLogoPath}}" class="project-card-logo"></svg-icon>
+    </div>
+  </div>
+  <div class="cell project-card-footer-container">
+    <div class="cell project-tag" *ngFor="let tag of project?.tags">
+      {{tag}}
+    </div>
+  </div>
 </div>
