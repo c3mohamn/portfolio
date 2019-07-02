@@ -11,9 +11,7 @@ import { Subject } from 'rxjs';
   selector: 'nm-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  animations: [
-    listFadeAnimation
-  ]
+  animations: [listFadeAnimation]
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
   private ngUnsubscribe: Subject<any> = new Subject();
@@ -22,7 +20,10 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   selectedProject = false;
   selectedProjectName = 'none';
 
-  constructor(@Inject(DOCUMENT) private document: any, private routeService: RouterStateService) {}
+  constructor(
+    @Inject(DOCUMENT) private document: any,
+    private routeService: RouterStateService
+  ) {}
 
   ngOnInit() {
     const fullPath = this.document.location.href;
@@ -30,10 +31,13 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       this.isHerokuDomain = true;
     }
 
-    this.routeService.getCurrentParams().pipe(takeUntil(this.ngUnsubscribe)).subscribe(data => {
-      this.selectedProject = data && data.project;
-      this.selectedProjectName = data && data.project || 'none';
-    });
+    this.routeService
+      .getCurrentParams()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
+        this.selectedProject = data && data.project;
+        this.selectedProjectName = (data && data.project) || 'none';
+      });
   }
 
   ngOnDestroy(): void {

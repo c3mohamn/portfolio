@@ -35,6 +35,8 @@
     "angular-svg-icon": "^7.2.1",
     "core-js": "^2.5.4",
     "foundation-sites": "^6.5.3",
+    "ngx-page-scroll": "^6.0.2",
+    "ngx-page-scroll-core": "^6.0.2",
     "rxjs": "~6.5.2",
     "tslib": "^1.10.0",
     "typescript": "~3.4.5",
