@@ -12,11 +12,15 @@
   <div class="cell project-body-container">
     <!-- Temp -->
     <div>
-      <iframe src="https://giphy.com/embed/FIxjQGnjmNt5u" width="400" height="300" frameBorder="0" class="giphy-embed"
-        allowFullScreen></iframe>
-      <p><a href="https://giphy.com/gifs/funny-writing-assignment-FIxjQGnjmNt5u">via GIPHY</a></p>
-      <p>Content is not finished for projects... but I have my writer working overtime!</p>
-      <p>Meanwhile, feel free to checkout the <a [routerLink]="[ '/about']">About</a> page!</p>
+      <p [style.fontSize]="'1.25rem'" [style.color]="'yellow'">I haven't finished this section yet... but I have my
+        writer working overtime!</p>
+      <div class="text-center">
+        <iframe src="https://giphy.com/embed/FIxjQGnjmNt5u" width="400" height="300" frameBorder="0" class="giphy-embed"
+          allowFullScreen></iframe>
+      </div>
+      <p [style.fontSize]="'1.25rem'" [style.color]="'cyan'" class="text-right">Meanwhile, feel free to checkout the
+        <a [routerLink]="[ '/about']">About</a> page!
+      </p>
     </div>
   </div>
 </div>
