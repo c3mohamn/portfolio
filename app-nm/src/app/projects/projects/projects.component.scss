@@ -4,15 +4,11 @@
   width: 100%;
 
   .main-text-container {
-    padding: 6rem 1rem;
-    margin: 1rem 0 2rem 0;
+    padding: 0 1rem 6rem 1rem;
+    margin: 0 0 2rem 0;
 
     @include breakpoint(640px down) {
-      padding: 1rem;
-    }
-
-    .main-subtitle {
-      opacity: 0.5;
+      padding: 0 1rem;
     }
 
     .main-body {
