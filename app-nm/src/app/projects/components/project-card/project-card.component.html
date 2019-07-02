@@ -1,5 +1,7 @@
 <div class="project-card-container grid-y">
-  <div class="project-card-preview-container" [style.backgroundImage]="'url(' + project?.previewPhotoPath + ')'">
+  <div *ngIf="project && project.previewPhotoPath">
+    <div class="project-card-preview-container" [style.backgroundImage]="'url(' + project?.previewPhotoPath + ')'">
+    </div>
   </div>
   <div class="cell project-card-header-container">
     <h4 class="project-title">{{project?.title}}</h4>

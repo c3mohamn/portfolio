@@ -7,6 +7,11 @@ import { RouterStateService } from 'src/app/state/router-state/router-state.serv
 import { StoreModule } from '@ngrx/store';
 import { reducers } from 'src/app/state';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { NgxPageScrollDirective } from 'ngx-page-scroll';
+import { ProjectComponent } from '../components/project/project.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -14,8 +19,20 @@ describe('ProjectsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, StoreModule.forRoot(reducers), BrowserAnimationsModule],
-      declarations: [ProjectsComponent, ProjectCardComponent],
+      imports: [
+        RouterTestingModule,
+        StoreModule.forRoot(reducers),
+        BrowserAnimationsModule,
+        NgxPageScrollCoreModule,
+        AngularSvgIconModule,
+        HttpClientModule
+      ],
+      declarations: [
+        ProjectsComponent,
+        ProjectCardComponent,
+        ProjectComponent,
+        NgxPageScrollDirective
+      ],
       providers: [RouterStateService]
     }).compileComponents();
   }));
