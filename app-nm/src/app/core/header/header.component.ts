@@ -1,6 +1,8 @@
 import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterStateService } from 'src/app/state/router-state/router-state.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'nm-header',
@@ -8,12 +10,12 @@ import { RouterStateService } from 'src/app/state/router-state/router-state.serv
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+  private ngUnsubscribe: Subject<any> = new Subject();
   showMobileMenu = false;
   isSmallScreen = false;
   isScrolledDown = false;
   currentPageTitle = '';
   pages = [
-    // { name: 'home', url: '' },
     { name: 'projects', url: '/projects' },
     { name: 'about', url: '/about' },
     { name: 'resume', url: '/resume' },
@@ -30,15 +32,20 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true);
 
-    this.routeService.getCurrentPageTitle().subscribe(data => {
-      if (data) {
-        this.currentPageTitle = data.toLowerCase();
-      }
-    });
+    this.routeService
+      .getCurrentPageTitle()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
+        if (data) {
+          this.currentPageTitle = data.toLowerCase();
+        }
+      });
   }
 
   ngOnDestroy() {
     window.removeEventListener('scroll', this.scroll, true);
+    this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 
   scroll = (event: any): void => {

@@ -8,6 +8,8 @@ export interface Project {
   contributions: string;
   takeaways: string;
   tags?: string[];
+  svgLogoPath?: string;
+  previewPhotoPath?: string;
 }
 
 export enum ProjectType {

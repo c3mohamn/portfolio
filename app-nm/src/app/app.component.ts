@@ -8,20 +8,19 @@ import { takeUntil } from 'rxjs/operators';
   selector: 'nm-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [
-    routerTransition
-  ]
+  animations: [routerTransition]
 })
 export class AppComponent implements OnDestroy {
   private ngUnsubscribe: Subject<any> = new Subject();
-  currentRouteIndex = -1;
+  currentRouteIndex = 0;
 
   constructor(private routeService: RouterStateService) {
-    routeService.getCurrentPageIndex().pipe(takeUntil(this.ngUnsubscribe)).subscribe(data => {
-      if (data && data > -1) {
+    routeService
+      .getCurrentPageIndex()
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(data => {
         this.currentRouteIndex = data;
-      }
-    });
+      });
   }
 
   ngOnDestroy(): void {

@@ -3,14 +3,16 @@ import { Project, ProjectType } from '../models/project.model';
 export const projects: Project[] = [
   {
     id: 0,
-    name: 'source-waitlist',
+    name: 'source',
     title: `Source Waitlist`,
     type: ProjectType.Work,
     purpose: ``,
     features: ``,
     contributions: ``,
     takeaways: ``,
-    tags: ['Work', 'Web']
+    tags: ['Waitlist', 'Angular', '.NET'],
+    svgLogoPath: 'assets/icons/source-logo.svg',
+    previewPhotoPath: 'assets/images/projects/preview/source.png'
   },
   {
     id: 1,
@@ -21,7 +23,9 @@ export const projects: Project[] = [
     features: ``,
     contributions: ``,
     takeaways: ``,
-    tags: []
+    tags: ['Gaming', 'Tool', 'Angular'],
+    svgLogoPath: 'assets/icons/horde-logo.svg',
+    previewPhotoPath: 'assets/images/projects/preview/warmains.png'
   },
   {
     id: 2,
@@ -32,7 +36,9 @@ export const projects: Project[] = [
     features: ``,
     contributions: ``,
     takeaways: ``,
-    tags: ['School', 'Web']
+    tags: ['Engineering', 'Angular', 'Scheduler'],
+    svgLogoPath: 'assets/icons/book-me-logo.svg',
+    previewPhotoPath: 'assets/images/projects/preview/book-me.png'
   },
   {
     id: 3,
@@ -43,7 +49,9 @@ export const projects: Project[] = [
     features: ``,
     contributions: ``,
     takeaways: ``,
-    tags: []
+    tags: ['Engineering', 'Android', 'Course'],
+    svgLogoPath: 'assets/icons/course-correct-logo.svg',
+    previewPhotoPath: 'assets/images/projects/preview/course-correct.png'
   },
   {
     id: 4,
@@ -54,7 +62,10 @@ export const projects: Project[] = [
     features: ``,
     contributions: ``,
     takeaways: ``,
-    tags: []
+    tags: ['HCI', 'Prototyping', 'Research'],
+    svgLogoPath: 'assets/icons/mental-health.svg',
+    previewPhotoPath:
+      'assets/images/projects/preview/hands-for-mental-health.png'
   },
   {
     id: 5,
@@ -65,7 +76,9 @@ export const projects: Project[] = [
     features: ``,
     contributions: ``,
     takeaways: ``,
-    tags: []
+    tags: ['HCI', 'Experiment', 'Heuristics'],
+    svgLogoPath: 'assets/icons/cineplex.svg',
+    previewPhotoPath: 'assets/images/projects/preview/cineplex.png'
   },
   {
     id: 6,
@@ -76,6 +89,8 @@ export const projects: Project[] = [
     features: ``,
     contributions: ``,
     takeaways: ``,
-    tags: []
+    tags: ['HCI', 'Experiment', 'React'],
+    svgLogoPath: 'assets/icons/keyboard.svg',
+    previewPhotoPath: 'assets/images/projects/preview/smart-watch.png'
   }
 ];

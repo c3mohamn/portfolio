@@ -1,14 +1,27 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
     files: [
-      { pattern: 'assets/**/*.svg', watched: false, included: false, served: true, nocache: false },
-      { pattern: 'assets/**/*.png', watched: false, included: false, served: true, nocache: false }
+      {
+        pattern: 'assets/**/*.svg',
+        watched: false,
+        included: false,
+        served: true,
+        nocache: false
+      },
+      {
+        pattern: 'assets/**/*.png',
+        watched: false,
+        included: false,
+        served: true,
+        nocache: false
+      }
     ],
+    exclude: ['null'],
     proxies: {
-      "/assets/": "/base/assets/"
+      '/assets/': '/base/assets/'
     },
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],

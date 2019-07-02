@@ -7,35 +7,35 @@ const routes: Routes = [
     redirectTo: 'projects',
     pathMatch: 'full',
     // loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
-    data: { title: 'Home', index: 0 }
+    data: { title: 'Home' }
   },
   {
     path: 'projects',
     loadChildren: () =>
       import('./projects/projects.module').then(m => m.ProjectsModule),
-    data: { title: 'Projects', index: 1 }
+    data: { title: 'Projects', index: 0 }
   },
   {
     path: 'about',
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule),
-    data: { title: 'About', index: 2 }
+    data: { title: 'About', index: 1 }
   },
   {
     path: 'resume',
     loadChildren: () =>
       import('./resume/resume.module').then(m => m.ResumeModule),
-    data: { title: 'Resume', index: 3 }
+    data: { title: 'Resume', index: 2 }
   },
   {
     path: 'contact',
     loadChildren: () =>
       import('./contact/contact.module').then(m => m.ContactModule),
-    data: { title: 'Contact', index: 4 }
+    data: { title: 'Contact', index: 3 }
   },
   {
     path: '*',
     redirectTo: 'projects',
-    pathMatch: 'full',
+    pathMatch: 'full'
   }
 ];
 
@@ -48,4 +48,4 @@ const routerOptions: ExtraOptions = {
   imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

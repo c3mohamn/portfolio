@@ -1,20 +1,23 @@
 @import 'variables';
 
 .project-container {
-  transition: all 200ms ease-in;
-}
+  .back-arrow-container {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
 
-.back-arrow-container {
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-
-  .back-arrow {
-    fill: lighten($nm-primary-light, 20);
-    transition: fill 200ms ease-in;
-
-    &:hover{ 
+    .back-arrow {
       fill: $nm-primary-light;
+      transition: $nm-transition-fast;
+
+      &:hover {
+        fill: $nm-secondary;
+      }
     }
+  }
+
+  .project-body-container {
+    padding: 1rem;
+    text-align: justify;
   }
 }

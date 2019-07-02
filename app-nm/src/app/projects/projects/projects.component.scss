@@ -4,23 +4,32 @@
   width: 100%;
 
   .main-text-container {
-    margin: 6rem 0;
+    padding: 0 1rem 6rem 1rem;
+    margin: 0 0 2rem 0;
 
     @include breakpoint(640px down) {
-      margin: 3rem 0;
+      padding: 0 1rem;
     }
 
-    .main-subtitle {
-      opacity: .5;
-    }
-  
     .main-body {
       font-size: 1.5rem;
     }
   }
 
-  .projects-header {
-    border-bottom: solid 1px $nm-primary;
-    padding-bottom: 1rem;
+  .project-container {
+    position: relative;
+    width: 100%;
+    transition: $nm-transition-medium;
+    opacity: 0;
+    z-index: 1;
+
+    &.has-project {
+      opacity: 1;
+    }
+  }
+
+  .project-cards-list {
+    z-index: 2;
+    transition: $nm-transition-medium;
   }
 }

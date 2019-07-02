@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="nav-link cell shrink disable-select" *ngFor="let page of pages" (click)="navigate(page.url)">
-      <h4>{{page.name}}</h4>
+      <h4 [ngClass]="{'selected': currentPageTitle === page.name}">{{page.name}}</h4>
     </div>
   </div>
 </div>
