@@ -29,8 +29,14 @@
 }
 
 .menu-icon {
-  fill: $nm-secondary;
+  fill: $nm-primary-light;
   margin-right: 1rem;
+  transition: $nm-transition-fast;
+  cursor: pointer;
+
+  &:hover {
+    fill: $nm-secondary;
+  }
 }
 
 .nav-link {

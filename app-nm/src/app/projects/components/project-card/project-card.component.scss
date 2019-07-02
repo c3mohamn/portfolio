@@ -6,7 +6,7 @@
   opacity: 0.9;
   box-shadow: $nm-boxshadow-3;
   transition: box-shadow 300ms ease-in;
-  transition: opacity 300ms ease-in;
+  transition: opacity 100ms ease-in;
 
   &:hover {
     box-shadow: none;
