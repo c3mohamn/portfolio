@@ -9,10 +9,9 @@
     <div class="nm-section">
       <h5 class="nm-header-1">What I used</h5>
       <div class="nm-body">
-        Here is a list of technologies, languages, and tools that I used for this website.
+        Here is a list of technologies, languages, and tools that I used to create this website.
         <br><br>
-        Click on the icons for a description! <span style="margin-left:0.5rem; color:gray;"><small><i>Images and links
-              will be added soon.</i></small></span>
+        Click on the icons for a description!
       </div>
       <div class="cell grid-x grid-margin-x grid-margin-y nm-body">
         <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{ icon.title }}"
@@ -21,9 +20,7 @@
         </div>
       </div>
       <div class="nm-body about-icon-description-container" [ngClass]="{ show: description }">
-        <div class="about-icon-description">
-          {{ description }}
-        </div>
+        <div class="about-icon-description" [innerHtml]="description"></div>
       </div>
     </div>
     <!-- Other resources -->

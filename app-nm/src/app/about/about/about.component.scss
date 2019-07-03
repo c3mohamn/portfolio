@@ -19,7 +19,7 @@
   .about-icon-description-container {
     transition: $nm-transition-slow;
     border: solid 1px $nm-secondary;
-    padding: 0;
+    padding: 0 1rem;
     margin: 2rem 0;
 
     .about-icon-description {
@@ -39,7 +39,7 @@
 
   .about-icon-container {
     width: 64px;
-    opacity: 0.8;
+    opacity: 0.7;
     cursor: pointer;
     transition: $nm-transition-fast;
 
@@ -47,15 +47,8 @@
       width: 32px;
     }
 
+    &:hover,
     &.selected {
-      width: 86px;
-
-      @include breakpoint(640px down) {
-        width: 40px;
-      }
-    }
-
-    &:hover, &.selected {
       opacity: 1;
     }
 
