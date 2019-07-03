@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'foundation-styles';
 
 .header-container {
   width: 100%;
@@ -7,6 +7,10 @@
   position: fixed;
   z-index: 9;
   transition: $nm-transition-medium;
+
+  @include breakpoint(640px down) {
+    height: 4rem;
+  }
 
   //override header margin
   h1,
@@ -69,7 +73,7 @@
 
     .mobile-menu-close {
       padding: 1rem;
-      height: 6rem;
+      height: 4rem;
       width: 100%;
     }
   }

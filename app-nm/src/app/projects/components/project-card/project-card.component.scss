@@ -6,7 +6,7 @@
   height: 500px;
   cursor: pointer;
   opacity: 1;
-  box-shadow: $nm-boxshadow-3;
+  box-shadow: $nm-boxshadow-2;
   transition: $nm-transition-faster;
 
   &:hover {
@@ -17,6 +17,11 @@
       display: block;
     }
 
+    .project-card-footer-container {
+      opacity: 0;
+      transition: $nm-transition-faster;
+    }
+
     .project-card-body-container {
       opacity: 0;
       transition: $nm-transition-faster;
@@ -25,6 +30,11 @@
     .project-title {
       color: $nm-secondary-verylight;
     }
+  }
+
+  .project-short-description {
+    margin: 0;
+    color: $nm-teal;
   }
 
   .project-card-preview-container {
@@ -74,15 +84,16 @@
   }
 
   .project-card-footer-container {
-    padding: 1rem 0.5rem;
+    padding: 0.5rem;
     background: $nm-primary;
 
     .project-tag {
       display: inline;
+      margin: 0.25rem;
+      padding: 0.25rem 0.5rem;
       color: $nm-gray-light;
       font-weight: 100;
-      margin: 0.5rem 0.25rem;
-      padding: 0.25rem 0.5rem;
+      font-size: 14px;
       border: solid 1px $nm-primary-light;
       border-radius: 0.25rem;
     }

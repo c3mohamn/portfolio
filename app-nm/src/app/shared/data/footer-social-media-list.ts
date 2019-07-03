@@ -22,6 +22,11 @@ export const socialMedia: SocialMediaLink[] = [
     title: 'Linkedin'
   },
   {
+    media: 'github',
+    link: 'https://github.com/c3mohamn',
+    title: 'Github'
+  },
+  {
     media: 'microsoft-outlook',
     link: 'mailto:nasir.m23@hotmail.com',
     title: 'Microsoft Outlook'

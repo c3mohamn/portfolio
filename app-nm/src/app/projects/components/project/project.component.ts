@@ -14,6 +14,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
   private ngUnsubscribe: Subject<any> = new Subject();
   projects: Project[] = projects;
   project: Project;
+  projectName: string;
 
   constructor(private routeService: RouterStateService) {}
 
@@ -22,9 +23,9 @@ export class ProjectComponent implements OnInit, OnDestroy {
       .getCurrentParams()
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(data => {
-        const projectName = data && data.project;
-        if (projectName) {
-          this.project = projects.find(p => p.name === projectName);
+        this.projectName = data && data.project;
+        if (this.projectName) {
+          this.project = projects.find(p => p.name === this.projectName);
         }
       });
   }
