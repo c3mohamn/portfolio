@@ -17,6 +17,11 @@
       display: block;
     }
 
+    .project-card-footer-container {
+      opacity: 0;
+      transition: $nm-transition-faster;
+    }
+
     .project-card-body-container {
       opacity: 0;
       transition: $nm-transition-faster;
@@ -74,14 +79,14 @@
   }
 
   .project-card-footer-container {
-    padding: 1rem 0.5rem;
+    padding: 0.5rem;
     background: $nm-primary;
 
     .project-tag {
       display: inline;
       color: $nm-gray-light;
       font-weight: 100;
-      margin: 0.5rem 0.25rem;
+      margin: 0.25rem 0.5rem;
       padding: 0.25rem 0.5rem;
       border: solid 1px $nm-primary-light;
       border-radius: 0.25rem;
