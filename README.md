@@ -12,7 +12,7 @@ This is the source code for Nasir's [portfolio website](https://nasirm.ca).
 - [`Travis CI`](https://travis-ci.org/) as CI
 - [`Ngrx`](https://ngrx.io/) as front-end data & state management
 - [`Google Analytics`](https://analytics.google.com) & GTM for tracking traffic
-- [`Zerb Foundation`](https://foundation.zurb.com/) as css library
+- [`Zurb Foundation`](https://foundation.zurb.com/) as css library
 - [`Heroku`](https://heroku.com) for hosting
 - [`Clourflare`](https://www.cloudflare.com/) for website security
 - [`Trello`](https://trello.com/b/hoS9NAOg/portfolio-ideas) for recording and tracking ideas

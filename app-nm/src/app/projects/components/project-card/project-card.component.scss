@@ -17,18 +17,28 @@
       display: block;
     }
 
-    .project-card-footer-container {
-      opacity: 0;
+    .project-card-header-container {
       transition: $nm-transition-faster;
+
+      .project-title {
+        color: $nm-secondary-verylight;
+      }
+    }
+
+    .project-card-footer-container {
+      background: none;
+      transition: $nm-transition-faster;
+
+      .project-tag {
+        text-shadow: $nm-primary-dark 0px 0px 10px;
+        color: white;
+        border-color: white;
+      }
     }
 
     .project-card-body-container {
       opacity: 0;
       transition: $nm-transition-faster;
-    }
-
-    .project-title {
-      color: $nm-secondary-verylight;
     }
   }
 

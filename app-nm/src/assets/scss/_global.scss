@@ -4,6 +4,10 @@
   user-select: none;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 .nm-header-1 {
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
@@ -17,7 +21,7 @@
 }
 
 .nm-body {
-  padding: 1rem;
+  padding: 1rem 0;
   text-align: justify;
 }
 
