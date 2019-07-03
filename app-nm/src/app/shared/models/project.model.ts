@@ -2,6 +2,7 @@ export interface Project {
   id: number;
   name: string;
   title: string;
+  shortDescription?: string;
   type: ProjectType;
   purpose: string;
   features: string;
