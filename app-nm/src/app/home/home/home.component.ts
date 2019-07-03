@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'nm-home',
@@ -7,13 +6,7 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  isHerokuDomain = false;
-  constructor(@Inject(DOCUMENT) private document: any) {}
+  constructor() {}
 
-  ngOnInit() {
-    const fullPath = this.document.location.href;
-    if (fullPath.toLowerCase().includes('herokuapp')) {
-      this.isHerokuDomain = true;
-    }
-  }
+  ngOnInit() {}
 }

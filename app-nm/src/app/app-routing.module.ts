@@ -33,7 +33,7 @@ const routes: Routes = [
     data: { title: 'Contact', index: 3 }
   },
   {
-    path: '*',
+    path: '**',
     redirectTo: 'projects',
     pathMatch: 'full'
   }
