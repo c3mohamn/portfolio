@@ -67,6 +67,13 @@ export const iconList: TechIcon[] = [
      add a custom domain for free, which is what I have done for this website.`
   },
   {
+    title: 'Cloudflare',
+    class: 'cloudflare',
+    description: `Cloudflare is like the middleman between website visitors and the user's hosting provider.
+    It provides network services, DDos mitigation, internet security, and DNS services. Basically, it makes it so
+    my website is secure (https).`
+  },
+  {
     title: 'Trello',
     class: 'trello',
     description: `Trello is a web-based list-making application.
