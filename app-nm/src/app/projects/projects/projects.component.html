@@ -27,12 +27,11 @@
     <router-outlet></router-outlet>
   </div>
   <!-- Projet Cards -->
-  <div [@listFadeAnimation]="projects.length" class="project-cards-list">
-    <div class="cell small-12 grid-x grid-margin-x grid-margin-y margin-top-2">
-      <div class="cell small-12 medium-6" *ngFor="let project of projects" [routerLink]="[ project.name ]" pageScroll
-        pageScrollTarget=".project-container" [pageScrollOffset]=100>
-        <nm-project-card [project]="project"></nm-project-card>
-      </div>
+  <div class="cell small-12 grid-x margin-top-2 grid-margin-x grid-margin-y project-cards-list"
+    [@listFadeAnimation]="projects.length">
+    <div class="cell small-12 medium-6" *ngFor="let project of projects" [routerLink]="[ project.name ]" pageScroll
+      pageScrollTarget=".project-container" [pageScrollOffset]=100>
+      <nm-project-card [project]="project"></nm-project-card>
     </div>
   </div>
 </div>
