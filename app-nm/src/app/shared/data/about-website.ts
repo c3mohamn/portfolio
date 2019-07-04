@@ -1,14 +1,14 @@
 import { TechIcon } from '../models/about-tech.model';
 
-export const howItStarted = `
-      After finishing my undergraduate degree and beginning my job hunt, I came to the realization
-      that like artists, web developers should also have portfolios.
-      <br /><br />
-      So I began building my own portfolio.
-      A place for me to easily showcase who I am and what I apsire to be. A place where
-      I could keep a log of everything I learn. Hopefully it captures, to some extent, who I am and
-      what I have to offer.
-`;
+// export const howItStarted = `
+//       After finishing my undergraduate degree and beginning my job hunt, I came to the realization
+//       that like artists, web developers should also have portfolios.
+//       <br /><br />
+//       So I began building my own portfolio.
+//       A place for me to easily showcase who I am and what I apsire to be. A place where
+//       I could keep a log of everything I learn. Hopefully it captures, to some extent, who I am and
+//       what I have to offer.
+// `;
 
 export const iconList: TechIcon[] = [
   {

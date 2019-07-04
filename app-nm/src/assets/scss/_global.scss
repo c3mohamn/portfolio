@@ -22,6 +22,18 @@
 .nm-body {
   padding: 1rem 0;
   text-align: justify;
+
+  &.medium-small {
+    font-size: 1.25rem;
+  }
+
+  &.medium {
+    font-size: 1.5rem;
+  }
+
+  &.large {
+    font-size: 2rem;
+  }
 }
 
 .last-modified-text {

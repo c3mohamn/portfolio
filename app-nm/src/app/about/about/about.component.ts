@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { iconList, howItStarted } from 'src/app/shared/data/about-website';
+import { iconList } from 'src/app/shared/data/about-website';
 import { TechIcon } from 'src/app/shared/models/about-tech.model';
 
 @Component({
@@ -9,7 +9,6 @@ import { TechIcon } from 'src/app/shared/models/about-tech.model';
 })
 export class AboutComponent implements OnInit {
   iconList: TechIcon[] = iconList;
-  howItStarted: string = howItStarted;
   description = '';
   selected = '';
 

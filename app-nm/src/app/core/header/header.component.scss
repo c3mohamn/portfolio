@@ -59,14 +59,18 @@
 }
 
 .nav-link {
+  margin-left: 1.25rem;
   font-family: 'Oswald';
   color: $nm-primary-light;
-  padding-left: 1rem;
   font-size: 1rem;
   letter-spacing: 0.25rem;
   text-transform: uppercase;
   cursor: pointer;
   transition: $nm-transition-faster;
+
+  &.nav-link-mobile {
+    margin-left: 0;
+  }
 
   &:hover,
   &.selected {

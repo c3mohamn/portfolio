@@ -43,8 +43,16 @@
     cursor: pointer;
     transition: $nm-transition-fast;
 
+    .about-icon-caption {
+      font-size: 12px;
+    }
+
     @include breakpoint(640px down) {
       width: 32px;
+
+      .about-icon-caption {
+        font-size: 10px;
+      }
     }
 
     &:hover,
