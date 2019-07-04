@@ -12,7 +12,6 @@
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   font-weight: 300;
-  // border-bottom: 2px solid $nm-secondary;
 }
 
 .nm-header-2 {
@@ -30,6 +29,11 @@
   font-size: 1rem;
   color: $nm-gray;
   font-weight: 100;
+}
+
+::selection {
+  color: white;
+  background: $nm-secondary-light;
 }
 
 /* width */
