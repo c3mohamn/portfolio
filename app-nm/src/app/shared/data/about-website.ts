@@ -191,6 +191,20 @@ export const iconList: TechIcon[] = [
      and I use to track page views and clicks.`
   },
   {
+    title: 'Fullstory',
+    class: 'fullstory',
+    description: `
+    <h4><small>
+    <a class="no-underline" href="https://www.fullstory.com" target="_blank" rel="noopener"
+        aria-label="Fullstory link" Fullstory">
+        Fullstory
+      </a>
+    </small></h4>
+    <br />
+    Fullstory is a digital analytics platform that shows video replays of user experiences.
+    `
+  },
+  {
     title: 'Photoshop',
     class: 'photoshop',
     description: `
