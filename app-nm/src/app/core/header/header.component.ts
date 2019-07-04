@@ -25,9 +25,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private routeService: RouterStateService
-  ) {
-    this.onWindowResize();
-  }
+  ) {}
 
   ngOnInit() {
     window.addEventListener('scroll', this.scroll, true);
@@ -68,19 +66,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.showMobileMenu = toggle;
     } else {
       this.showMobileMenu = !this.showMobileMenu;
-    }
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onWindowResize($event?: any) {
-    const screenWidth = window.innerWidth;
-
-    // Close mobile menu when screen size is greater than medium width
-    if (screenWidth > 640) {
-      this.toggleMobileMenu(false);
-      this.isSmallScreen = false;
-    } else {
-      this.isSmallScreen = true;
     }
   }
 }

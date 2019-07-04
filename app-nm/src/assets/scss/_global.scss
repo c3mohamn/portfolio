@@ -4,11 +4,14 @@
   user-select: none;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 .nm-header-1 {
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
   font-weight: 300;
-  // border-bottom: 2px solid $nm-secondary;
 }
 
 .nm-header-2 {
@@ -17,8 +20,20 @@
 }
 
 .nm-body {
-  padding: 1rem;
+  padding: 1rem 0;
   text-align: justify;
+
+  &.medium-small {
+    font-size: 1.25rem;
+  }
+
+  &.medium {
+    font-size: 1.5rem;
+  }
+
+  &.large {
+    font-size: 2rem;
+  }
 }
 
 .last-modified-text {
@@ -26,6 +41,11 @@
   font-size: 1rem;
   color: $nm-gray;
   font-weight: 100;
+}
+
+::selection {
+  color: white;
+  background: $nm-secondary-light;
 }
 
 /* width */

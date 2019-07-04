@@ -3,27 +3,39 @@
 .header-container {
   width: 100%;
   height: 6rem;
-  padding: 1rem;
+  padding: 0 2rem;
   position: fixed;
   z-index: 9;
   transition: $nm-transition-medium;
+
+  .header-container-inner {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+
+    .header-title {
+      h4 {
+        font-family: 'Oswald';
+        color: $nm-primary-light;
+        cursor: pointer;
+        transition: $nm-transition-faster;
+
+        &:hover {
+          color: $nm-secondary;
+          text-shadow: $nm-primary-dark 0px 0px 5px;
+        }
+      }
+    }
+  }
 
   @include breakpoint(640px down) {
     height: 4rem;
   }
 
   //override header margin
-  h1,
-  h2,
-  h3,
-  h4,
   h5,
   h6 {
     margin: 0;
-  }
-
-  .title-container {
-    padding-left: 1rem;
   }
 
   &.scrolled-down {
@@ -34,9 +46,12 @@
 
 .menu-icon {
   fill: $nm-primary-light;
-  margin-right: 1rem;
   transition: $nm-transition-fast;
   cursor: pointer;
+
+  &.close {
+    z-index: 11;
+  }
 
   &:hover {
     fill: $nm-secondary;
@@ -44,18 +59,23 @@
 }
 
 .nav-link {
-  h4,
-  h5 {
-    color: $nm-primary-light;
-    cursor: pointer;
-    font-family: 'Oswald';
-    transition: $nm-transition-faster;
-    letter-spacing: 0.25rem;
+  margin-left: 1.25rem;
+  font-family: 'Oswald';
+  color: $nm-primary-light;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: $nm-transition-faster;
 
-    &:hover,
-    &.selected {
-      color: $nm-secondary;
-    }
+  &.nav-link-mobile {
+    margin-left: 0;
+  }
+
+  &:hover,
+  &.selected {
+    color: $nm-secondary;
+    text-shadow: $nm-primary-dark 0px 0px 5px;
   }
 }
 
@@ -68,13 +88,9 @@
   background: darken($nm-primary, 10);
   z-index: 10;
 
-  .mobile-menu-container-inner {
-    position: relative;
-
-    .mobile-menu-close {
-      padding: 1rem;
-      height: 4rem;
-      width: 100%;
-    }
+  .mobile-menu-header {
+    height: 4rem;
+    padding: 0 2rem;
+    width: 100%;
   }
 }
