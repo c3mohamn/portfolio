@@ -1,0 +1,31 @@
+<div class="project-container grid-y grid-margin-y" *ngIf="project">
+  <div class="cell project-header grid-x grid-margin-x align-middle">
+    <div class="cell shrink back-arrow-container" [routerLink]="[ '' ]">
+      <ng-container *ngIf="isBrowser">
+        <svg-icon src="assets/icons/arrow-back.svg" class="back-arrow"></svg-icon>
+      </ng-container>
+    </div>
+    <div class="cell auto"></div>
+    <div class="cell shrink">
+      <h1 class="projects-header margin-right-1"><small>{{project?.title}}</small></h1>
+    </div>
+  </div>
+
+  <div class="cell project-body-container">
+    <!-- Temp -->
+    <div>
+      <p [style.fontSize]="'1.25rem'" [style.color]="'yellow'">I haven't finished this section yet... but I have my
+        writer working overtime!</p>
+      <div class="text-center">
+        <iframe src="https://giphy.com/embed/FIxjQGnjmNt5u" width="400" height="300" frameBorder="0" class="giphy-embed"
+          allowFullScreen></iframe>
+      </div>
+      <p [style.fontSize]="'1.25rem'" [style.color]="'cyan'" class="text-right">Meanwhile, feel free to checkout the
+        <a [routerLink]="[ '/about']">About</a> page!
+      </p>
+    </div>
+  </div>
+</div>
+<div *ngIf="!project" class="text-right">
+  <h3 class="not-found-text">Project <q>{{projectName}}</q> not found.</h3>
+</div>

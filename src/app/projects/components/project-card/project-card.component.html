@@ -1,0 +1,22 @@
+<div class="project-card-container grid-y">
+  <div *ngIf="project && project.previewPhotoPath">
+    <div class="project-card-preview-container" [style.backgroundImage]="'url(' + project?.previewPhotoPath + ')'">
+    </div>
+  </div>
+  <div class="cell shrink project-card-header-container">
+    <h4 class="project-title">{{project?.title}}</h4>
+    <p class="project-short-description">{{project?.shortDescription}}</p>
+  </div>
+  <div class="cell auto project-card-body-container grid-y align-middle align-center">
+    <div class="cell project-card-logo-container {{ project?.name }}" *ngIf="project && project.svgLogoPath.length">
+      <ng-container *ngIf="isBrowser">
+        <svg-icon src="{{project.svgLogoPath}}" class="project-card-logo"></svg-icon>
+      </ng-container>
+    </div>
+  </div>
+  <div class="cell shrink grid-x project-card-footer-container">
+    <div class="cell shrink project-tag" *ngFor="let tag of project?.tags">
+      {{tag}}
+    </div>
+  </div>
+</div>
