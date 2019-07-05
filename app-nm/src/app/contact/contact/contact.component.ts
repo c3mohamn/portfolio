@@ -9,7 +9,8 @@ import {
   FormGroup,
   FormBuilder,
   Validators,
-  FormControl
+  FormControl,
+  FormGroupDirective
 } from '@angular/forms';
 
 @Component({
@@ -29,9 +30,9 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.createForm();
   }
 
-  submitForm({ value, valid }): void {
+  submitForm({ value, valid }, formDirective: FormGroupDirective): void {
     if (valid) {
-      this.sendEmail(value);
+      this.sendEmail(value, formDirective);
     }
   }
 
@@ -54,7 +55,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     });
   }
 
-  sendEmail(form: ContactForm): void {
+  sendEmail(form: ContactForm, formDirective: FormGroupDirective): void {
     this.submitting = true;
     this.contactService
       .sendEmail(form)
@@ -63,6 +64,7 @@ export class ContactComponent implements OnInit, OnDestroy {
         result => {
           // console.log(result);
           this.contactForm.reset();
+          formDirective.resetForm();
           this.serverResponseMsg = result.message;
           this.error = false;
           this.submitting = false;

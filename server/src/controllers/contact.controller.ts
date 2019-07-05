@@ -33,7 +33,7 @@ router.post('/send', (req: Request, res: Response) => {
     sgMail
       .send(msg)
       .then(() => {
-        res.status(200).send({ message: 'Message send successfully!' });
+        res.status(200).send({ message: 'Message sent successfully!' });
       })
       .catch(error => {
         console.error(error.toString());
