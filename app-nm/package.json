@@ -1,22 +1,40 @@
 {
-  "name": "app-nm",
-  "version": "0.0.0",
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Online portfolio for Nasir Mohammad",
+  "author": "Nasir Mohammad",
+  "homepage": "https://github.com/c3mohamn/portfolio#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c3mohamn/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/c3mohamn/portfolio/issues"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": "11.x",
+    "npm": "6.x"
+  },
   "scripts": {
     "ng": "ng",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "start": "node dist/server",
+    "build": "ng build",
+    "test:ci": "npm run test:headless",
     "test:client": "ng test",
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
     "test:lint:e2e": "ng lint && npm run test:headless && ng e2e --protractor-config='e2e/protractor.ci.conf.js'",
-    "build": "ng build",
-    "start": "node dist/server",
     "client:dev": "ng serve --proxy-config proxy.config.json",
-    "server:dev": "nodemon server.ts",
+    "server:dev": "npm run build:ssr && nodemon server.ts",
+    "all:dev": "concurrently \"npm:client:dev\" \"npm:server:dev\"",
     "build:client": "ng build --aot --prod --build-optimizer",
     "build:server": "webpack --config webpack.server.config.js --progress --colors",
-    "build:ssr": "npm run build:client-and-ssr-bundles && npm run build:server",
+    "build:ssr": "npm run build:client-and-ssr-bundles",
     "build:client-and-ssr-bundles": "npm run build:client && ng run app-nm:server:production --bundleDependencies all",
-    "postinstall": "npm run build:ssr"
+    "prettier:format": "prettier --print-width 80 --single-quote --trailing-comma none --write **/*.ts",
+    "postinstall": "npm run build:ssr && npm run build:server"
   },
   "private": true,
   "dependencies": {
@@ -64,6 +82,8 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.1",
+    "concurrently": "^4.1.1",
+    "cross-env": "^5.2.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.0.0",
@@ -78,6 +98,21 @@
     "tslint": "~5.11.0",
     "webpack-cli": "^3.3.5"
   },
+  "keywords": [
+    "Nasir",
+    "Mohammad",
+    "Portfolio",
+    "Angular",
+    "App",
+    "Website",
+    "Mongo",
+    "Db",
+    "Resume",
+    "Blog",
+    "Express",
+    "Node",
+    "Typescript"
+  ],
   "nodemonConfig": {
     "restartable": "rs",
     "ignore": [

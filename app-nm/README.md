@@ -1,28 +1,57 @@
-# AppNm
+[![Build Status](https://travis-ci.com/c3mohamn/portfolio.svg?branch=master)](https://travis-ci.com/c3mohamn/portfolio)
+
+# Portfolio
+
+This is the source code for Nasir's [portfolio website](https://nasirm.ca).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
 Current Angular version is 8.0.2.
 
-## Development server
+## Technology
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [`Angular (8+)`](https://angular.io/) as the front-end
+- [`Nodejs`](https://nodejs.org) as the server
+- [`Vscode`](https://code.visualstudio.com/) as code editor
+- [`Travis CI`](https://travis-ci.org/) as CI
+- [`Ngrx`](https://ngrx.io/) as front-end data & state management
+- [`Google Analytics`](https://analytics.google.com) & GTM for tracking traffic
+- [`Zurb Foundation`](https://foundation.zurb.com/) as css library
+- [`Heroku`](https://heroku.com) for hosting
+- [`Clourflare`](https://www.cloudflare.com/) for website security
+- [`Trello`](https://trello.com/b/hoS9NAOg/portfolio-ideas) for recording and tracking ideas
+- [`Fullstory`](https://www.fullstory.com) for digital analytics
+- [`SendGrid`](https://sendgrid.com/) for transactional emails
 
-## Code scaffolding
+My [about page](https://nasirm.ca/about) contains a bigger list and longer description of the tech used.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Commands
 
-## Build
+Run `npm install` to install all packages.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run test:client` to run Angular tests.
 
-## Running unit tests
+Run `npm run client:dev` to start the angular client on port 4200.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run server:dev` to build front-end bundles and starts the server on port 3000.
+
+Run `npm run all:dev` to concurrently run client-dev and server-dev.
+
+Run `npm run build:client` to build the angular browser client to dist/browser/.
+
+Run `npm run build:server` to build server to dist/.
+
+Run `npm run build:ssr` to build angular server to dist/server/.
+
+Run `prettier-format` to format all typescript files (requires prettier-cli).
 
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Further help
 
