@@ -16,6 +16,8 @@ This is the source code for Nasir's [portfolio website](https://nasirm.ca).
 - [`Heroku`](https://heroku.com) for hosting
 - [`Clourflare`](https://www.cloudflare.com/) for website security
 - [`Trello`](https://trello.com/b/hoS9NAOg/portfolio-ideas) for recording and tracking ideas
+- [`Fullstory`](https://www.fullstory.com) for digital analytics
+- [`SendGrid`](https://sendgrid.com/) for transactional emails
 
 My [about page](https://nasirm.ca/about) contains a bigger list and longer description of the tech used.
 

@@ -82,8 +82,9 @@ export const iconList: TechIcon[] = [
     </small></h4>
     <br />
     Foundation is a front-end framework
-     like Bootstrap. It is very customizable and allows you to include the features you want. I
-     primarily use it for it's scss functions and grid system.`
+     like Bootstrap. It is very customizable and allows you to include the features you want. 
+     <br><br>
+     I primarily use it for it's scss functions and grid system.`
   },
   {
     title: 'Material Design',
@@ -98,7 +99,8 @@ export const iconList: TechIcon[] = [
     <br />
     Material is a design concept
      created by Google. I have used, on several occasions, Angular Material components, icons and fonts.
-     For this website, I have only used their fonts and icons thus far.`
+     <br /> <br />
+     For this website, I am using Angular Material, Google fonts,  icons.`
   },
   {
     title: 'Github',
@@ -189,6 +191,35 @@ export const iconList: TechIcon[] = [
     Google Tag Manager is a tag
      management system used for tracking and analytics of websites. It pairs well with Google Analytics
      and I use to track page views and clicks.`
+  },
+  {
+    title: 'SendGrid',
+    class: 'sendgrid',
+    description: `
+    <h4><small>
+    <a class="no-underline" href="https://sendgrid.com/" target="_blank" rel="noopener"
+        aria-label="SendGrid link" SendGrid">
+        SendGrid
+      </a>
+    </small></h4>
+    <br />
+    SendGrid is a customer communication platform for transactional and marketing emails. I am currently using it
+    to send contact form messages to my email.
+    `
+  },
+  {
+    title: 'Fullstory',
+    class: 'fullstory',
+    description: `
+    <h4><small>
+    <a class="no-underline" href="https://www.fullstory.com" target="_blank" rel="noopener"
+        aria-label="Fullstory link" Fullstory">
+        Fullstory
+      </a>
+    </small></h4>
+    <br />
+    Fullstory is a digital analytics platform that shows video replays of user experiences.
+    `
   },
   {
     title: 'Photoshop',

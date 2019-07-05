@@ -9,6 +9,7 @@ import { RouterStateService } from './state/router-state/router-state.service';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './state';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -21,7 +22,8 @@ describe('AppComponent', () => {
         HttpClientModule,
         AngularSvgIconModule,
         StoreModule.forRoot(reducers),
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        MaterialModule
       ],
       declarations: [AppComponent, HeaderComponent, FooterComponent],
       providers: [RouterStateService]

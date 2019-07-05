@@ -4,7 +4,7 @@
   "description": "Online portfolio for Nasir Mohammad",
   "main": "index.js",
   "scripts": {
-    "client-dev": "cd app-nm && npm run ng serve",
+    "client-dev": "cd app-nm && npm start",
     "client-prod": "cd app-nm && npm run build-prod",
     "client-link": "cd app-nm && ng lint",
     "server-dev": "cd server && cross-env npm run server-dev",

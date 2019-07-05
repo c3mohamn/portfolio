@@ -1,10 +1,17 @@
 @import 'variables';
 
-.contact-container {
-  font-size: 1.5rem;
+.social-media-links {
+  clear: right;
 }
 
-.contact-button {
-  margin-top: 2rem;
-  max-width: 10rem;
+.response-message {
+  transition: $nm-transition-fast;
+
+  &.error {
+    color: $nm-red;
+  }
+
+  &.good {
+    color: $nm-green;
+  }
 }

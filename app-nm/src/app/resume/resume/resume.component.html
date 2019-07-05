@@ -7,10 +7,10 @@
     </div>
     <div class="cell auto"></div>
     <div class="cell shrink">
-      <a class="button" target="_blank" rel="noopener" href="assets/files/nasir_mohammad_cv_web.pdf"
-        aria-label="Open Nasir Resume pdf" title="Nasir Resume pdf">PDF</a>
-      <a class="button margin-left-1" rel="noopener" href="assets/files/nasir_mohammad_cv_web.docx"
-        aria-label="Open Nasir Resume docx" title="Nasir Resume docx">DOCX</a>
+      <a mat-fab color="secondary" target="_blank" rel="noopener" matTooltip="View Resume as PDF"
+        href="assets/files/nasir_mohammad_cv_web.pdf" aria-label="Open Nasir Resume pdf">PDF</a>
+      <a mat-fab color="secondary" class="margin-left-1" rel="noopener" href="assets/files/nasir_mohammad_cv_web.docx"
+        aria-label="Open Nasir Resume docx" matTooltip="View Resume as DOCX">DOCX</a>
     </div>
   </div>
   <!-- Main Column -->
@@ -46,8 +46,8 @@
       <h5 class="nm-header-1">Projects</h5>
       <!-- Warmains -->
       <h5 class="nm-header-2"><small><a href="https://github.com/c3mohamn/angular-warmains" target="_blank"
-            rel="noopener" aria-label="Go to the Github repository for Warmains"
-            title="Link to Warmains Github repo">Warmains</a>, <i>Personal
+            rel="noopener" aria-label="Link to Warmains Repo" matTooltip="Link to Warmains Github Repo"
+            [matTooltipPosition]="'above'">Warmains</a>, <i>Personal
             Website</i></small></h5>
       <ul class="list">
         <li>Created a shareable character development tool for World of Warcraft </li>
