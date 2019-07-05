@@ -2,7 +2,7 @@ import { Config } from '../models/config.model';
 
 function getConfigData(): Config {
   let config: Config = {
-    SENDGRID_API_KEY: '',
+    SENDGRID_API_KEY: ''
   };
 
   if (process.env.NODE_ENV === 'production') {
