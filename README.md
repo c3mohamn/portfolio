@@ -11,10 +11,12 @@ Current Angular version is 8.0.2.
 ## Technology
 
 - [`Angular (8+)`](https://angular.io/) as the front-end
-- [`Nodejs`](https://nodejs.org) as the server
+- [`Angular Redux (NgRx)`](https://ngrx.io/) as front-end data & state management
+- [`Angular Material`](https://material.angular.io/) for material components
+- [`Angular Universal`](https://angular.io/guide/universal) for ssr
+- [`Nodejs`](https://nodejs.org) as the server environment
 - [`Vscode`](https://code.visualstudio.com/) as code editor
 - [`Travis CI`](https://travis-ci.org/) as CI
-- [`Ngrx`](https://ngrx.io/) as front-end data & state management
 - [`Google Analytics`](https://analytics.google.com) & GTM for tracking traffic
 - [`Zurb Foundation`](https://foundation.zurb.com/) as css library
 - [`Heroku`](https://heroku.com) for hosting
