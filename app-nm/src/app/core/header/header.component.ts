@@ -1,8 +1,15 @@
-import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  Inject,
+  PLATFORM_ID
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterStateService } from 'src/app/state/router-state/router-state.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'nm-header',
@@ -21,14 +28,20 @@ export class HeaderComponent implements OnInit, OnDestroy {
     { name: 'resume', url: '/resume' },
     { name: 'contact', url: '/contact' }
   ];
+  isBrowser: boolean;
 
   constructor(
     private router: Router,
-    private routeService: RouterStateService
-  ) {}
+    private routeService: RouterStateService,
+    @Inject(PLATFORM_ID) private platformId
+  ) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   ngOnInit() {
-    window.addEventListener('scroll', this.scroll, true);
+    if (this.isBrowser) {
+      window.addEventListener('scroll', this.scroll, true);
+    }
 
     this.routeService
       .getCurrentPageTitle()
@@ -41,7 +54,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    window.removeEventListener('scroll', this.scroll, true);
+    if (this.isBrowser) {
+      window.removeEventListener('scroll', this.scroll, true);
+    }
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
   }

@@ -9,7 +9,9 @@
   </div>
   <div class="cell auto project-card-body-container grid-y align-middle align-center">
     <div class="cell project-card-logo-container {{ project?.name }}" *ngIf="project && project.svgLogoPath.length">
-      <svg-icon src="{{project.svgLogoPath}}" class="project-card-logo"></svg-icon>
+      <ng-container *ngIf="isBrowser">
+        <svg-icon src="{{project.svgLogoPath}}" class="project-card-logo"></svg-icon>
+      </ng-container>
     </div>
   </div>
   <div class="cell shrink grid-x project-card-footer-container">

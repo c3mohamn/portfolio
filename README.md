@@ -33,8 +33,8 @@ My [about page](https://nasirm.ca/about) contains a bigger list and longer descr
 
 `npm run server-prod` transpiles typescript server files to dist/ folder as javascript files.
 
-`npm run all-dev` concurrently runs client-dev and server-dev.
+`npm run all:dev` concurrently runs client-dev and server-dev.
 
-`npm run all-prod` concurrently runs client-prod and server-prod.
+`npm run all:prod` concurrently runs client-prod and server-prod.
 
-`npm run test-ng` starts the angular tests.
+`npm run test:ng` starts the angular tests.

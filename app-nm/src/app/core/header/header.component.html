@@ -9,17 +9,21 @@
       {{page.name}}
     </div>
     <div class="cell shrink hide-for-medium">
-      <svg-icon src="assets/icons/menu.svg" class="menu-icon disable-select" [svgStyle]="{'width.px': 32}"
-        (click)="toggleMobileMenu()">
-      </svg-icon>
+      <ng-container *ngIf="isBrowser">
+        <svg-icon src="assets/icons/menu.svg" class="menu-icon disable-select" [svgStyle]="{'width.px': 32}"
+          (click)="toggleMobileMenu()">
+        </svg-icon>
+      </ng-container>
     </div>
   </div>
 </div>
 <div class="mobile-menu-container hide-for-medium" [hidden]="!showMobileMenu">
   <div class="mobile-menu-header grid-x align-middle align-right">
     <div class="cell shrink">
-      <svg-icon src="assets/icons/close.svg" class="menu-icon close disable-select" [svgStyle]="{'width.px': 32}"
-        (click)="toggleMobileMenu()"></svg-icon>
+      <ng-container *ngIf="isBrowser">
+        <svg-icon src="assets/icons/close.svg" class="menu-icon close disable-select" [svgStyle]="{'width.px': 32}"
+          (click)="toggleMobileMenu()"></svg-icon>
+      </ng-container>
     </div>
   </div>
   <div class="mobile-menu-links grid-y grid-margin-y align-center align-middle margin-top-3">

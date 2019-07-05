@@ -10,7 +10,9 @@
     <div class="cell grid-x grid-margin-x grid-margin-y nm-body">
       <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{ icon.title }}"
         (click)="showDescriptionFor(icon)" [ngClass]="{ selected: selected === icon.class }">
-        <svg-icon src="assets/icons/{{ icon.class }}.svg" class="about-icon {{ icon.class }}"></svg-icon>
+        <ng-container *ngIf="isBrowser">
+          <svg-icon src="assets/icons/{{ icon.class }}.svg" class="about-icon {{ icon.class }}"></svg-icon>
+        </ng-container>
         <div class="text-center about-icon-caption">
           {{icon.title}}
         </div>
