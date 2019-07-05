@@ -3,14 +3,16 @@ import {
   MatInputModule,
   MatSelectModule,
   MatFormFieldModule,
-  MatButtonModule
+  MatButtonModule,
+  MatTooltipModule
 } from '@angular/material';
 
 const modules = [
   MatFormFieldModule,
   MatInputModule,
   MatSelectModule,
-  MatButtonModule
+  MatButtonModule,
+  MatTooltipModule
 ];
 
 @NgModule({
