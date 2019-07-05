@@ -16,7 +16,9 @@ router.post('/send', (req: Request, res: Response) => {
   // console.log(form);
 
   if (!checkMailParams(form)) {
-    res.status(400).send({ message: 'Bad request. Please fill out the contact form correctly.' });
+    res.status(400).send({
+      message: 'Bad request. Please fill out the contact form correctly.'
+    });
   } else {
     const msg: MailData = {
       to: 'nasir.m23@hotmail.com',
@@ -27,7 +29,7 @@ router.post('/send', (req: Request, res: Response) => {
       By: ${form.name} <br/>
       Phone: ${form.phone} <br/>
       Email: ${form.email}
-      `,
+      `
     };
 
     sgMail

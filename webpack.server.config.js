@@ -7,20 +7,20 @@ module.exports = {
   mode: 'none',
   entry: {
     // This is our Express server for Dynamic universal
-    index: './src/index.ts',
+    server: './server.ts'
   },
   externals: {
-    '../app-nm/dist/server/main': 'require("../app-nm/server/main")',
+    './dist/server/main': 'require("./server/main")'
   },
   target: 'node',
   resolve: { extensions: ['.ts', '.js'] },
   optimization: {
-    minimize: false,
+    minimize: false
   },
   output: {
     // Puts the output at the root of the dist folder
     path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: '[name].js'
   },
   module: {
     noParse: /polyfills-.*\.js/,
@@ -30,22 +30,22 @@ module.exports = {
         // Mark files inside `@angular/core` as using SystemJS style dynamic imports.
         // Removing this will cause deprecation warnings to appear.
         test: /(\\|\/)@angular(\\|\/)core(\\|\/).+\.js$/,
-        parser: { system: true },
-      },
-    ],
+        parser: { system: true }
+      }
+    ]
   },
   plugins: [
     new webpack.ContextReplacementPlugin(
       // fixes WARNING Critical dependency: the request of a dependency is an expression
       /(.+)?angular(\\|\/)core(.+)?/,
-      path.join(__dirname, '../app-nm/src'), // location of your src
+      path.join(__dirname, 'src'), // location of your src
       {} // a map of your routes
     ),
     new webpack.ContextReplacementPlugin(
       // fixes WARNING Critical dependency: the request of a dependency is an expression
       /(.+)?express(\\|\/)(.+)?/,
-      path.join(__dirname, '../app-nm/src'),
+      path.join(__dirname, 'src'),
       {}
-    ),
-  ],
+    )
+  ]
 };

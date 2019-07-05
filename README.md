@@ -4,6 +4,10 @@
 
 This is the source code for Nasir's [portfolio website](https://nasirm.ca).
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+
+Current Angular version is 8.0.2.
+
 ## Technology
 
 - [`Angular (8+)`](https://angular.io/) as the front-end
@@ -23,18 +27,32 @@ My [about page](https://nasirm.ca/about) contains a bigger list and longer descr
 
 ## Commands
 
-`npm install` installs packages in all directories using `preinstall`.
+Run `npm install` to install all packages.
 
-`npm run client-dev` starts the angular client on port 4200.
+Run `npm run test:client` to run Angular tests.
 
-`npm run client-prod` builds the angular client to dist/app-nm folder.
+Run `npm run client:dev` to start the angular client on port 4200.
 
-`npm run server-dev` starts the server on port 3000.
+Run `npm run server:dev` to build front-end bundles and starts the server on port 3000.
 
-`npm run server-prod` transpiles typescript server files to dist/ folder as javascript files.
+Run `npm run all:dev` to concurrently run client-dev and server-dev.
 
-`npm run all:dev` concurrently runs client-dev and server-dev.
+Run `npm run build:client` to build the angular browser client to dist/browser/.
 
-`npm run all:prod` concurrently runs client-prod and server-prod.
+Run `npm run build:server` to build server to dist/.
 
-`npm run test:ng` starts the angular tests.
+Run `npm run build:ssr` to build angular server to dist/server/.
+
+Run `prettier-format` to format all typescript files (requires prettier-cli).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
