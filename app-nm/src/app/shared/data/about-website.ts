@@ -82,8 +82,9 @@ export const iconList: TechIcon[] = [
     </small></h4>
     <br />
     Foundation is a front-end framework
-     like Bootstrap. It is very customizable and allows you to include the features you want. I
-     primarily use it for it's scss functions and grid system.`
+     like Bootstrap. It is very customizable and allows you to include the features you want. 
+     <br><br>
+     I primarily use it for it's scss functions and grid system.`
   },
   {
     title: 'Material Design',
@@ -98,7 +99,8 @@ export const iconList: TechIcon[] = [
     <br />
     Material is a design concept
      created by Google. I have used, on several occasions, Angular Material components, icons and fonts.
-     For this website, I have only used their fonts and icons thus far.`
+     <br /> <br />
+     For this website, I am using Angular Material, Google fonts,  icons.`
   },
   {
     title: 'Github',
