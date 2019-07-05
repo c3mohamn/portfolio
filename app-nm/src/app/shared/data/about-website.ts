@@ -191,6 +191,21 @@ export const iconList: TechIcon[] = [
      and I use to track page views and clicks.`
   },
   {
+    title: 'SendGrid',
+    class: 'sendgrid',
+    description: `
+    <h4><small>
+    <a class="no-underline" href="https://sendgrid.com/" target="_blank" rel="noopener"
+        aria-label="SendGrid link" SendGrid">
+        SendGrid
+      </a>
+    </small></h4>
+    <br />
+    SendGrid is a customer communication platform for transactional and marketing emails. I am currently using it
+    to send contact form messages to my email.
+    `
+  },
+  {
     title: 'Fullstory',
     class: 'fullstory',
     description: `
