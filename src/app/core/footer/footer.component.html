@@ -1,0 +1,16 @@
+<div class="footer-container grid-y align-center align-middle">
+  <div class="grid-x footer-social-icons align-center align-middle">
+    <div class="cell footer-social-icon-container" *ngFor="let item of socialMediaList" title="{{item.title}}">
+      <a href="{{item.link}}" target="{{item.media !== 'microsoft-outlook' ? '_blank' : ''}}" rel="noopener"
+        aria-label="Go to Nasir's social media profile page" alt="social media icon">
+        <ng-container *ngIf="isBrowser">
+          <mat-icon svgIcon="{{item.media}}" class="footer-social-icon"></mat-icon>
+        </ng-container>
+        <ng-container *ngIf="!isBrowser">
+          <img src="assets/icons/placeholder.svg">
+        </ng-container>
+      </a>
+    </div>
+  </div>
+  <p class="footer-main-text text-center">&copy; 2019 Created by Nasir Mohammad</p>
+</div>
