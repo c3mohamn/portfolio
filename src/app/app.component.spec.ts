@@ -9,7 +9,7 @@ import { RouterStateService } from './state/router-state/router-state.service';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './state';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material/material.module';
+import { MatCustomIconService } from './shared/services/mat-custom-icon.service';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -22,11 +22,10 @@ describe('AppComponent', () => {
         HttpClientModule,
         AngularSvgIconModule,
         StoreModule.forRoot(reducers),
-        BrowserAnimationsModule,
-        MaterialModule
+        BrowserAnimationsModule
       ],
       declarations: [AppComponent, HeaderComponent, FooterComponent],
-      providers: [RouterStateService]
+      providers: [RouterStateService, MatCustomIconService]
     }).compileComponents();
   }));
 

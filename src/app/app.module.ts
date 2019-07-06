@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { StateModule } from './state/state.module';
+import { MatCustomIconService } from './shared/services/mat-custom-icon.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +22,7 @@ import { StateModule } from './state/state.module';
       enabled: environment.production
     })
   ],
-  providers: [],
+  providers: [MatCustomIconService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
