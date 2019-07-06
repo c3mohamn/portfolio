@@ -1,10 +1,14 @@
 import 'zone.js/dist/zone-node';
 import 'reflect-metadata';
+import { enableProdMode } from '@angular/core';
 
 import express, { Application } from 'express';
 import { join } from 'path';
 import bodyParser from 'body-parser';
 import routes from './server/controllers';
+
+// Faster server renders w/ Prod mode (dev mode never needed)
+enableProdMode();
 
 const app: Application = express();
 const port: number | string = process.env.PORT || 3000;
