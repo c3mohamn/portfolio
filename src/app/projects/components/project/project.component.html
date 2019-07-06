@@ -1,8 +1,11 @@
 <div class="project-container grid-y grid-margin-y" *ngIf="project">
   <div class="cell project-header grid-x grid-margin-x align-middle">
-    <div class="cell shrink back-arrow-container" [routerLink]="[ '' ]">
+    <div class="cell shrink" [routerLink]="[ '' ]">
       <ng-container *ngIf="isBrowser">
-        <svg-icon src="assets/icons/arrow-back.svg" class="back-arrow"></svg-icon>
+        <mat-icon svgIcon="arrow-back" class="back-arrow"></mat-icon>
+      </ng-container>
+      <ng-container *ngIf="!isBrowser">
+        <img src="assets/icons/placeholder.svg">
       </ng-container>
     </div>
     <div class="cell auto"></div>

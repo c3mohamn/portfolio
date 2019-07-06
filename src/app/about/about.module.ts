@@ -2,16 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './about/about.component';
-import { AngularSvgIconModule } from 'angular-svg-icon';
-import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [AboutComponent],
-  imports: [
-    CommonModule,
-    AboutRoutingModule,
-    AngularSvgIconModule,
-    HttpClientModule
-  ]
+  imports: [CommonModule, AboutRoutingModule, MatIconModule]
 })
 export class AboutModule {}

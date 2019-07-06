@@ -10,9 +10,12 @@
     </div>
     <div class="cell shrink hide-for-medium">
       <ng-container *ngIf="isBrowser">
-        <svg-icon src="assets/icons/menu.svg" class="menu-icon disable-select" [svgStyle]="{'width.px': 32}"
-          (click)="toggleMobileMenu()">
-        </svg-icon>
+        <ng-container *ngIf="isBrowser">
+          <mat-icon svgIcon="menu" class="menu-icon disable-select" (click)="toggleMobileMenu()"></mat-icon>
+        </ng-container>
+        <ng-container *ngIf="!isBrowser">
+          <img src="assets/icons/placeholder.svg">
+        </ng-container>
       </ng-container>
     </div>
   </div>
@@ -21,8 +24,10 @@
   <div class="mobile-menu-header grid-x align-middle align-right">
     <div class="cell shrink">
       <ng-container *ngIf="isBrowser">
-        <svg-icon src="assets/icons/close.svg" class="menu-icon close disable-select" [svgStyle]="{'width.px': 32}"
-          (click)="toggleMobileMenu()"></svg-icon>
+        <mat-icon svgIcon="close" class="menu-icon close disable-select" (click)="toggleMobileMenu()"></mat-icon>
+      </ng-container>
+      <ng-container *ngIf="!isBrowser">
+        <img src="assets/icons/placeholder.svg">
       </ng-container>
     </div>
   </div>

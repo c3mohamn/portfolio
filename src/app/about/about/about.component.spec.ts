@@ -1,8 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AboutComponent } from './about.component';
-import { AngularSvgIconModule } from 'angular-svg-icon';
-import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;
@@ -10,7 +9,7 @@ describe('AboutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [AngularSvgIconModule, HttpClientModule],
+      imports: [MatIconModule],
       declarations: [AboutComponent]
     }).compileComponents();
   }));

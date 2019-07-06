@@ -9,7 +9,7 @@ export interface Project {
   contributions: string;
   takeaways: string;
   tags?: string[];
-  svgLogoPath?: string;
+  svgLogoName?: string;
   previewPhotoPath?: string;
 }
 

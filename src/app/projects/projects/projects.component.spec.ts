@@ -10,8 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollDirective } from 'ngx-page-scroll';
 import { ProjectComponent } from '../components/project/project.component';
-import { AngularSvgIconModule } from 'angular-svg-icon';
-import { HttpClientModule } from '@angular/common/http';
+import { MatIconModule } from '@angular/material';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
@@ -24,8 +23,7 @@ describe('ProjectsComponent', () => {
         StoreModule.forRoot(reducers),
         BrowserAnimationsModule,
         NgxPageScrollCoreModule,
-        AngularSvgIconModule,
-        HttpClientModule
+        MatIconModule
       ],
       declarations: [
         ProjectsComponent,

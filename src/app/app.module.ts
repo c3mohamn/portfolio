@@ -9,6 +9,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { StateModule } from './state/state.module';
 import { MatCustomIconService } from './shared/services/mat-custom-icon.service';
+import { MatIconModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +20,8 @@ import { MatCustomIconService } from './shared/services/mat-custom-icon.service'
     AppRoutingModule,
     CoreModule,
     StateModule,
+    MatIconModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production
     })

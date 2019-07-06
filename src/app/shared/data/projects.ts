@@ -12,7 +12,7 @@ export const projects: Project[] = [
     contributions: ``,
     takeaways: ``,
     tags: ['Angular', '.NET', 'SQL', 'Professional'],
-    svgLogoPath: 'assets/icons/source-logo.svg',
+    svgLogoName: 'source-logo',
     previewPhotoPath: 'assets/images/projects/preview/source.png'
   },
   {
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     contributions: ``,
     takeaways: ``,
     tags: ['Angular', 'Nodejs', 'Mongo', 'Gaming', 'Personal'],
-    svgLogoPath: 'assets/icons/horde-logo.svg',
+    svgLogoName: 'horde-logo',
     previewPhotoPath: 'assets/images/projects/preview/warmains.png'
   },
   {
@@ -40,7 +40,7 @@ export const projects: Project[] = [
     contributions: ``,
     takeaways: ``,
     tags: ['Angular', 'Nodejs', 'Mongo', 'Engineering', 'School'],
-    svgLogoPath: 'assets/icons/book-me-logo.svg',
+    svgLogoName: 'book-me-logo',
     previewPhotoPath: 'assets/images/projects/preview/book-me.png'
   },
   {
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     contributions: ``,
     takeaways: ``,
     tags: ['Android', 'Java', 'Engineering', 'School'],
-    svgLogoPath: 'assets/icons/course-correct-logo.svg',
+    svgLogoName: 'course-correct-logo',
     previewPhotoPath: 'assets/images/projects/preview/course-correct.png'
   },
   {
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     contributions: ``,
     takeaways: ``,
     tags: ['Axure', 'HCI', 'Prototyping', 'Research', 'School'],
-    svgLogoPath: 'assets/icons/mental-health.svg',
+    svgLogoName: 'mental-health',
     previewPhotoPath:
       'assets/images/projects/preview/hands-for-mental-health.png'
   },
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     contributions: ``,
     takeaways: ``,
     tags: ['Heuristics', 'HCI', 'Heuristics', 'Study', 'School'],
-    svgLogoPath: 'assets/icons/cineplex.svg',
+    svgLogoName: 'cineplex',
     previewPhotoPath: 'assets/images/projects/preview/cineplex.png'
   },
   {
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     contributions: ``,
     takeaways: ``,
     tags: ['React', 'HCI', 'Experiment', 'Study', 'School'],
-    svgLogoPath: 'assets/icons/keyboard.svg',
+    svgLogoName: 'keyboard',
     previewPhotoPath: 'assets/images/projects/preview/smart-watch.png'
   }
 ];

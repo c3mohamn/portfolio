@@ -1,18 +1,15 @@
 @import 'variables';
 
 .project-container {
-  .back-arrow-container {
+  .back-arrow {
     width: 48px;
     height: 48px;
     cursor: pointer;
+    fill: $nm-primary-light;
+    transition: $nm-transition-fast;
 
-    .back-arrow {
-      fill: $nm-primary-light;
-      transition: $nm-transition-fast;
-
-      &:hover {
-        fill: $nm-secondary;
-      }
+    &:hover {
+      fill: $nm-secondary;
     }
   }
 

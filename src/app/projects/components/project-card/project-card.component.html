@@ -8,9 +8,12 @@
     <p class="project-short-description">{{project?.shortDescription}}</p>
   </div>
   <div class="cell auto project-card-body-container grid-y align-middle align-center">
-    <div class="cell project-card-logo-container {{ project?.name }}" *ngIf="project && project.svgLogoPath.length">
+    <div class="cell project-card-logo-container {{ project?.name }}" *ngIf="project && project.svgLogoName.length">
       <ng-container *ngIf="isBrowser">
-        <svg-icon src="{{project.svgLogoPath}}" class="project-card-logo"></svg-icon>
+        <mat-icon svgIcon="{{project?.svgLogoName}}" class="project-card-logo {{ project?.name }}"></mat-icon>
+      </ng-container>
+      <ng-container *ngIf="!isBrowser">
+        <img src="assets/icons/placeholder.svg">
       </ng-container>
     </div>
   </div>

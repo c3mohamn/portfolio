@@ -2,11 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HeaderComponent } from './header.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientModule } from '@angular/common/http';
-import { AngularSvgIconModule } from 'angular-svg-icon';
 import { RouterStateService } from 'src/app/state/router-state/router-state.service';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from 'src/app/state';
+import { MatIconModule } from '@angular/material';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -16,8 +15,7 @@ describe('HeaderComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        HttpClientModule,
-        AngularSvgIconModule,
+        MatIconModule,
         StoreModule.forRoot(reducers)
       ],
       providers: [RouterStateService],
