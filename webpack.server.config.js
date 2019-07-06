@@ -15,7 +15,7 @@ module.exports = {
   target: 'node',
   resolve: { extensions: ['.ts', '.js'] },
   optimization: {
-    minimize: false
+    minimize: true
   },
   output: {
     // Puts the output at the root of the dist folder

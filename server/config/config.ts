@@ -5,8 +5,6 @@ function getConfigData(): Config {
     SENDGRID_API_KEY: ''
   };
 
-  console.log(process.env.NODE_ENV);
-
   if (process.env.NODE_ENV === 'development') {
     const configDev: Config = require('../../config.dev.json');
     config = configDev;
