@@ -46,6 +46,8 @@ module.exports = {
       /(.+)?express(\\|\/)(.+)?/,
       path.join(__dirname, 'src'),
       {}
-    )
+    ),
+    // Temp to suppress warnings for mongoose and require_optional
+    new webpack.ContextReplacementPlugin(/.*/)
   ]
 };
