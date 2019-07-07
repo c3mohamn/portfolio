@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { iconList } from 'src/app/shared/data/about-website';
 import { TechIcon } from 'src/app/shared/models/about-tech.model';
+import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
 
 @Component({
   selector: 'nm-about',
@@ -12,9 +13,13 @@ export class AboutComponent implements OnInit {
   description = '';
   selected = '';
 
-  constructor() {}
+  constructor(private metaTagService: MetaTagService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.metaTagService.setTitle('About | Nasir Mohammad Portfolio');
+    this.metaTagService.updateImgTagDefault();
+    this.metaTagService.updateDescriptionTagDefault();
+  }
 
   showDescriptionFor(icon: TechIcon): void {
     if (this.selected === icon.class) {

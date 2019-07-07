@@ -4,6 +4,7 @@ import { projects } from 'src/app/shared/data/projects';
 import { RouterStateService } from 'src/app/state/router-state/router-state.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
 
 @Component({
   selector: 'nm-project',
@@ -16,7 +17,10 @@ export class ProjectComponent implements OnInit, OnDestroy {
   project: Project;
   projectName: string;
 
-  constructor(private routeService: RouterStateService) {}
+  constructor(
+    private routeService: RouterStateService,
+    private metaTagService: MetaTagService
+  ) {}
 
   ngOnInit() {
     this.routeService
@@ -26,6 +30,18 @@ export class ProjectComponent implements OnInit, OnDestroy {
         this.projectName = data && data.project;
         if (this.projectName) {
           this.project = projects.find(p => p.name === this.projectName);
+          // set meta tags
+          this.metaTagService.setTitle(
+            `${this.project.title} | Projects | Nasir Mohammad Portfolio`
+          );
+          this.metaTagService.updateDescriptionTag(
+            this.project.shortDescription
+          );
+          this.metaTagService.updateImgTag(
+            `https://www.nasirm.ca/${this.project.previewImgRelativePath}`
+          );
+        } else {
+          this.metaTagService.setTitle(`Projects | Nasir Mohammad Portfolio`);
         }
       });
   }
