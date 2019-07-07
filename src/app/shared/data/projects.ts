@@ -19,7 +19,7 @@ export const projects: Project[] = [
     id: 1,
     name: 'warmains',
     title: `Warmains`,
-    shortDescription: `Character development tool for World of Warcraft.`,
+    shortDescription: `A character, talent, and raid planning tool for World of Warcraft.`,
     type: ProjectType.Personal,
     purpose: ``,
     features: ``,
