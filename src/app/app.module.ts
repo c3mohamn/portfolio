@@ -8,7 +8,7 @@ import { CoreModule } from './core/core.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { StateModule } from './state/state.module';
-import { MatCustomIconService } from './shared/services/mat-custom-icon.service';
+import { MatCustomIconService } from './shared/services/mat-custom-icon/mat-custom-icon.service';
 import { MatIconModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 

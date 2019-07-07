@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     private routeService: RouterStateService,
     @Inject(PLATFORM_ID) private platformId
   ) {
-    this.isBrowser = isPlatformBrowser(platformId);
+    this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   ngOnInit() {

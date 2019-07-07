@@ -1,6 +1,7 @@
 <div class="project-card-container grid-y">
-  <div *ngIf="project && project.previewPhotoPath">
-    <div class="project-card-preview-container" [style.backgroundImage]="'url(' + project?.previewPhotoPath + ')'">
+  <div *ngIf="project && project.previewImgRelativePath">
+    <div class="project-card-preview-container"
+      [style.backgroundImage]="'url(' + project?.previewImgRelativePath + ')'">
     </div>
   </div>
   <div class="cell shrink project-card-header-container">
@@ -9,12 +10,7 @@
   </div>
   <div class="cell auto project-card-body-container grid-y align-middle align-center">
     <div class="cell project-card-logo-container {{ project?.name }}" *ngIf="project && project.svgLogoName.length">
-      <ng-container *ngIf="isBrowser">
-        <mat-icon svgIcon="{{project?.svgLogoName}}" class="project-card-logo {{ project?.name }}"></mat-icon>
-      </ng-container>
-      <ng-container *ngIf="!isBrowser">
-        <img src="assets/icons/placeholder.svg">
-      </ng-container>
+      <mat-icon svgIcon="{{project?.svgLogoName}}" class="project-card-logo {{ project?.name }}"></mat-icon>
     </div>
   </div>
   <div class="cell shrink grid-x project-card-footer-container">

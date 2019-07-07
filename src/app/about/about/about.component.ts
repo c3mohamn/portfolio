@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { iconList } from 'src/app/shared/data/about-website';
 import { TechIcon } from 'src/app/shared/models/about-tech.model';
-import { isPlatformBrowser } from '@angular/common';
+import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
 
 @Component({
   selector: 'nm-about',
@@ -12,13 +12,14 @@ export class AboutComponent implements OnInit {
   iconList: TechIcon[] = iconList;
   description = '';
   selected = '';
-  isBrowser: boolean;
 
-  constructor(@Inject(PLATFORM_ID) private platformId) {
-    this.isBrowser = isPlatformBrowser(platformId);
+  constructor(private metaTagService: MetaTagService) {}
+
+  ngOnInit() {
+    this.metaTagService.setTitle('About | Nasir Mohammad Portfolio');
+    this.metaTagService.updateImgTagDefault();
+    this.metaTagService.updateDescriptionTagDefault();
   }
-
-  ngOnInit() {}
 
   showDescriptionFor(icon: TechIcon): void {
     if (this.selected === icon.class) {

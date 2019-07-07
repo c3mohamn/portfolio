@@ -10,7 +10,7 @@ export interface Project {
   takeaways: string;
   tags?: string[];
   svgLogoName?: string;
-  previewPhotoPath?: string;
+  previewImgRelativePath?: string;
 }
 
 export enum ProjectType {

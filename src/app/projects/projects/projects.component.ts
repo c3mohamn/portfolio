@@ -6,6 +6,7 @@ import { listFadeAnimation } from 'src/app/shared/animations/list.animation';
 import { RouterStateService } from 'src/app/state/router-state/router-state.service';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
 
 @Component({
   selector: 'nm-projects',
@@ -22,12 +23,17 @@ export class ProjectsComponent implements OnInit, OnDestroy {
 
   constructor(
     @Inject(DOCUMENT) private document: any,
-    private routeService: RouterStateService
+    private routeService: RouterStateService,
+    private metaTagService: MetaTagService
   ) {}
 
   ngOnInit() {
+    this.metaTagService.setTitle('Projects | Nasir Mohammad Portfolio');
+    this.metaTagService.updateImgTagDefault();
+    this.metaTagService.updateDescriptionTagDefault();
+
     const fullPath = this.document.location.href;
-    if (fullPath.toLowerCase().includes('herokuapp')) {
+    if (fullPath.toLowerCase().includes('')) {
       this.isHerokuDomain = true;
     }
 

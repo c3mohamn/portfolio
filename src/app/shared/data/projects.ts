@@ -13,13 +13,13 @@ export const projects: Project[] = [
     takeaways: ``,
     tags: ['Angular', '.NET', 'SQL', 'Professional'],
     svgLogoName: 'source-logo',
-    previewPhotoPath: 'assets/images/projects/preview/source.png'
+    previewImgRelativePath: 'assets/images/projects/preview/source.png'
   },
   {
     id: 1,
     name: 'warmains',
     title: `Warmains`,
-    shortDescription: `Character development tool for World of Warcraft.`,
+    shortDescription: `A character, talent, and raid planning tool for World of Warcraft.`,
     type: ProjectType.Personal,
     purpose: ``,
     features: ``,
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     takeaways: ``,
     tags: ['Angular', 'Nodejs', 'Mongo', 'Gaming', 'Personal'],
     svgLogoName: 'horde-logo',
-    previewPhotoPath: 'assets/images/projects/preview/warmains.png'
+    previewImgRelativePath: 'assets/images/projects/preview/warmains.png'
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     takeaways: ``,
     tags: ['Angular', 'Nodejs', 'Mongo', 'Engineering', 'School'],
     svgLogoName: 'book-me-logo',
-    previewPhotoPath: 'assets/images/projects/preview/book-me.png'
+    previewImgRelativePath: 'assets/images/projects/preview/book-me.png'
   },
   {
     id: 3,
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     takeaways: ``,
     tags: ['Android', 'Java', 'Engineering', 'School'],
     svgLogoName: 'course-correct-logo',
-    previewPhotoPath: 'assets/images/projects/preview/course-correct.png'
+    previewImgRelativePath: 'assets/images/projects/preview/course-correct.png'
   },
   {
     id: 4,
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     takeaways: ``,
     tags: ['Axure', 'HCI', 'Prototyping', 'Research', 'School'],
     svgLogoName: 'mental-health',
-    previewPhotoPath:
+    previewImgRelativePath:
       'assets/images/projects/preview/hands-for-mental-health.png'
   },
   {
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     takeaways: ``,
     tags: ['Heuristics', 'HCI', 'Heuristics', 'Study', 'School'],
     svgLogoName: 'cineplex',
-    previewPhotoPath: 'assets/images/projects/preview/cineplex.png'
+    previewImgRelativePath: 'assets/images/projects/preview/cineplex.png'
   },
   {
     id: 6,
@@ -98,6 +98,6 @@ export const projects: Project[] = [
     takeaways: ``,
     tags: ['React', 'HCI', 'Experiment', 'Study', 'School'],
     svgLogoName: 'keyboard',
-    previewPhotoPath: 'assets/images/projects/preview/smart-watch.png'
+    previewImgRelativePath: 'assets/images/projects/preview/smart-watch.png'
   }
 ];

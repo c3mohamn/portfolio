@@ -12,6 +12,7 @@ import {
   FormControl,
   FormGroupDirective
 } from '@angular/forms';
+import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
 
 @Component({
   selector: 'nm-contact',
@@ -26,7 +27,11 @@ export class ContactComponent implements OnInit, OnDestroy {
   error = false;
   submitting = false;
 
-  constructor(private contactService: ContactService, private fb: FormBuilder) {
+  constructor(
+    private contactService: ContactService,
+    private fb: FormBuilder,
+    private metaTagService: MetaTagService
+  ) {
     this.createForm();
   }
 
@@ -92,7 +97,11 @@ export class ContactComponent implements OnInit, OnDestroy {
       : '';
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.metaTagService.setTitle('Contact | Nasir Mohammad Portfolio');
+    this.metaTagService.updateImgTagDefault();
+    this.metaTagService.updateDescriptionTagDefault();
+  }
 
   ngOnDestroy(): void {
     this.ngUnsubscribe.next();

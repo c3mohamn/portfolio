@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
 
 @Component({
   selector: 'nm-resume',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent implements OnInit {
-  constructor() {}
+  constructor(private metaTagService: MetaTagService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.metaTagService.setTitle('Resume | Nasir Mohammad Portfolio');
+    this.metaTagService.updateImgTagDefault();
+    this.metaTagService.updateDescriptionTagDefault();
+  }
 }
