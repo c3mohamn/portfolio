@@ -6,6 +6,7 @@ import express, { Application } from 'express';
 import { join } from 'path';
 import bodyParser from 'body-parser';
 import routes from './server/controllers';
+import mongodb from './server/config/mongodb';
 
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
@@ -13,6 +14,9 @@ enableProdMode();
 const app: Application = express();
 const port: number | string = process.env.PORT || 3000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
+
+// database connection
+mongodb.connect();
 
 // init body parser middleware
 app.use(bodyParser.json());
