@@ -3,7 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-module.exports = {
+const config = {
   mode: 'none',
   entry: {
     // This is our Express server for Dynamic universal
@@ -54,4 +54,23 @@ module.exports = {
     // Temp to suppress warnings for mongoose and require_optional
     new webpack.ContextReplacementPlugin(/.*/)
   ]
+};
+
+module.exports = (env, argv) => {
+  // set NODE_ENV during webpack phase
+  if (argv.mode === 'production') {
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('production')
+      })
+    );
+  } else {
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        'process.env.NODE_ENV': JSON.stringify('development')
+      })
+    );
+  }
+
+  return config;
 };

@@ -7,16 +7,9 @@ const options: mongoose.ConnectionOptions = {
   useNewUrlParser: true
 };
 
-let uri = config.MONGODB_URI;
-
-// temp fix for local
-if (!uri) {
-  uri = require('../../config.dev.json').MONGODB_URI;
-}
-
 function connect() {
-  mongoose.connect(uri, options).then(
-    () => console.log(`Connected to db ${uri}`),
+  mongoose.connect(config.MONGODB_URI, options).then(
+    () => console.log(`Connected to db ${config.MONGODB_URI}`),
     (error: any) => {
       console.log(error);
     }
