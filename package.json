@@ -58,6 +58,7 @@
     "ngx-page-scroll": "^6.0.2",
     "ngx-page-scroll-core": "^6.0.2",
     "rxjs": "~6.5.2",
+    "swagger-ui-express": "^4.0.7",
     "tslib": "^1.10.0",
     "typegoose": "^5.7.2",
     "zone.js": "~0.9.1"
