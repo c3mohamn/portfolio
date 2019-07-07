@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatIconModule } from '@angular/material';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, SharedModule, MatIconModule],
   exports: [HeaderComponent, FooterComponent]
 })
 export class CoreModule {}

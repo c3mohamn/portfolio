@@ -1,12 +1,8 @@
 <div class="project-container grid-y grid-margin-y" *ngIf="project">
   <div class="cell project-header grid-x grid-margin-x align-middle">
     <div class="cell shrink" [routerLink]="[ '' ]">
-      <ng-container *ngIf="isBrowser">
-        <mat-icon svgIcon="arrow-back" class="back-arrow"></mat-icon>
-      </ng-container>
-      <ng-container *ngIf="!isBrowser">
-        <img src="assets/icons/placeholder.svg">
-      </ng-container>
+      <mat-icon svgIcon="arrow-back" class="back-arrow" *appShellNoRender></mat-icon>
+      <img src="assets/icons/placeholder.svg" *appShellRender>
     </div>
     <div class="cell auto"></div>
     <div class="cell shrink">
@@ -16,7 +12,7 @@
 
   <div class="cell project-body-container">
     <!-- Temp -->
-    <div>
+    <div *appShellNoRender>
       <p [style.fontSize]="'1.25rem'" [style.color]="'yellow'">I haven't finished this section yet... but I have my
         writer working overtime!</p>
       <div class="text-center">

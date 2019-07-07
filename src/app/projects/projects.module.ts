@@ -7,11 +7,13 @@ import { ProjectComponent } from './components/project/project.component';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { MatIconModule } from '@angular/material';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [ProjectsComponent, ProjectCardComponent, ProjectComponent],
   imports: [
     CommonModule,
+    SharedModule,
     ProjectsRoutingModule,
     NgxPageScrollModule,
     MatIconModule,

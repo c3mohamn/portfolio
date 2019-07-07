@@ -61,4 +61,16 @@
     z-index: 2;
     transition: $nm-transition-medium;
   }
+
+  .project-cards-list-placeholder {
+    z-index: 2;
+
+    .project-card-placeholder {
+      width: 100%;
+      height: 500px;
+      padding: 1rem;
+      background: $nm-primary;
+      box-shadow: $nm-boxshadow-2;
+    }
+  }
 }

@@ -9,26 +9,18 @@
       {{page.name}}
     </div>
     <div class="cell shrink hide-for-medium">
-      <ng-container *ngIf="isBrowser">
-        <ng-container *ngIf="isBrowser">
-          <mat-icon svgIcon="menu" class="menu-icon disable-select" (click)="toggleMobileMenu()"></mat-icon>
-        </ng-container>
-        <ng-container *ngIf="!isBrowser">
-          <img src="assets/icons/placeholder.svg">
-        </ng-container>
-      </ng-container>
+      <mat-icon svgIcon="menu" class="menu-icon disable-select" (click)="toggleMobileMenu()" *appShellNoRender>
+      </mat-icon>
+      <img src="assets/icons/placeholder.svg" *appShellRender>
     </div>
   </div>
 </div>
 <div class="mobile-menu-container hide-for-medium" [hidden]="!showMobileMenu">
   <div class="mobile-menu-header grid-x align-middle align-right">
     <div class="cell shrink">
-      <ng-container *ngIf="isBrowser">
-        <mat-icon svgIcon="close" class="menu-icon close disable-select" (click)="toggleMobileMenu()"></mat-icon>
-      </ng-container>
-      <ng-container *ngIf="!isBrowser">
-        <img src="assets/icons/placeholder.svg">
-      </ng-container>
+      <mat-icon svgIcon="close" class="menu-icon close disable-select" (click)="toggleMobileMenu()" *appShellNoRender>
+      </mat-icon>
+      <img src="assets/icons/placeholder.svg" *appShellRender>
     </div>
   </div>
   <div class="mobile-menu-links grid-y grid-margin-y align-center align-middle margin-top-3">
