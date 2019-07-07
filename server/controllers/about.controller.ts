@@ -15,12 +15,13 @@ router.get('', (req: Request, res: Response) => {
 router.get('/tech', async (req: Request, res: Response) => {
   console.log('get /about/tech');
 
-  const test = {
-    title: 'test',
-    class: 'test'
-  };
+  // const test = {
+  //   title: 'test2',
+  //   class: 'test2',
+  //   orderNumber: 1
+  // };
 
-  const newTech = new AboutTechModel(test);
+  // const newTech = new AboutTechModel(test);
 
   // newTech.save().then(tech => res.status(201).send({ tech }));
 
@@ -30,7 +31,7 @@ router.get('/tech', async (req: Request, res: Response) => {
       res.status(200).send({ tech });
     },
     err => {
-      res.status(404).send(err);
+      res.status(500).send(err);
     }
   );
 });
