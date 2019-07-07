@@ -3,7 +3,7 @@ import { routerTransition } from './shared/animations/router.animation';
 import { RouterStateService } from './state/router-state/router-state.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { MatCustomIconService } from './shared/services/mat-custom-icon.service';
+import { MatCustomIconService } from './shared/services/mat-custom-icon/mat-custom-icon.service';
 
 @Component({
   selector: 'nm-root',
