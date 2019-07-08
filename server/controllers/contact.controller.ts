@@ -55,9 +55,7 @@ function validateForm(form: ContactForm) {
     message: Joi.string()
       .required()
       .max(1000),
-    name: Joi.string()
-      .max(150)
-      .alphanum()
+    name: Joi.string().max(150)
   };
 
   return Joi.validate(form, schema);
