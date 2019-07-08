@@ -22,9 +22,6 @@ mongodb.connect();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Allows client to find javascript files in dist folder
-app.use(express.static(join(__dirname, 'dist/browser')));
-
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const {
   AppServerModuleNgFactory,
