@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
 import { Project } from 'src/app/shared/models/project.model';
 import { projects } from 'src/app/shared/data/projects';
 import { listFadeAnimation } from 'src/app/shared/animations/list.animation';
@@ -16,13 +15,11 @@ import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.servic
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
   private ngUnsubscribe: Subject<any> = new Subject();
-  isHerokuDomain = false;
   projects: Project[] = projects;
   selectedProject = false;
   selectedProjectName = 'none';
 
   constructor(
-    @Inject(DOCUMENT) private document: any,
     private routeService: RouterStateService,
     private metaTagService: MetaTagService
   ) {}
@@ -31,11 +28,6 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     this.metaTagService.setTitle('Projects | Nasir Mohammad Portfolio');
     this.metaTagService.updateImgTagDefault();
     this.metaTagService.updateDescriptionTagDefault();
-
-    const fullPath = this.document.location.href;
-    if (fullPath.toLowerCase().includes('')) {
-      this.isHerokuDomain = true;
-    }
 
     this.routeService
       .getCurrentParams()
