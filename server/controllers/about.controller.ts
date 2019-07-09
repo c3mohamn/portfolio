@@ -1,11 +1,7 @@
 import express, { Request, Response } from 'express';
-import AboutTech from '../models/about-tech.model';
+import AboutTechModel from '../models/about-tech.model';
 
 const router = express.Router();
-
-const AboutTechModel = new AboutTech().getModelForClass(AboutTech, {
-  schemaOptions: { versionKey: false }
-});
 
 router.get('', (req: Request, res: Response) => {
   console.log('get /about');

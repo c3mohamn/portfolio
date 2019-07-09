@@ -23,4 +23,8 @@ class AboutTech extends Typegoose {
   timestampModified: Date;
 }
 
-export default AboutTech;
+const AboutTechModel = new AboutTech().getModelForClass(AboutTech, {
+  schemaOptions: { versionKey: false }
+});
+
+export default AboutTechModel;
