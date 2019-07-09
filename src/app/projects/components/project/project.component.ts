@@ -28,8 +28,8 @@ export class ProjectComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(data => {
         this.projectName = data && data.project;
-        if (this.projectName) {
-          this.project = projects.find(p => p.name === this.projectName);
+        this.project = projects.find(p => p.name === this.projectName);
+        if (this.project) {
           // set meta tags
           this.metaTagService.setTitle(
             `${this.project.title} | Projects | Nasir Mohammad Portfolio`
@@ -40,8 +40,12 @@ export class ProjectComponent implements OnInit, OnDestroy {
           this.metaTagService.updateImgTag(
             `https://www.nasirm.ca/${this.project.previewImgRelativePath}`
           );
+          this.metaTagService.updateUrlTag(`/projects/${this.project.name}`);
         } else {
           this.metaTagService.setTitle(`Projects | Nasir Mohammad Portfolio`);
+          this.metaTagService.updateDescriptionTagDefault();
+          this.metaTagService.updateImgTagDefault();
+          this.metaTagService.updateUrlTag('/projects');
         }
       });
   }

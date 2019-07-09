@@ -54,6 +54,15 @@ export class MetaTagService {
   }
 
   /**
+   * Updates content for og:url meta tag.
+   *
+   * @param path Path of current route
+   */
+  updateUrlTag(path: string): void {
+    this.updateTag('og:url', `https://nasirm.ca${path.toLowerCase()}`);
+  }
+
+  /**
    * Update content for og:image and twitter:image meta tags to the default.
    */
   updateImgTagDefault(): void {

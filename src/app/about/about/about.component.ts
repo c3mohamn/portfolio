@@ -19,6 +19,7 @@ export class AboutComponent implements OnInit {
     this.metaTagService.setTitle('About | Nasir Mohammad Portfolio');
     this.metaTagService.updateImgTagDefault();
     this.metaTagService.updateDescriptionTagDefault();
+    this.metaTagService.updateUrlTag('/about');
   }
 
   showDescriptionFor(icon: TechIcon): void {

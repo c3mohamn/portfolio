@@ -28,6 +28,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     this.metaTagService.setTitle('Projects | Nasir Mohammad Portfolio');
     this.metaTagService.updateImgTagDefault();
     this.metaTagService.updateDescriptionTagDefault();
+    this.metaTagService.updateUrlTag('/projects');
 
     this.routeService
       .getCurrentParams()
