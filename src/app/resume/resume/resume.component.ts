@@ -13,5 +13,6 @@ export class ResumeComponent implements OnInit {
     this.metaTagService.setTitle('Resume | Nasir Mohammad Portfolio');
     this.metaTagService.updateImgTagDefault();
     this.metaTagService.updateDescriptionTagDefault();
+    this.metaTagService.updateUrlTag('/resume');
   }
 }

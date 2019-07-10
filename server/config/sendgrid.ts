@@ -1,9 +1,6 @@
 import sgMail from '@sendgrid/mail';
-import configData from './config';
-import { Config } from '../models/config.model';
+import config from './config';
 
-const config: Config = configData;
-
-sgMail.setApiKey(config.SENDGRID_API_KEY || '');
+sgMail.setApiKey(config.SENDGRID_API_KEY);
 
 export default sgMail;

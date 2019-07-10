@@ -5,6 +5,7 @@ import { RouterStateService } from 'src/app/state/router-state/router-state.serv
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
+import { ProjectService } from '../../services/project.service';
 
 @Component({
   selector: 'nm-project',
@@ -16,10 +17,23 @@ export class ProjectComponent implements OnInit, OnDestroy {
   projects: Project[] = projects;
   project: Project;
   projectName: string;
+  defaultText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id optio, ab repudiandae quo perspiciatis dolores
+  laudantium nesciunt dicta consectetur deserunt officiis doloremque sunt! Doloremque, iure tenetur? Amet sunt
+  reprehenderit eum.`;
+  defaultListText = `
+  <ul>
+  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id optio, ab repudiandae quo perspiciatis dolores
+    laudantium nesciunt dicta consectetur deserunt officiis doloremque sunt!</li>
+  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nostrum aut veritatis eius accusantium
+    inventore maiores quia voluptates dignissimos adipisci eos quo ratione</li>
+  <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore omnis quisquam nostrum cupiditate,
+    perspiciatis accusamus provident.</li>
+</ul>`;
 
   constructor(
     private routeService: RouterStateService,
-    private metaTagService: MetaTagService
+    private metaTagService: MetaTagService,
+    private projectService: ProjectService
   ) {}
 
   ngOnInit() {
@@ -28,8 +42,8 @@ export class ProjectComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(data => {
         this.projectName = data && data.project;
-        if (this.projectName) {
-          this.project = projects.find(p => p.name === this.projectName);
+        this.project = this.projectService.getProject(this.projectName);
+        if (this.project) {
           // set meta tags
           this.metaTagService.setTitle(
             `${this.project.title} | Projects | Nasir Mohammad Portfolio`
@@ -40,8 +54,12 @@ export class ProjectComponent implements OnInit, OnDestroy {
           this.metaTagService.updateImgTag(
             `https://www.nasirm.ca/${this.project.previewImgRelativePath}`
           );
+          this.metaTagService.updateUrlTag(`/projects/${this.project.name}`);
         } else {
           this.metaTagService.setTitle(`Projects | Nasir Mohammad Portfolio`);
+          this.metaTagService.updateDescriptionTagDefault();
+          this.metaTagService.updateImgTagDefault();
+          this.metaTagService.updateUrlTag('/projects');
         }
       });
   }

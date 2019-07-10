@@ -71,6 +71,20 @@ export const iconList: TechIcon[] = [
      because it is incredibly easy to use and set up.`
   },
   {
+    title: 'Mongodb',
+    class: 'mongodb',
+    description: `
+    <h4><small>
+    <a class="no-underline" href="https://www.mongodb.com/new" target="_blank" rel="noopener"
+        aria-label="Mongodb link" title="Mongodb">
+        Mongodb
+      </a>
+    </small></h4>
+    <br />
+    Mongodb is a cross-platform document-oriented database classified as NoSQL or non-relational.
+    It uses JSON-like documents which is perfect for a website where most of the data is text based. `
+  },
+  {
     title: 'Zurb Foundation',
     class: 'foundation',
     description: `
@@ -100,7 +114,21 @@ export const iconList: TechIcon[] = [
     Material is a design concept
      created by Google. I have used, on several occasions, Angular Material components, icons and fonts.
      <br /> <br />
-     For this website, I am using Angular Material, Google fonts,  icons.`
+     For this website, I am using Angular Material, Google fonts, and  icons.`
+  },
+  {
+    title: 'Swagger',
+    class: 'swagger',
+    description: `
+    <h4><small>
+    <a class="no-underline" href="https://swagger.io/" target="_blank" rel="noopener"
+        aria-label="Swagger link" title="Swagger">
+        Swagger
+      </a>
+    </small></h4>
+    <br />
+    Swagger is an open-source software framework backed by a large ecosystem of tools
+    that helps developers design, build, document, and consume RESTful Web services.`
   },
   {
     title: 'Github',

@@ -101,6 +101,7 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.metaTagService.setTitle('Contact | Nasir Mohammad Portfolio');
     this.metaTagService.updateImgTagDefault();
     this.metaTagService.updateDescriptionTagDefault();
+    this.metaTagService.updateUrlTag('/contact');
   }
 
   ngOnDestroy(): void {

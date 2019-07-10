@@ -49,12 +49,7 @@
     position: relative;
     width: 100%;
     transition: $nm-transition-medium;
-    opacity: 0;
     z-index: 1;
-
-    &.has-project {
-      opacity: 1;
-    }
   }
 
   .project-cards-list {
