@@ -11,17 +11,37 @@
   </div>
 
   <div class="cell project-body-container">
-    <!-- Temp -->
-    <div *appShellNoRender>
-      <p [style.fontSize]="'1.25rem'" [style.color]="'yellow'">I haven't finished this section yet... but I have my
-        writer working overtime!</p>
-      <div class="text-center">
-        <iframe src="https://giphy.com/embed/FIxjQGnjmNt5u" width="400" height="300" frameBorder="0" class="giphy-embed"
-          allowFullScreen></iframe>
+    <div class="grid-x grid-margin-x grid-margin-y">
+      <div class="cell small-12" [ngClass]="{'medium-6': project.overviewImgRelativePath}">
+        <h4 class="nm-header-1">Overview</h4>
+        <div class="body-text" [innerHtml]="project.overview || defaultText"></div>
       </div>
-      <p [style.fontSize]="'1.25rem'" [style.color]="'cyan'" class="text-right">Meanwhile, feel free to checkout the
-        <a [routerLink]="[ '/about']">About</a> page!
-      </p>
+      <div class="cell small-12 medium-6" *ngIf="project.overviewImgRelativePath">
+        <div class="overview-image-container">
+          <img src="{{project.overviewImgRelativePath}}" alt="over image" class="project-image overview-image">
+        </div>
+      </div>
+      <div class="cell small-12 medium-6">
+        <h4 class="nm-header-1">Goals</h4>
+        <div class="body-text" [innerHtml]="project.goals || defaultListText"></div>
+      </div>
+      <div class="cell small-12 medium-6">
+        <h4 class="nm-header-1">Contributions</h4>
+        <div class="body-text" [innerHtml]="project.contributions || defaultListText"></div>
+      </div>
+      <div class="cell small-12 medium-6" *ngIf="project.processImgRelativePath">
+        <div class="process-image-container">
+          <img src="{{project.processImgRelativePath}}" alt="over image" class="project-image process-image">
+        </div>
+      </div>
+      <div class="cell small-12" [ngClass]="{'medium-6': project.processImgRelativePath}">
+        <h4 class="nm-header-1" [ngClass]="{'text-right': project.processImgRelativePath}">Process</h4>
+        <div class="body-text" [innerHtml]="project.process || defaultText"></div>
+      </div>
+      <div class="cell">
+        <h4 class="nm-header-1">Outcome</h4>
+        <div class="body-text" [innerHtml]="project.outcome || defaultText"></div>
+      </div>
     </div>
   </div>
 </div>

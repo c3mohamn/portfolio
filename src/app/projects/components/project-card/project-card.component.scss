@@ -79,8 +79,13 @@
         fill: $warcraft-horde;
       }
 
-      &.source {
-        width: 85%;
+      .source-telegram-bot {
+        width: 50px;
+      }
+
+      &.source-admin-panel,
+      &.source-telegram-bot {
+        width: 75%;
       }
 
       &.cineplex {

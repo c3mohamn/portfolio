@@ -16,8 +16,6 @@ import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.servic
 export class ProjectsComponent implements OnInit, OnDestroy {
   private ngUnsubscribe: Subject<any> = new Subject();
   projects: Project[] = projects;
-  selectedProject = false;
-  selectedProjectName = 'none';
 
   constructor(
     private routeService: RouterStateService,
@@ -29,14 +27,6 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     this.metaTagService.updateImgTagDefault();
     this.metaTagService.updateDescriptionTagDefault();
     this.metaTagService.updateUrlTag('/projects');
-
-    this.routeService
-      .getCurrentParams()
-      .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(data => {
-        this.selectedProject = data && data.project;
-        this.selectedProjectName = (data && data.project) || 'none';
-      });
   }
 
   ngOnDestroy(): void {

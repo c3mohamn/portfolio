@@ -8,6 +8,7 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { MatIconModule } from '@angular/material';
 import { SharedModule } from '../shared/shared.module';
+import { ProjectService } from './services/project.service';
 
 @NgModule({
   declarations: [ProjectsComponent, ProjectCardComponent, ProjectComponent],
@@ -18,6 +19,7 @@ import { SharedModule } from '../shared/shared.module';
     NgxPageScrollModule,
     MatIconModule,
     NgxPageScrollCoreModule.forRoot({ duration: 500 })
-  ]
+  ],
+  providers: [ProjectService]
 })
 export class ProjectsModule {}
