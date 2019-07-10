@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     name: 'source-admin-panel',
     title: `Source Waitlist Admin Panel`,
-    shortDescription: `An admin panel allowing the marketing team easily perform CRUD commands on users, email templates, and more.`,
+    shortDescription: `An admin panel allowing the marketing team easily perform CRUD commands for users, email templates, and more.`,
     type: ProjectType.Work,
     tags: ['Angular', '.NET', 'SQL', 'Professional'],
     svgLogoName: 'source-logo',
