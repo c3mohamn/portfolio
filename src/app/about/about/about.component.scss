@@ -38,7 +38,8 @@
   }
 
   .about-icon-container {
-    width: 64px;
+    max-height: 100px;
+    max-width: 64px;
     opacity: 0.7;
     cursor: pointer;
     transition: $nm-transition-fast;
@@ -48,6 +49,7 @@
     }
 
     @include breakpoint(640px down) {
+      max-width: 50px;
       width: 32px;
 
       .about-icon-caption {
