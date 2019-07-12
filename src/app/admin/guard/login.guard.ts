@@ -12,7 +12,7 @@ import { AdminService } from '../services/admin.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminGuard implements CanActivate {
+export class LoginGuard implements CanActivate {
   constructor(private adminService: AdminService, private router: Router) {}
 
   canActivate(
@@ -23,10 +23,10 @@ export class AdminGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (this.adminService.isLoggedIn()) {
+    if (!this.adminService.isLoggedIn()) {
       return true;
     } else {
-      this.router.navigate(['admin/login']);
+      this.router.navigate(['admin']);
       return false;
     }
   }

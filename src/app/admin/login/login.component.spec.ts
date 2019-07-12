@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -17,7 +18,8 @@ describe('LoginComponent', () => {
         ReactiveFormsModule,
         MaterialModule,
         BrowserAnimationsModule,
-        HttpClientModule
+        HttpClientModule,
+        RouterTestingModule
       ],
       declarations: [LoginComponent]
     }).compileComponents();

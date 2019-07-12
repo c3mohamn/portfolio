@@ -1,18 +1,18 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 
-import { AdminGuard } from './admin.guard';
+import { LoginGuard } from './login.guard';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 
-describe('AdminGuard', () => {
+describe('LoginGuard', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule, RouterTestingModule],
-      providers: [AdminGuard]
+      providers: [LoginGuard]
     });
   });
 
-  it('should ...', inject([AdminGuard], (guard: AdminGuard) => {
+  it('should ...', inject([LoginGuard], (guard: LoginGuard) => {
     expect(guard).toBeTruthy();
   }));
 });

@@ -7,6 +7,9 @@ import {
 } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
+import { takeUntil } from 'rxjs/operators';
+import { AdminService } from '../services/admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'nm-login',
@@ -20,7 +23,12 @@ export class LoginComponent implements OnInit, OnDestroy {
   error = false;
   submitting = false;
 
-  constructor(private fb: FormBuilder, private metaTagService: MetaTagService) {
+  constructor(
+    private fb: FormBuilder,
+    private metaTagService: MetaTagService,
+    private adminService: AdminService,
+    private router: Router
+  ) {
     this.createForm();
   }
 
@@ -41,7 +49,25 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   login(form: any): void {
     this.submitting = true;
-    console.log('logging in');
+    this.adminService
+      .verify(form.password)
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe(
+        result => {
+          // console.log(result.token);
+          this.adminService.login(result.token);
+          this.serverResponseMsg = '';
+          this.error = false;
+          setTimeout(() => this.router.navigate(['admin']), 500);
+        },
+        error => {
+          // console.log(error);
+          this.loginForm.reset();
+          this.serverResponseMsg = error.error.message;
+          this.error = true;
+          this.submitting = false;
+        }
+      );
   }
 
   getErrorMessage(inputName: string): string {

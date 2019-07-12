@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
 
 @Component({
   selector: 'nm-admin',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
-  constructor() {}
+  constructor(private metaTagService: MetaTagService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.metaTagService.setTitle('Admin | Nasir Mohammad Portfolio');
+    this.metaTagService.updateImgTagDefault();
+    this.metaTagService.updateDescriptionTagDefault();
+    this.metaTagService.updateUrlTag('/admin');
+  }
 }

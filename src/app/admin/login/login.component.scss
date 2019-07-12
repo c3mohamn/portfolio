@@ -11,4 +11,16 @@
     background: $nm-primary-dark;
     box-shadow: $nm-boxshadow-3;
   }
+
+  .response-message {
+    transition: $nm-transition-fast;
+
+    &.error {
+      color: $nm-red;
+    }
+
+    &.good {
+      color: $nm-green;
+    }
+  }
 }
