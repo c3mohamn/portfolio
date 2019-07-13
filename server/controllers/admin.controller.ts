@@ -23,4 +23,12 @@ router.post('/verify', (req: Request, res: Response) => {
   const adminPassword = config.ADMIN_PASSWORD;
 });
 
+router.post('/project', async (req: Request, res: Response) => {
+  console.log('post /admin/project');
+});
+
+router.put('/project', async (req: Request, res: Response) => {
+  console.log('put /admin/project');
+});
+
 export default router;
