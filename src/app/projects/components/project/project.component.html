@@ -11,37 +11,26 @@
   </div>
 
   <div class="cell project-body-container">
-    <p [style.color]="'yellow'" [style.fontSize]="'1.5rem'">Still working on translating this latin!</p>
     <div class="grid-x grid-margin-x grid-margin-y">
-      <div class="cell small-12" [ngClass]="{'medium-6': project.overviewImgRelativePath}">
+      <div class="cell small-12">
         <h4 class="nm-header-1">Overview</h4>
-        <div class="body-text" [innerHtml]="project.overview || defaultText"></div>
-      </div>
-      <div class="cell small-12 medium-6" *ngIf="project.overviewImgRelativePath">
-        <div class="overview-image-container">
-          <img src="{{project.overviewImgRelativePath}}" alt="over image" class="project-image overview-image">
-        </div>
+        <div class="body-text" [innerHtml]="project.overview || defaultText" *appShellNoRender></div>
       </div>
       <div class="cell small-12 medium-6">
         <h4 class="nm-header-1">Goals</h4>
-        <div class="body-text" [innerHtml]="project.goals || defaultListText"></div>
+        <div class="body-text text-left" [innerHtml]="project.goals || defaultListText" *appShellNoRender></div>
       </div>
       <div class="cell small-12 medium-6">
         <h4 class="nm-header-1">Contributions</h4>
-        <div class="body-text" [innerHtml]="project.contributions || defaultListText"></div>
+        <div class="body-text text-left" [innerHtml]="project.contributions || defaultListText" *appShellNoRender></div>
       </div>
-      <div class="cell small-12 medium-6" *ngIf="project.processImgRelativePath">
-        <div class="process-image-container">
-          <img src="{{project.processImgRelativePath}}" alt="over image" class="project-image process-image">
-        </div>
-      </div>
-      <div class="cell small-12" [ngClass]="{'medium-6': project.processImgRelativePath}">
-        <h4 class="nm-header-1" [ngClass]="{'text-right': project.processImgRelativePath}">Process</h4>
-        <div class="body-text" [innerHtml]="project.process || defaultText"></div>
+      <div class="cell small-12">
+        <h4 class="nm-header-1">Process</h4>
+        <div class="body-text" [innerHtml]="project.process || defaultText" *appShellNoRender></div>
       </div>
       <div class="cell">
         <h4 class="nm-header-1">Outcome</h4>
-        <div class="body-text" [innerHtml]="project.outcome || defaultText"></div>
+        <div class="body-text" [innerHtml]="project.outcome || defaultText" *appShellNoRender></div>
       </div>
     </div>
   </div>
