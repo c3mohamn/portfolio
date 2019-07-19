@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Current Angular version is 8.1.0.
 
+![](https://i.imgur.com/CPxCEL7.png)
+
 ## Technology
 
 - [`Angular (8+)`](https://angular.io/) as the front-end
