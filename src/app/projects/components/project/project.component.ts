@@ -22,12 +22,9 @@ export class ProjectComponent implements OnInit, OnDestroy {
   reprehenderit eum.`;
   defaultListText = `
   <ul>
-  <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id optio, ab repudiandae quo perspiciatis dolores
-    laudantium nesciunt dicta consectetur deserunt officiis doloremque sunt!</li>
-  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum nostrum aut veritatis eius accusantium
-    inventore maiores quia voluptates dignissimos adipisci eos quo ratione</li>
-  <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore omnis quisquam nostrum cupiditate,
-    perspiciatis accusamus provident.</li>
+  <li>${this.defaultText}</li>
+  <li>${this.defaultText}</li>
+  <li>${this.defaultText}</li>
 </ul>`;
 
   constructor(

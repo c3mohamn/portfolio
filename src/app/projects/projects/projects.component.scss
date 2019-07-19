@@ -29,6 +29,20 @@
     .main-text-body {
       font-size: 1.5rem;
       line-height: 2.5rem;
+
+      .beautiful {
+        animation: beautiful 20s ease infinite;
+      }
+
+      .responsive {
+        animation: responsive 20s ease infinite;
+      }
+    }
+
+    .sub-text-body {
+      font-size: 1rem;
+      line-height: 2rem;
+      font-weight: 100;
     }
 
     @include breakpoint(640px down) {
@@ -66,5 +80,35 @@
       padding: 1rem;
       box-shadow: $nm-boxshadow-2;
     }
+  }
+}
+
+@keyframes beautiful {
+  0% {
+    color: white;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: $nm-teal;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes responsive {
+  0% {
+    letter-spacing: 0px;
+  }
+  50% {
+    letter-spacing: 0px;
+  }
+  75% {
+    letter-spacing: 1px;
+  }
+  100% {
+    letter-spacing: 0px;
   }
 }

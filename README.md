@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Current Angular version is 8.1.0.
 
+![](https://i.imgur.com/CPxCEL7.png)
+
 ## Technology
 
 - [`Angular (8+)`](https://angular.io/) as the front-end
@@ -26,6 +28,8 @@ Current Angular version is 8.1.0.
 - [`SendGrid`](https://sendgrid.com/) for transactional emails
 
 My [about page](https://nasirm.ca/about) contains a bigger list and longer description of the tech used.
+
+![](https://i.imgur.com/Mag2Xsx.png)
 
 ## Commands
 

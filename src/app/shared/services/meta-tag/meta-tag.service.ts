@@ -74,7 +74,8 @@ export class MetaTagService {
    */
   updateDescriptionTagDefault(): void {
     const description = `Website portfolio for Nasir Mohammad, a Software Developer
-    with a passion for solving problems, creating cool apps, and learning new things.`;
+    with a focus in web technologies. Nasir is passionate about solving problems,
+    creating amazing apps, and learning new things.`;
     this.updateDescriptionTag(description);
   }
 }
