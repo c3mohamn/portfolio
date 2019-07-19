@@ -29,6 +29,8 @@ Current Angular version is 8.1.0.
 
 My [about page](https://nasirm.ca/about) contains a bigger list and longer description of the tech used.
 
+![](https://i.imgur.com/Mag2Xsx.png)
+
 ## Commands
 
 Run `npm install` to install all packages.
