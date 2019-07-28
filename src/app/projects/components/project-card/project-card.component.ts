@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Project } from 'src/app/shared/models/project.model';
+import { Project } from 'src/app/projects/models/project.model';
 
 @Component({
   selector: 'nm-project-card',
