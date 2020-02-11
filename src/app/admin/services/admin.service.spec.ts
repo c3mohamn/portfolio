@@ -1,16 +1,16 @@
-import { TestBed } from "@angular/core/testing";
+import { TestBed } from '@angular/core/testing';
 
-import { AdminService } from "./admin.service";
-import { HttpClientModule } from "@angular/common/http";
+import { AdminService } from './admin.service';
+import { HttpClientModule } from '@angular/common/http';
 
-describe("AdminService", () => {
+describe('AdminService', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
       imports: [HttpClientModule]
     })
   );
 
-  it("should be created", () => {
+  it('should be created', () => {
     const service: AdminService = TestBed.inject(AdminService);
     expect(service).toBeTruthy();
   });
