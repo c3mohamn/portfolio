@@ -55,7 +55,7 @@
     "joi": "^14.3.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.2.7",
-    "mongoose": "^5.6.3",
+    "mongoose": "^5.7.5",
     "ngx-page-scroll": "^6.0.2",
     "ngx-page-scroll-core": "^6.0.2",
     "rxjs": "~6.5.2",
