@@ -1,4 +1,4 @@
-import { Project, ProjectType } from '../models/project.model';
+import { Project, ProjectType } from '../../projects/models/project.model';
 
 export const adminPanelProject: Project = {
   name: 'source-admin-panel',

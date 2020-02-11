@@ -1,4 +1,4 @@
-import { TechIcon } from '../models/about-tech.model';
+import { TechIcon } from '../../about/models/tech-icon.model';
 
 // export const howItStarted = `
 //       After finishing my undergraduate degree and beginning my job hunt, I came to the realization

@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { iconList } from 'src/app/shared/data/about-website';
-import { TechIcon } from 'src/app/shared/models/about-tech.model';
+import { TechIcon } from 'src/app/about/models/tech-icon.model';
 import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
 
 @Component({
