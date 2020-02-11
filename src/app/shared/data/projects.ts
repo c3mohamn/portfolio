@@ -1,4 +1,4 @@
-import { Project } from '../models/project.model';
+import { Project } from '../../projects/models/project.model';
 import { warmainsProject } from './project-warmains';
 import { telegramBotProject } from './project-telegram-bot';
 import { adminPanelProject } from './project-admin-panel';

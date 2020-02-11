@@ -33,6 +33,11 @@ const routes: Routes = [
     data: { title: 'Contact', index: 3 }
   },
   {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+    data: { title: 'Admin', index: 4 }
+  },
+  {
     path: '**',
     redirectTo: 'projects',
     pathMatch: 'full'

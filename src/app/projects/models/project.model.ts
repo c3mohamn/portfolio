@@ -18,7 +18,7 @@ export interface Project {
 }
 
 export enum ProjectType {
-  Work,
-  School,
-  Personal
+  Work = 'Work',
+  School = 'School',
+  Personal = 'Personal'
 }

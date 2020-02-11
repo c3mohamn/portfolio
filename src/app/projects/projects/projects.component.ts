@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
-import { Project } from 'src/app/shared/models/project.model';
+import { Project } from 'src/app/projects/models/project.model';
 import { projects } from 'src/app/shared/data/projects';
 import { listFadeAnimation } from 'src/app/shared/animations/list.animation';
 import { RouterStateService } from 'src/app/state/router-state/router-state.service';
