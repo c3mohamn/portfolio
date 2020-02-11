@@ -1,17 +1,17 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { ContactService } from './contact.service';
-import { HttpClientModule } from '@angular/common/http';
+import { ContactService } from "./contact.service";
+import { HttpClientModule } from "@angular/common/http";
 
-describe('ContactService', () => {
+describe("ContactService", () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
       imports: [HttpClientModule]
     })
   );
 
-  it('should be created', () => {
-    const service: ContactService = TestBed.get(ContactService);
+  it("should be created", () => {
+    const service: ContactService = TestBed.inject(ContactService);
     expect(service).toBeTruthy();
   });
 });

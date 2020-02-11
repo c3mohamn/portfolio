@@ -24,7 +24,8 @@
     "build:ssr": "npm run build:client-and-ssr-bundles",
     "build:client-and-ssr-bundles": "npm run build:client && ng run portfolio:server:production --bundleDependencies all",
     "prettier:format": "prettier --print-width 80 --single-quote --trailing-comma none --write **/*.ts",
-    "heroku-postbuild": "npm run build:ssr && npm run build:server"
+    "heroku-postbuild": "npm run build:ssr && npm run build:server",
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
   },
   "private": true,
   "dependencies": {
