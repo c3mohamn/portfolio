@@ -107,8 +107,8 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "11.x",
-    "npm": "6.x"
+    "node": "12.16.0",
+    "npm": "6.13.7"
   },
   "keywords": [
     "Nasir",
