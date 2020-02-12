@@ -5,7 +5,7 @@ class AboutTech extends Typegoose {
   title: string;
 
   @prop({ required: true })
-  class: string;
+  cssClass: string;
 
   @prop({ required: true })
   orderNumber: number;

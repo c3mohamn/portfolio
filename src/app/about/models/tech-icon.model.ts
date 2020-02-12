@@ -1,7 +1,7 @@
 // Change optional tags when implementation finished
 export interface TechIcon {
   title: string;
-  class: string;
+  cssClass: string;
   description?: string;
   link?: string;
   orderNumber?: number;

@@ -2,9 +2,8 @@ import mongoose from 'mongoose';
 import config from './config';
 
 const options: mongoose.ConnectionOptions = {
-  reconnectInterval: 500,
-  reconnectTries: 5,
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 };
 
 function connect() {

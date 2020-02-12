@@ -13,7 +13,7 @@ router.get('/tech', async (req: Request, res: Response) => {
 
   // const test = {
   //   title: 'test2',
-  //   class: 'test2',
+  //   cssClass: 'test2',
   //   orderNumber: 1
   // };
 

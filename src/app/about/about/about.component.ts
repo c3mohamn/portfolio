@@ -23,12 +23,12 @@ export class AboutComponent implements OnInit {
   }
 
   showDescriptionFor(icon: TechIcon): void {
-    if (this.selected === icon.class) {
+    if (this.selected === icon.cssClass) {
       this.selected = '';
       this.description = '';
     } else if (icon.description) {
       this.description = icon.description;
-      this.selected = icon.class;
+      this.selected = icon.cssClass;
     }
   }
 }

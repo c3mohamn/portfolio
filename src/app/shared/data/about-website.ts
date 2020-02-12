@@ -13,7 +13,7 @@ import { TechIcon } from '../../about/models/tech-icon.model';
 export const iconList: TechIcon[] = [
   {
     title: 'Visual Studio Code',
-    class: 'vscode',
+    cssClass: 'vscode',
     description: `
     <h4><small>
     <a class="no-underline" href="https://code.visualstudio.com/" target="_blank" rel="noopener"
@@ -27,7 +27,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Angular',
-    class: 'angular',
+    cssClass: 'angular',
     description: `
     <h4><small>
     <a class="no-underline" href="https://angular.io/" target="_blank" rel="noopener"
@@ -42,7 +42,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Angular Redux',
-    class: 'ngrx',
+    cssClass: 'ngrx',
     description: `
     <h4><small>
     <a class="no-underline" href="https://ngrx.io/" target="_blank" rel="noopener"
@@ -57,7 +57,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Nodejs',
-    class: 'node',
+    cssClass: 'node',
     description: `
     <h4><small>
     <a class="no-underline" href="https://nodejs.org" target="_blank" rel="noopener"
@@ -72,7 +72,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Mongodb',
-    class: 'mongodb',
+    cssClass: 'mongodb',
     description: `
     <h4><small>
     <a class="no-underline" href="https://www.mongodb.com/new" target="_blank" rel="noopener"
@@ -86,7 +86,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Zurb Foundation',
-    class: 'foundation',
+    cssClass: 'foundation',
     description: `
     <h4><small>
     <a class="no-underline" href="https://foundation.zurb.com/" target="_blank" rel="noopener"
@@ -102,7 +102,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Material Design',
-    class: 'material-design',
+    cssClass: 'material-design',
     description: `
     <h4><small>
     <a class="no-underline" href="https://material.io/design/" target="_blank" rel="noopener"
@@ -118,7 +118,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Swagger',
-    class: 'swagger',
+    cssClass: 'swagger',
     description: `
     <h4><small>
     <a class="no-underline" href="https://swagger.io/" target="_blank" rel="noopener"
@@ -132,7 +132,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Github',
-    class: 'github',
+    cssClass: 'github',
     description: `
     <h4><small>
     <a class="no-underline" href="https://github.com/c3mohamn/portfolio" target="_blank" rel="noopener"
@@ -146,7 +146,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Heroku',
-    class: 'heroku',
+    cssClass: 'heroku',
     description: `
     <h4><small>
     <a class="no-underline" href="https://heroku.com" target="_blank" rel="noopener"
@@ -162,7 +162,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Cloudflare',
-    class: 'cloudflare',
+    cssClass: 'cloudflare',
     description: `
     <h4><small>
     <a class="no-underline" href="https://www.cloudflare.com/" target="_blank" rel="noopener"
@@ -177,7 +177,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Trello',
-    class: 'trello',
+    cssClass: 'trello',
     description: `
     <h4><small>
     <a class="no-underline" href="https://trello.com/b/hoS9NAOg/portfolio-ideas" target="_blank" rel="noopener"
@@ -192,7 +192,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Google Analytics',
-    class: 'google-analytics',
+    cssClass: 'google-analytics',
     description: `
     <h4><small>
     <a class="no-underline" href="https://analytics.google.com" target="_blank" rel="noopener"
@@ -207,7 +207,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Google Tag Manager',
-    class: 'google-tag-manager',
+    cssClass: 'google-tag-manager',
     description: `
     <h4><small>
     <a class="no-underline" href="https://tagmanager.google.com/" target="_blank" rel="noopener"
@@ -222,7 +222,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'SendGrid',
-    class: 'sendgrid',
+    cssClass: 'sendgrid',
     description: `
     <h4><small>
     <a class="no-underline" href="https://sendgrid.com/" target="_blank" rel="noopener"
@@ -237,7 +237,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Fullstory',
-    class: 'fullstory',
+    cssClass: 'fullstory',
     description: `
     <h4><small>
     <a class="no-underline" href="https://www.fullstory.com" target="_blank" rel="noopener"
@@ -251,7 +251,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Photoshop',
-    class: 'photoshop',
+    cssClass: 'photoshop',
     description: `
     <h4><small>
         Photoshop
@@ -263,7 +263,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Travis CI',
-    class: 'travis',
+    cssClass: 'travis',
     description: `
     <h4><small>
     <a class="no-underline" href="https://travis-ci.org/" target="_blank" rel="noopener"
@@ -278,7 +278,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'HTML5',
-    class: 'html',
+    cssClass: 'html',
     description: `
     <h4><small>
         HTML5
@@ -290,7 +290,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'TypeScript',
-    class: 'typescript',
+    cssClass: 'typescript',
     description: `
     <h4><small>
     <a class="no-underline" href="https://www.typescriptlang.org/" target="_blank" rel="noopener"
@@ -305,7 +305,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'JavaScript',
-    class: 'javascript',
+    cssClass: 'javascript',
     description: `
     <h4><small>
         JavaScript
@@ -318,7 +318,7 @@ export const iconList: TechIcon[] = [
   },
   {
     title: 'Sass',
-    class: 'sass',
+    cssClass: 'sass',
     description: `
     <h4><small>
     <a class="no-underline" href="https://sass-lang.com/" target="_blank" rel="noopener"

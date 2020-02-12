@@ -50,7 +50,7 @@
         "title": {
           "type": "string"
         },
-        "class": {
+        "cssClass": {
           "type": "string"
         },
         "description": {
