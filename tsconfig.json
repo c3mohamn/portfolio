@@ -17,5 +17,10 @@
     "lib": ["es6", "es2018", "dom"],
     "module": "esnext",
     "target": "es5"
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    "strictTemplates": true
   }
 }
