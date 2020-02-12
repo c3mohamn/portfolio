@@ -1,4 +1,4 @@
-import { Typegoose, prop } from 'typegoose';
+import { Typegoose, prop } from '@hasezoey/typegoose';
 
 class AboutTech extends Typegoose {
   @prop({ required: true })
