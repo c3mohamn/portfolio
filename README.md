@@ -6,13 +6,13 @@ This is the source code for Nasir's [portfolio website](https://nasirm.ca).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-Current Angular version is 8.1.0.
+Current Angular version is 9.0.0.
 
 ![](https://i.imgur.com/CPxCEL7.png)
 
 ## Technology
 
-- [`Angular (8+)`](https://angular.io/) as the front-end
+- [`Angular (9+)`](https://angular.io/) as the front-end
 - [`Angular Redux (NgRx)`](https://ngrx.io/) as front-end data & state management
 - [`Angular Material`](https://material.angular.io/) for material components
 - [`Angular Universal`](https://angular.io/guide/universal) for ssr
