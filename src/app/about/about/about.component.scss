@@ -37,8 +37,8 @@
     }
 
     @include breakpoint(640px down) {
-      max-width: 50px;
-      width: 32px;
+      max-height: 50px;
+      max-width: 32px;
 
       .about-icon-caption {
         font-size: 10px;
@@ -51,6 +51,14 @@
     }
 
     .about-icon {
+      height: 100px;
+      width: 64px;
+
+      @include breakpoint(640px down) {
+        height: 50px;
+        width: 32px;
+      }
+
       &.typescript {
         fill: $typescript;
       }
