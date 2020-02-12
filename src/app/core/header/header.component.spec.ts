@@ -5,7 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { RouterStateService } from 'src/app/state/router-state/router-state.service';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from 'src/app/state';
-import { MatIconModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;

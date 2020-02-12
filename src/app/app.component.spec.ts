@@ -8,7 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducers } from './state';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCustomIconService } from './shared/services/mat-custom-icon/mat-custom-icon.service';
-import { MatIconModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {

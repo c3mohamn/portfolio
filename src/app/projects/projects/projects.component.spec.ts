@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollDirective } from 'ngx-page-scroll';
 import { ProjectComponent } from '../components/project/project.component';
-import { MatIconModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;

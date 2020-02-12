@@ -96,7 +96,7 @@ export const iconList: TechIcon[] = [
     </small></h4>
     <br />
     Foundation is a front-end framework
-     like Bootstrap. It is very customizable and allows you to include the features you want. 
+     like Bootstrap. It is very customizable and allows you to include the features you want.
      <br><br>
      I primarily use it for it's scss functions and grid system.`
   },
