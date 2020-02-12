@@ -6,7 +6,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { ProjectComponent } from './components/project/project.component';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
-import { MatIconModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from '../shared/shared.module';
 import { ProjectService } from './services/project.service';
 
