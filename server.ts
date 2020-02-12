@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
 const {
-  AppServerModuleNgFactory,
+  AppServerModule,
   LAZY_MODULE_MAP,
   ngExpressEngine,
   provideModuleMap
@@ -34,7 +34,7 @@ const {
 app.engine(
   'html',
   ngExpressEngine({
-    bootstrap: AppServerModuleNgFactory,
+    bootstrap: AppServerModule,
     providers: [provideModuleMap(LAZY_MODULE_MAP)]
   })
 );
