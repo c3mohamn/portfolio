@@ -7,12 +7,6 @@ import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [ContactComponent],
-  imports: [
-    CommonModule,
-    ContactRoutingModule,
-    MaterialModule,
-    FormsModule,
-    ReactiveFormsModule
-  ]
+  imports: [CommonModule, ContactRoutingModule, MaterialModule, FormsModule, ReactiveFormsModule]
 })
 export class ContactModule {}

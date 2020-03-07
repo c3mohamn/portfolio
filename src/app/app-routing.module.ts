@@ -11,8 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'projects',
-    loadChildren: () =>
-      import('./projects/projects.module').then(m => m.ProjectsModule),
+    loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule),
     data: { title: 'Projects', index: 0 }
   },
   {
@@ -22,20 +21,13 @@ const routes: Routes = [
   },
   {
     path: 'resume',
-    loadChildren: () =>
-      import('./resume/resume.module').then(m => m.ResumeModule),
+    loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule),
     data: { title: 'Resume', index: 2 }
   },
   {
     path: 'contact',
-    loadChildren: () =>
-      import('./contact/contact.module').then(m => m.ContactModule),
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule),
     data: { title: 'Contact', index: 3 }
-  },
-  {
-    path: 'admin',
-    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
-    data: { title: 'Admin', index: 4 }
   },
   {
     path: '**',

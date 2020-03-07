@@ -17,10 +17,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   private ngUnsubscribe: Subject<any> = new Subject();
   projects: Project[] = projects;
 
-  constructor(
-    private routeService: RouterStateService,
-    private metaTagService: MetaTagService
-  ) {}
+  constructor(private routeService: RouterStateService, private metaTagService: MetaTagService) {}
 
   ngOnInit() {
     this.metaTagService.setTitle('Projects | Nasir Mohammad Portfolio');

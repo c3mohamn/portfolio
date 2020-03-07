@@ -1,7 +1,6 @@
 import express, { Request, Response } from 'express';
 import sgMail from '../config/sendgrid';
 import { ContactForm } from '../models/contact-form.model';
-import { MailData } from '@sendgrid/helpers/classes/mail';
 import Joi from 'joi';
 
 const router = express.Router();
@@ -21,7 +20,7 @@ router.post('/send', async (req: Request, res: Response) => {
     return res.status(400).send({ message: error.details[0].message });
   }
 
-  const msg: MailData = {
+  const msg = {
     to: 'nasir.m23@hotmail.com',
     from: form.email || 'no-email-entered@example.com',
     subject: 'Email from your portfolio',

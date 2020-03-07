@@ -5,13 +5,7 @@ import { ContactService } from '../services/contact.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { ContactForm } from '../models/contact-form.model';
-import {
-  FormGroup,
-  FormBuilder,
-  Validators,
-  FormControl,
-  FormGroupDirective
-} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl, FormGroupDirective } from '@angular/forms';
 import { MetaTagService } from 'src/app/shared/services/meta-tag/meta-tag.service';
 
 @Component({
@@ -27,11 +21,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   error = false;
   submitting = false;
 
-  constructor(
-    private contactService: ContactService,
-    private fb: FormBuilder,
-    private metaTagService: MetaTagService
-  ) {
+  constructor(private contactService: ContactService, private fb: FormBuilder, private metaTagService: MetaTagService) {
     this.createForm();
   }
 
@@ -43,20 +33,10 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   createForm(): void {
     this.contactForm = this.fb.group({
-      name: new FormControl('', [
-        Validators.required,
-        Validators.maxLength(150)
-      ]),
-      email: new FormControl('', [
-        Validators.required,
-        Validators.email,
-        Validators.maxLength(150)
-      ]),
+      name: new FormControl('', [Validators.required, Validators.maxLength(150)]),
+      email: new FormControl('', [Validators.required, Validators.email, Validators.maxLength(150)]),
       phone: new FormControl('', [Validators.maxLength(20)]),
-      message: new FormControl('', [
-        Validators.required,
-        Validators.maxLength(1000)
-      ])
+      message: new FormControl('', [Validators.required, Validators.maxLength(1000)])
     });
   }
 

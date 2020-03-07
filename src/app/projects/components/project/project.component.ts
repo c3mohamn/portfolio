@@ -42,15 +42,9 @@ export class ProjectComponent implements OnInit, OnDestroy {
         this.project = this.projectService.getProject(this.projectName);
         if (this.project) {
           // set meta tags
-          this.metaTagService.setTitle(
-            `${this.project.title} | Projects | Nasir Mohammad Portfolio`
-          );
-          this.metaTagService.updateDescriptionTag(
-            this.project.shortDescription
-          );
-          this.metaTagService.updateImgTag(
-            `https://www.nasirm.ca/${this.project.previewImgRelativePath}`
-          );
+          this.metaTagService.setTitle(`${this.project.title} | Projects | Nasir Mohammad Portfolio`);
+          this.metaTagService.updateDescriptionTag(this.project.shortDescription);
+          this.metaTagService.updateImgTag(`https://www.nasirm.ca/${this.project.previewImgRelativePath}`);
           this.metaTagService.updateUrlTag(`/projects/${this.project.name}`);
         } else {
           this.metaTagService.setTitle(`Projects | Nasir Mohammad Portfolio`);
