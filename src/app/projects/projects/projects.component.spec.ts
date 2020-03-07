@@ -25,12 +25,7 @@ describe('ProjectsComponent', () => {
         NgxPageScrollCoreModule,
         MatIconModule
       ],
-      declarations: [
-        ProjectsComponent,
-        ProjectCardComponent,
-        ProjectComponent,
-        NgxPageScrollDirective
-      ],
+      declarations: [ProjectsComponent, ProjectCardComponent, ProjectComponent, NgxPageScrollDirective],
       providers: [RouterStateService]
     }).compileComponents();
   }));

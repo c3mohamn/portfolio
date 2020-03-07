@@ -9,10 +9,7 @@ import { customIcons } from '../../data/custom-icons';
 export class MatCustomIconService {
   icons = customIcons;
 
-  constructor(
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
-  ) {}
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {}
 
   /**
    * Adds an icon to the Material Icon Registry.
@@ -22,9 +19,7 @@ export class MatCustomIconService {
   addCustomIcon(name: string): void {
     this.matIconRegistry.addSvgIcon(
       name,
-      this.domSanitizer.bypassSecurityTrustResourceUrl(
-        `../../assets/icons/${name}.svg`
-      )
+      this.domSanitizer.bypassSecurityTrustResourceUrl(`../../assets/icons/${name}.svg`)
     );
   }
 

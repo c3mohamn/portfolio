@@ -13,11 +13,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        MatIconModule,
-        StoreModule.forRoot(reducers)
-      ],
+      imports: [RouterTestingModule, MatIconModule, StoreModule.forRoot(reducers)],
       providers: [RouterStateService],
       declarations: [HeaderComponent]
     }).compileComponents();

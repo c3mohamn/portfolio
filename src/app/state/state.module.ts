@@ -1,14 +1,12 @@
 import { NgModule, InjectionToken } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule, ActionReducerMap } from '@ngrx/store';
-import { reducers, metaReducers, State } from './index';
+import { reducers, State } from './index';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { RouterStateModule } from './router-state/router-state.module';
 import { EffectsModule } from '@ngrx/effects';
 
-export const REDUCERS_TOKEN = new InjectionToken<ActionReducerMap<State>>(
-  'Registered Reducers'
-);
+export const REDUCERS_TOKEN = new InjectionToken<ActionReducerMap<State>>('Registered Reducers');
 
 Object.assign(REDUCERS_TOKEN, reducers);
 

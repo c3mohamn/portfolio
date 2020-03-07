@@ -3,15 +3,11 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "git.enableSmartCommit": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true,
-  "prettier.jsxBracketSameLine": true,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.suggestSelection": "first",
-  "editor.tabSize": 2,
   "html.format.endWithNewline": true,
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

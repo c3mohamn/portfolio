@@ -13,11 +13,7 @@ describe('ProjectComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        MatIconModule,
-        StoreModule.forRoot(reducers),
-        RouterTestingModule
-      ],
+      imports: [MatIconModule, StoreModule.forRoot(reducers), RouterTestingModule],
       providers: [RouterStateService],
       declarations: [ProjectComponent]
     }).compileComponents();

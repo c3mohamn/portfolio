@@ -6,7 +6,7 @@ This is the source code for Nasir's [portfolio website](https://nasirm.ca).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-Current Angular version is 9.0.0.
+Current Angular version is 9.0.5.
 
 ![](https://i.imgur.com/CPxCEL7.png)
 
@@ -39,13 +39,11 @@ Run `npm run test:client` to run Angular tests.
 
 Run `npm run client:dev` to start the angular client on port 4200.
 
-Run `npm run server:dev` to build front-end bundles and starts the server on port 3000.
+Run `npm run dev:ssr` to build front-end bundles and starts the server on port 3000.
 
 Run `npm run all:dev` to concurrently run client-dev and server-dev.
 
 Run `npm run build:client` to build the angular browser client to dist/browser/.
-
-Run `npm run build:server` to build server to dist/.
 
 Run `npm run build:ssr` to build angular server to dist/server/.
 

@@ -12,13 +12,7 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        HttpClientModule,
-        FormsModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        MaterialModule
-      ],
+      imports: [HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, MaterialModule],
       declarations: [ContactComponent]
     }).compileComponents();
   }));

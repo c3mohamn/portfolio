@@ -15,10 +15,7 @@ export class AppComponent implements OnInit, OnDestroy {
   private ngUnsubscribe: Subject<any> = new Subject();
   currentRouteIndex = 0;
 
-  constructor(
-    private routeService: RouterStateService,
-    private matCustomIconService: MatCustomIconService
-  ) {}
+  constructor(private routeService: RouterStateService, private matCustomIconService: MatCustomIconService) {}
 
   ngOnInit(): void {
     this.routeService
