@@ -8,7 +8,6 @@ import { StoreModule } from '@ngrx/store';
 import { reducers } from './state';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCustomIconService } from './shared/services/mat-custom-icon/mat-custom-icon.service';
-import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
@@ -17,13 +16,7 @@ describe('AppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        HttpClientModule,
-        MatIconModule,
-        StoreModule.forRoot(reducers),
-        BrowserAnimationsModule
-      ],
+      imports: [RouterTestingModule, HttpClientModule, StoreModule.forRoot(reducers), BrowserAnimationsModule],
       declarations: [AppComponent, HeaderComponent, FooterComponent],
       providers: [RouterStateService, MatCustomIconService]
     }).compileComponents();

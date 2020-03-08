@@ -4,7 +4,9 @@ import { ContactComponent } from './contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from 'src/app/material/material.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -12,7 +14,15 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, MaterialModule],
+      imports: [
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule
+      ],
       declarations: [ContactComponent]
     }).compileComponents();
   }));

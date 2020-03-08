@@ -1,15 +1,5 @@
 import { TechIcon } from '../../about/models/tech-icon.model';
 
-// export const howItStarted = `
-//       After finishing my undergraduate degree and beginning my job hunt, I came to the realization
-//       that like artists, web developers should also have portfolios.
-//       <br /><br />
-//       So I began building my own portfolio.
-//       A place for me to easily showcase who I am and what I apsire to be. A place where
-//       I could keep a log of everything I learn. Hopefully it captures, to some extent, who I am and
-//       what I have to offer.
-// `;
-
 export const iconList: TechIcon[] = [
   {
     title: 'Visual Studio Code',
@@ -70,21 +60,6 @@ export const iconList: TechIcon[] = [
      runtime environment for developing server-side and networking applications. I use it
      because it is incredibly easy to use and set up.`
   },
-  // REMOVED from node server
-  // {
-  //   title: 'Mongodb',
-  //   cssClass: 'mongodb',
-  //   description: `
-  //   <h4><small>
-  //   <a class="no-underline" href="https://www.mongodb.com/new" target="_blank" rel="noopener"
-  //       aria-label="Mongodb link" title="Mongodb">
-  //       Mongodb
-  //     </a>
-  //   </small></h4>
-  //   <br />
-  //   Mongodb is a cross-platform document-oriented database classified as NoSQL or non-relational.
-  //   It uses JSON-like documents which is perfect for a website where most of the data is text based. `
-  // },
   {
     title: 'Zurb Foundation',
     cssClass: 'foundation',
@@ -117,21 +92,6 @@ export const iconList: TechIcon[] = [
      <br /> <br />
      For this website, I am using Angular Material, Google fonts, and  icons.`
   },
-  // REMOVED from node server
-  // {
-  //   title: 'Swagger',
-  //   cssClass: 'swagger',
-  //   description: `
-  //   <h4><small>
-  //   <a class="no-underline" href="https://swagger.io/" target="_blank" rel="noopener"
-  //       aria-label="Swagger link" title="Swagger">
-  //       Swagger
-  //     </a>
-  //   </small></h4>
-  //   <br />
-  //   Swagger is an open-source software framework backed by a large ecosystem of tools
-  //   that helps developers design, build, document, and consume RESTful Web services.`
-  // },
   {
     title: 'Github',
     cssClass: 'github',
@@ -333,4 +293,34 @@ export const iconList: TechIcon[] = [
      It has many capabilities and features such as built-in functions, variables, rules, operations,
      interpolation and much more.`
   }
+  // REMOVED from node server
+  // {
+  //   title: 'Mongodb',
+  //   cssClass: 'mongodb',
+  //   description: `
+  //   <h4><small>
+  //   <a class="no-underline" href="https://www.mongodb.com/new" target="_blank" rel="noopener"
+  //       aria-label="Mongodb link" title="Mongodb">
+  //       Mongodb
+  //     </a>
+  //   </small></h4>
+  //   <br />
+  //   Mongodb is a cross-platform document-oriented database classified as NoSQL or non-relational.
+  //   It uses JSON-like documents which is perfect for a website where most of the data is text based. `
+  // },
+  // REMOVED from node server
+  // {
+  //   title: 'Swagger',
+  //   cssClass: 'swagger',
+  //   description: `
+  //   <h4><small>
+  //   <a class="no-underline" href="https://swagger.io/" target="_blank" rel="noopener"
+  //       aria-label="Swagger link" title="Swagger">
+  //       Swagger
+  //     </a>
+  //   </small></h4>
+  //   <br />
+  //   Swagger is an open-source software framework backed by a large ecosystem of tools
+  //   that helps developers design, build, document, and consume RESTful Web services.`
+  // },
 ];
