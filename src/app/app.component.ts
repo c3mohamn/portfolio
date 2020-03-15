@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { routerTransition } from './shared/animations/router.animation';
-import { RouterStateService } from './state/router-state/router-state.service';
+import { routerTransition } from './animations/router.animation';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { MatCustomIconService } from './shared/services/mat-custom-icon/mat-custom-icon.service';
+import { MatCustomIconService } from './services/mat-custom-icon/mat-custom-icon.service';
+import { RouterStateService } from './services/router-state.service';
 
 @Component({
   selector: 'nm-root',

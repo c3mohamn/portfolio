@@ -9,22 +9,22 @@ const routes: Routes = [
   },
   {
     path: 'projects',
-    loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule),
+    loadChildren: () => import('./modules/projects/projects.module').then(m => m.ProjectsModule),
     data: { title: 'Projects', index: 0 }
   },
   {
     path: 'about',
-    loadChildren: () => import('./about/about.module').then(m => m.AboutModule),
+    loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule),
     data: { title: 'About', index: 1 }
   },
   {
     path: 'resume',
-    loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule),
+    loadChildren: () => import('./modules/resume/resume.module').then(m => m.ResumeModule),
     data: { title: 'Resume', index: 2 }
   },
   {
     path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule),
+    loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule),
     data: { title: 'Contact', index: 3 }
   },
   {
