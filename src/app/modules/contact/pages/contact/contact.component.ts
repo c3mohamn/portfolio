@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SocialMediaLink } from 'src/app/models/social-media.model';
 import { socialMedia } from 'src/app/data/social-media-list';
-import { ContactService } from '../services/contact.service';
+import { ContactService } from '../../services/contact.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { ContactForm } from '../models/contact-form.model';
+import { ContactForm } from '../../models/contact-form.model';
 import { FormGroup, FormBuilder, Validators, FormControl, FormGroupDirective } from '@angular/forms';
 import { MetaTagService } from 'src/app/services/meta-tag/meta-tag.service';
 

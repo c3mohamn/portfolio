@@ -7,7 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollDirective } from 'ngx-page-scroll';
-import { ProjectComponent } from '../components/project/project.component';
+import { ProjectComponent } from '../pages/project/project.component';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterStateService } from 'src/app/services/router-state.service';
 import { reducers } from '../../state';
