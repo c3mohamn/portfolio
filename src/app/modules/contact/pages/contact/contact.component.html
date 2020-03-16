@@ -1,0 +1,48 @@
+<div class="contact-container">
+  <p>Feel free to contact me if you have any questions, advice, or for any opportunities
+    :)
+  </p>
+
+  <form (ngSubmit)="submitForm(contactForm, formDirective)" [formGroup]="contactForm" #formDirective="ngForm">
+    <mat-form-field appearance="outline" class="width-100">
+      <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="name" required />
+      <mat-error *ngIf="contactForm.get('name').invalid">{{getErrorMessage('name')}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="width-100">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" required />
+      <mat-error *ngIf="contactForm.get('email').invalid">{{getErrorMessage('email')}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="width-100">
+      <mat-label>Phone</mat-label>
+      <input matInput type="tel" formControlName="phone" />
+      <mat-error *ngIf="contactForm.get('phone').invalid">{{getErrorMessage('phone')}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="width-100">
+      <mat-label>Message</mat-label>
+      <textarea matInput type="text" #message maxlength="1000" formControlName="message" required></textarea>
+      <mat-error *ngIf="contactForm.get('message').invalid">{{getErrorMessage('message')}}</mat-error>
+      <mat-hint align="end">{{message.value?.length || 0}}/1000</mat-hint>
+    </mat-form-field>
+
+    <button mat-flat-button type="submit" class="margin-top-1 float-right" [disabled]="submitting">
+      Submit
+    </button>
+
+    <p class="response-message padding-1" [ngClass]="{'error': error, 'good': !error}">
+      <small>{{serverResponseMsg}}</small></p>
+  </form>
+
+  <div class="social-media-links padding-vertical-2">
+    <div *ngFor="let item of socialMediaList">
+      <a href="{{item.link}}" class="social-media-links" target="{{item.media !== 'microsoft-outlook' ? '_blank' : ''}}"
+        rel="noopener" aria-label="Go to Nasir's social media profile page" title="{{item.title}}">
+        {{item.title}}
+      </a>
+    </div>
+  </div>
+</div>

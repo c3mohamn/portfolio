@@ -1,61 +1,59 @@
 import 'zone.js/dist/zone-node';
-import 'reflect-metadata';
-import { enableProdMode } from '@angular/core';
 
-import express, { Application } from 'express';
+import express from 'express';
 import { join } from 'path';
 import bodyParser from 'body-parser';
 import routes from './server/controllers';
-import mongodb from './server/config/mongodb';
 
-// Faster server renders w/ Prod mode (dev mode never needed)
-enableProdMode();
+import { ngExpressEngine } from '@nguniversal/express-engine';
+import { AppServerModule } from 'src/main.server';
+import { existsSync } from 'fs';
+import { APP_BASE_HREF } from '@angular/common';
 
-const app: Application = express();
-const port: number | string = process.env.PORT || 3000;
-const DIST_FOLDER = join(process.cwd(), 'dist/browser');
+export function app() {
+  const server = express();
+  const distFolder = join(process.cwd(), 'dist/browser');
+  const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
-// database connection
-mongodb.connect();
+  // init body parser middleware
+  // tslint:disable-next-line: deprecation
+  server.use(bodyParser.json());
+  // tslint:disable-next-line: deprecation
+  server.use(bodyParser.urlencoded({ extended: false }));
 
-// init body parser middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+  server.engine('html', ngExpressEngine({ bootstrap: AppServerModule }));
 
-// * NOTE :: leave this as require() since this file is built Dynamically from webpack
-const {
-  AppServerModuleNgFactory,
-  LAZY_MODULE_MAP,
-  ngExpressEngine,
-  provideModuleMap
-} = require('./dist/server/main');
+  // API Routes
+  server.use('/api', routes);
 
-// Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
-app.engine(
-  'html',
-  ngExpressEngine({
-    bootstrap: AppServerModuleNgFactory,
-    providers: [provideModuleMap(LAZY_MODULE_MAP)]
-  })
-);
+  server.set('view engine', 'html');
+  server.set('views', distFolder);
 
-// API Routes
-app.use('/api', routes);
+  // Serve static files from /browser
+  server.get('*.*', express.static(distFolder, { maxAge: '1y' }));
 
-app.set('view engine', 'html');
-app.set('views', DIST_FOLDER);
+  // All regular routes use the Universal engine
+  server.get('*', (req, res) => {
+    res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
+  });
 
-// Serve static files from /browser
-app.get(
-  '*.*',
-  express.static(DIST_FOLDER, {
-    maxAge: '1y'
-  })
-);
+  return server;
+}
 
-// All regular routes use the Universal engine
-app.get('*', (req, res) => {
-  res.render('index', { req });
-});
+function run() {
+  const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+  // Start up the Node server
+  app().listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
+
+declare const __non_webpack_require__: NodeRequire;
+const mainModule = __non_webpack_require__.main;
+const moduleFilename = (mainModule && mainModule.filename) || '';
+if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
+  run();
+}
+
+export * from './src/main.server';

@@ -1,0 +1,82 @@
+@import 'foundation-styles';
+
+.about-container {
+  width: 100%;
+  height: 100%;
+
+  .about-icon-description-container {
+    transition: $nm-transition-slow;
+    border: solid 1px $nm-secondary;
+    padding: 0 1rem;
+    margin: 2rem 0;
+
+    .about-icon-description {
+      opacity: 0;
+      transition: $nm-transition-slow;
+    }
+
+    &.show {
+      padding: 1rem;
+      border-width: 2px;
+
+      .about-icon-description {
+        opacity: 1;
+      }
+    }
+  }
+
+  .about-icon-container {
+    max-height: 100px;
+    max-width: 64px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: $nm-transition-fast;
+
+    .about-icon-caption {
+      font-size: 12px;
+    }
+
+    @include breakpoint(640px down) {
+      max-height: 50px;
+      max-width: 32px;
+
+      .about-icon-caption {
+        font-size: 10px;
+      }
+    }
+
+    &:hover,
+    &.selected {
+      opacity: 1;
+    }
+
+    .about-icon {
+      height: 100px;
+      width: 64px;
+
+      @include breakpoint(640px down) {
+        height: 50px;
+        width: 32px;
+      }
+
+      &.typescript {
+        fill: $typescript;
+      }
+      &.javascript {
+        fill: $javascript;
+      }
+      &.material-design {
+        fill: $material;
+      }
+      &.github {
+        fill: $github;
+      }
+      &.heroku {
+        fill: $heroku;
+      }
+      &.cloudflare {
+        fill: $cloudflare;
+      }
+    }
+  }
+}

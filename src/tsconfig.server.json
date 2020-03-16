@@ -2,10 +2,12 @@
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
     "target": "es2015",
-    "module": "esnext",
+    "module": "commonjs",
     "outDir": "../out-tsc/app-server"
   },
   "angularCompilerOptions": {
     "entryModule": "./app/app.server.module#AppServerModule"
-  }
+  },
+  "files": ["../server.ts"],
+  "include": ["src/**/*.d.ts"]
 }
