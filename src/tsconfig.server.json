@@ -9,5 +9,5 @@
     "entryModule": "./app/app.server.module#AppServerModule"
   },
   "files": ["../server.ts"],
-  "exclude": ["test.ts", "**/*.spec.ts"]
+  "include": ["src/**/*.d.ts"]
 }
