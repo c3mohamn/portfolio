@@ -15,8 +15,8 @@
     "importHelpers": true,
     "typeRoots": ["node_modules/@types"],
     "lib": ["es6", "es2018", "dom"],
-    "module": "commonjs",
-    "target": "es6"
+    "module": "esnext",
+    "target": "es2015"
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
