@@ -6,7 +6,7 @@ This is the source code for Nasir's [portfolio website](https://nasirm.ca).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-Current Angular version is 9.0.5.
+Current Angular version is 9.0.6.
 
 ![](https://i.imgur.com/CPxCEL7.png)
 
