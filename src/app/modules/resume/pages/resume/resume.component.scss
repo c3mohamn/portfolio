@@ -30,7 +30,12 @@
 }
 
 .resume-date {
-  opacity: 0.5;
-  margin-left: 20px;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
   font-size: 0.75rem;
+}
+
+.resume-experience-company {
+  opacity: 0.7;
+  color: $nm-secondary;
 }
