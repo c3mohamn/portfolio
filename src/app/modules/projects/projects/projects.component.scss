@@ -30,12 +30,12 @@
       font-size: 1.5rem;
       line-height: 2.5rem;
 
-      .beautiful {
-        animation: beautiful 20s ease infinite;
+      .transition-colour {
+        animation: transition-colour 10s ease infinite;
       }
 
-      .responsive {
-        animation: responsive 20s ease infinite;
+      .transition-letter-spacing {
+        animation: transition-letter-spacing 10s ease infinite;
       }
     }
 
@@ -83,7 +83,7 @@
   }
 }
 
-@keyframes beautiful {
+@keyframes transition-colour {
   0% {
     color: white;
   }
@@ -98,7 +98,7 @@
   }
 }
 
-@keyframes responsive {
+@keyframes transition-letter-spacing {
   0% {
     letter-spacing: 0px;
   }
