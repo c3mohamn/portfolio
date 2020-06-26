@@ -12,20 +12,20 @@ Current Angular version is 9.1.4.
 
 ## Technology
 
-- [`Angular (9+)`](https://angular.io/) as the front-end
-- [`Angular Redux (NgRx)`](https://ngrx.io/) as front-end data & state management
-- [`Angular Material`](https://material.angular.io/) for material components
-- [`Angular Universal`](https://angular.io/guide/universal) for ssr
-- [`Nodejs`](https://nodejs.org) as the server environment
-- [`Vscode`](https://code.visualstudio.com/) as code editor
-- [`Travis CI`](https://travis-ci.org/) as CI
-- [`Google Analytics`](https://analytics.google.com) & GTM for tracking traffic
-- [`Zurb Foundation`](https://foundation.zurb.com/) as css library
-- [`Heroku`](https://heroku.com) for hosting
-- [`Clourflare`](https://www.cloudflare.com/) for website security
-- [`Trello`](https://trello.com/b/hoS9NAOg/portfolio-ideas) for recording and tracking ideas
-- [`Fullstory`](https://www.fullstory.com) for digital analytics
-- [`SendGrid`](https://sendgrid.com/) for transactional emails
+- [`Angular (9+)`](https://angular.io/)
+- [`Angular Redux (NgRx)`](https://ngrx.io/)
+- [`Angular Material`](https://material.angular.io/)
+- [`Angular Universal`](https://angular.io/guide/universal)
+- [`Nodejs`](https://nodejs.org)
+- [`Vscode`](https://code.visualstudio.com/)
+- [`Travis CI`](https://travis-ci.org/)
+- [`Google Analytics`](https://analytics.google.com) 
+- [`Zurb Foundation`](https://foundation.zurb.com/)
+- [`Heroku`](https://heroku.com)
+- [`Clourflare`](https://www.cloudflare.com/)
+- [`Trello`](https://trello.com/b/hoS9NAOg/portfolio-ideas)
+- [`Fullstory`](https://www.fullstory.com)
+- [`SendGrid`](https://sendgrid.com/)
 
 My [about page](https://nasirm.ca/about) contains a bigger list and longer description of the tech used.
 
