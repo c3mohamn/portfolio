@@ -9,8 +9,13 @@
       <i><small>Click on the icons for info!</small></i>
     </div>
     <div class="cell grid-x grid-margin-x grid-margin-y nm-body">
-      <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{ icon.title }}"
-        (click)="showDescriptionFor(icon)" [ngClass]="{ selected: selected === icon.cssClass }">
+      <div
+        class="cell about-icon-container"
+        *ngFor="let icon of iconList"
+        title="{{ icon.title }}"
+        (click)="showDescriptionFor(icon)"
+        [ngClass]="{ selected: selected === icon.cssClass }"
+      >
         <mat-icon svgIcon="{{ icon.cssClass }}" class="about-icon {{ icon.cssClass }}" *appShellNoRender></mat-icon>
         <img src="assets/icons/placeholder.svg" *appShellRender />
         <div class="text-center about-icon-caption">
@@ -28,24 +33,54 @@
     <div class="nm-body">
       <ul>
         <li>
-          <a href="https://brandcolors.net/" target="_blank" rel="noopener" aria-label="Go to Brand Colors webpage"
-            title="Link to BrandColors webpage">BrandColors</a>
+          <a
+            href="https://brandcolors.net/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Go to Brand Colors webpage"
+            title="Link to BrandColors webpage"
+            >BrandColors</a
+          >
         </li>
         <li>
-          <a href="https://picsvg.com/" target="_blank" rel="noopener" aria-label="Go to Picsvg webpage"
-            title="Link to Picsvg webpage">Picsvg</a>
+          <a
+            href="https://picsvg.com/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Go to Picsvg webpage"
+            title="Link to Picsvg webpage"
+            >Picsvg</a
+          >
         </li>
         <li>
-          <a href="https://simpleicons.org/" target="_blank" rel="noopener" aria-label="Go to Simple Icons webpage"
-            title="Link to Simple Icons webpage">Simple Icons</a>
+          <a
+            href="https://simpleicons.org/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Go to Simple Icons webpage"
+            title="Link to Simple Icons webpage"
+            >Simple Icons</a
+          >
         </li>
         <li>
-          <a href="https://worldvectorlogo.com" target="_blank" rel="noopener"
-            aria-label="Go to World Vector Logo webpage" title="Link to WORLDVECTORLOGO webpage">WORLDVECTORLOGO</a>
+          <a
+            href="https://worldvectorlogo.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Go to World Vector Logo webpage"
+            title="Link to WORLDVECTORLOGO webpage"
+            >WORLDVECTORLOGO</a
+          >
         </li>
         <li>
-          <a href="https://tinypng.com" target="_blank" rel="noopener" aria-label="Go to Tinypng webpage"
-            title="Link to Tinypng webpage">Tinypng</a>
+          <a
+            href="https://tinypng.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="Go to Tinypng webpage"
+            title="Link to Tinypng webpage"
+            >Tinypng</a
+          >
         </li>
       </ul>
     </div>

@@ -4,8 +4,12 @@
       <h4>Nasir Mohammad</h4>
     </div>
     <div class="cell auto"></div>
-    <div class="cell shrink disable-select nav-link show-for-medium" *ngFor="let page of pages"
-      [ngClass]="{ selected: currentPageTitle === page.name }" (click)="navigate(page.url)">
+    <div
+      class="cell shrink disable-select nav-link show-for-medium"
+      *ngFor="let page of pages"
+      [ngClass]="{ selected: currentPageTitle === page.name }"
+      (click)="navigate(page.url)"
+    >
       {{ page.name }}
     </div>
     <div class="cell shrink hide-for-medium">
@@ -24,8 +28,12 @@
     </div>
   </div>
   <div class="margin-top-3">
-    <div class="grid-x align-middle align-center margin-top-1" *ngFor="let page of pages"
-      [ngClass]="{ selected: currentPageTitle === page.name }" (click)="navigate(page.url)">
+    <div
+      class="grid-x align-middle align-center margin-top-1"
+      *ngFor="let page of pages"
+      [ngClass]="{ selected: currentPageTitle === page.name }"
+      (click)="navigate(page.url)"
+    >
       <div class="cell shrink disable-select nav-link nav-link-mobile">
         {{ page.name }}
       </div>
