@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Project } from '../models/project.model';
+
 import { projects } from '../data/projects';
+import { Project } from '../models/project.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,6 @@ export class ProjectService {
 
   // temp
   getProject(projectName: string): Project {
-    return this.projects.find(p => p.name === projectName);
+    return this.projects.find((p) => p.name === projectName);
   }
 }

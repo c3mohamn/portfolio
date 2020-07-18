@@ -1,8 +1,10 @@
+import { Observable } from 'rxjs';
+
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+
 import { RouterStateUrl } from '../modules/state/router-state/router-state.custom-serializer';
-import { RouterStateSelector, RouterState } from '../modules/state/router-state/router-state.selector';
+import { RouterState, RouterStateSelector } from '../modules/state/router-state/router-state.selector';
 
 @Injectable()
 export class RouterStateService {

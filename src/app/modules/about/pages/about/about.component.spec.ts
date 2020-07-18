@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AboutComponent } from './about.component';
-import { MatIconModule } from '@angular/material/icon';
 
 describe('AboutComponent', () => {
   let component: AboutComponent;

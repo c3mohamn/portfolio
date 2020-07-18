@@ -1,5 +1,5 @@
-import { Directive, Inject, OnInit, PLATFORM_ID, TemplateRef, ViewContainerRef } from '@angular/core';
 import { isPlatformServer } from '@angular/common';
+import { Directive, Inject, OnInit, PLATFORM_ID, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
   // tslint:disable-next-line: directive-selector

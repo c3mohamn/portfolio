@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { SocialMediaLink } from 'src/app/models/social-media.model';
 import { socialMedia } from 'src/app/data/social-media-list';
+import { SocialMediaLink } from 'src/app/models/social-media.model';
+
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'nm-footer',

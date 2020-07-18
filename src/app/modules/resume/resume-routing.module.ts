@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+
 import { ResumeComponent } from './pages/resume/resume.component';
 
 const routes: Routes = [{ path: '', component: ResumeComponent }];

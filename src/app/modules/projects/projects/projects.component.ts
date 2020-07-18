@@ -1,9 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs';
-import { MetaTagService } from 'src/app/services/meta-tag/meta-tag.service';
 import { listFadeAnimation } from 'src/app/animations/list.animation';
-import { Project } from '../models/project.model';
+import { MetaTagService } from 'src/app/services/meta-tag/meta-tag.service';
+
+import { Component, OnDestroy, OnInit } from '@angular/core';
+
 import { projects } from '../data/projects';
+import { Project } from '../models/project.model';
 
 @Component({
   selector: 'nm-projects',

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { MetaTagService } from 'src/app/services/meta-tag/meta-tag.service';
+
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'nm-resume',

@@ -1,6 +1,8 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
 import { ContactForm } from '../models/contact-form.model';
 
 @Injectable({

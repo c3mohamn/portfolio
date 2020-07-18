@@ -1,11 +1,12 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterStateService } from 'src/app/services/router-state.service';
 
-import { HeaderComponent } from './header.component';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatIconModule } from '@angular/material/icon';
 import { RouterTestingModule } from '@angular/router/testing';
 import { StoreModule } from '@ngrx/store';
-import { MatIconModule } from '@angular/material/icon';
-import { RouterStateService } from 'src/app/services/router-state.service';
+
 import { reducers } from '../../state';
+import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;

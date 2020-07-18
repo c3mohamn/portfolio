@@ -3,30 +3,55 @@
   <div class="cell main-text-container">
     <header>
       <div class="main-text-header">
-        Hi, I'm <a href="https://www.linkedin.com/in/nasir-mohammad-448906140/" target="_blank" rel="noopener"
-          aria-label="Nasir Linkedin page" title="Nasir Linkedin Page" class="main-name">Nasir</a>!
+        Hi, I'm
+        <a
+          href="https://www.linkedin.com/in/nasir-mohammad-448906140/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Nasir Linkedin page"
+          title="Nasir Linkedin Page"
+          class="main-name"
+          >Nasir</a
+        >!
       </div>
       <div class="main-text-body">
         I am passionate about solving problems and creating <span class="transition-colour">great-looking</span> and
         <span class="transition-letter-spacing">responsive</span> applications that make our lives <u>easier</u>.
       </div>
-      <br>
+      <br />
       <div class="sub-text-body">
         My primary focus is in web technologies, but I love expanding my horizon to learn new things and solve
-        real-world problems. Feel free to browse around this website and see <a [routerLink]="['/about']"
-          title="About Link" aria-label="About Link">how I made it</a>, get a copy of my <a [routerLink]="['/resume']"
-          title="Resume Link" aria-label="Resume Link">resume</a>, or checkout my <a
-          href="https://www.linkedin.com/in/nasirm23/" title="Nasir Linkedin Link" aria-label="Nasir Linkedin Link"
-          target="_blank" rel="noopener">Linkedin</a>,
-        <a href="https://github.com/c3mohamn/portfolio" target="_blank" rel="noopener"
-          aria-label="Go to Nasir's Github repository for this website" title="Link to portfolio Github repo">Github</a>
-        and <a href="https://trello.com/b/hoS9NAOg/portfolio-ideas" target="_blank" rel="noopener"
-          aria-label="Go to Nasir's Trello board for this website" title="Link to portfolio Trello board">Trello</a>
+        real-world problems. Feel free to browse around this website and see
+        <a [routerLink]="['/about']" title="About Link" aria-label="About Link">how I made it</a>, get a copy of my
+        <a [routerLink]="['/resume']" title="Resume Link" aria-label="Resume Link">resume</a>, or checkout my
+        <a
+          href="https://www.linkedin.com/in/nasirm23/"
+          title="Nasir Linkedin Link"
+          aria-label="Nasir Linkedin Link"
+          target="_blank"
+          rel="noopener"
+          >Linkedin</a
+        >,
+        <a
+          href="https://github.com/c3mohamn/portfolio"
+          target="_blank"
+          rel="noopener"
+          aria-label="Go to Nasir's Github repository for this website"
+          title="Link to portfolio Github repo"
+          >Github</a
+        >
+        and
+        <a
+          href="https://trello.com/b/hoS9NAOg/portfolio-ideas"
+          target="_blank"
+          rel="noopener"
+          aria-label="Go to Nasir's Trello board for this website"
+          title="Link to portfolio Trello board"
+          >Trello</a
+        >
         page.
       </div>
     </header>
-
-
   </div>
   <!-- Projects Header -->
   <div class="cell text-right">
@@ -37,19 +62,30 @@
     <router-outlet></router-outlet>
   </div>
   <!-- Projet Cards -->
-  <div class="cell small-12 grid-x margin-top-2 grid-margin-x grid-margin-y project-cards-list"
-    [@listFadeAnimation]="projects.length" *appShellNoRender>
-    <div class="cell small-12 medium-6" *ngFor="let project of projects" [routerLink]="[ project.name ]" pageScroll
-      pageScrollTarget=".project-container" [pageScrollOffset]=100>
+  <div
+    class="cell small-12 grid-x margin-top-2 grid-margin-x grid-margin-y project-cards-list"
+    [@listFadeAnimation]="projects.length"
+    *appShellNoRender
+  >
+    <div
+      class="cell small-12 medium-6"
+      *ngFor="let project of projects"
+      [routerLink]="[project.name]"
+      pageScroll
+      pageScrollTarget=".project-container"
+      [pageScrollOffset]="100"
+    >
       <nm-project-card [project]="project"></nm-project-card>
     </div>
   </div>
   <!-- SSR cards placeholder -->
-  <div class="cell small-12 grid-x margin-top-2 grid-margin-x grid-margin-y project-cards-list-placeholder"
-    *appShellRender>
+  <div
+    class="cell small-12 grid-x margin-top-2 grid-margin-x grid-margin-y project-cards-list-placeholder"
+    *appShellRender
+  >
     <div class="cell small-12 medium-6" *ngFor="let project of projects">
       <div class="project-card-placeholder">
-        <h4>{{project.title}}</h4>
+        <h4>{{ project.title }}</h4>
       </div>
     </div>
   </div>

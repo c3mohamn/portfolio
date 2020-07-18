@@ -1,12 +1,14 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { SocialMediaLink } from 'src/app/models/social-media.model';
-import { socialMedia } from 'src/app/data/social-media-list';
-import { ContactService } from '../../services/contact.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { ContactForm } from '../../models/contact-form.model';
-import { FormGroup, FormBuilder, Validators, FormControl, FormGroupDirective } from '@angular/forms';
+import { socialMedia } from 'src/app/data/social-media-list';
+import { SocialMediaLink } from 'src/app/models/social-media.model';
 import { MetaTagService } from 'src/app/services/meta-tag/meta-tag.service';
+
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
+
+import { ContactForm } from '../../models/contact-form.model';
+import { ContactService } from '../../services/contact.service';
 
 @Component({
   selector: 'nm-contact',
@@ -46,7 +48,7 @@ export class ContactComponent implements OnInit, OnDestroy {
       .sendEmail(form)
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(
-        result => {
+        (result) => {
           // console.log(result);
           this.contactForm.reset();
           formDirective.resetForm();
@@ -54,7 +56,7 @@ export class ContactComponent implements OnInit, OnDestroy {
           this.error = false;
           this.submitting = false;
         },
-        error => {
+        (error) => {
           // console.log(error);
           this.serverResponseMsg = error.error.message;
           this.error = true;
