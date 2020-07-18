@@ -1,7 +1,9 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { routerTransition } from './animations/router.animation';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+
+import { Component, OnDestroy, OnInit } from '@angular/core';
+
+import { routerTransition } from './animations/router.animation';
 import { MatCustomIconService } from './services/mat-custom-icon/mat-custom-icon.service';
 import { RouterStateService } from './services/router-state.service';
 
@@ -21,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.routeService
       .getCurrentPageIndex()
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(data => {
+      .subscribe((data) => {
         this.currentRouteIndex = data;
       });
 

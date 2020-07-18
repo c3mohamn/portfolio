@@ -45,15 +45,9 @@ router.post('/send', async (req: Request, res: Response) => {
 
 function validateForm(form: ContactForm) {
   const schema = {
-    email: Joi.string()
-      .required()
-      .min(1)
-      .max(150)
-      .email(),
+    email: Joi.string().required().min(1).max(150).email(),
     phone: Joi.string().max(20),
-    message: Joi.string()
-      .required()
-      .max(1000),
+    message: Joi.string().required().max(1000),
     name: Joi.string().max(150)
   };
 

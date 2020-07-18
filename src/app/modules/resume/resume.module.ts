@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ResumeRoutingModule } from './resume-routing.module';
-import { ResumeComponent } from './pages/resume/resume.component';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
+import { ResumeComponent } from './pages/resume/resume.component';
+import { ResumeRoutingModule } from './resume-routing.module';
 
 @NgModule({
   declarations: [ResumeComponent],

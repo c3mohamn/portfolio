@@ -1,4 +1,4 @@
-import { query, group, style, animate, trigger, transition } from '@angular/animations';
+import { animate, group, query, style, transition, trigger } from '@angular/animations';
 
 export const slideLeft = [
   query(':enter, :leave', style({ position: 'absolute', width: '100%', height: '100%' }), { optional: true }),

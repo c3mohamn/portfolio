@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+
 import { AppShellNoRenderDirective } from './directives/app-shell/app-shell-no-render.directive';
 import { AppShellRenderDirective } from './directives/app-shell/app-shell-render.directive';
 

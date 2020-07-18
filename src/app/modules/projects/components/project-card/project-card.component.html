@@ -1,21 +1,20 @@
 <div class="project-card-container grid-y">
   <div *ngIf="project && project.previewImgRelativePath">
     <div class="project-card-preview-container"
-      [style.backgroundImage]="'url(' + project?.previewImgRelativePath + ')'">
-    </div>
+      [style.backgroundImage]="'url(' + project?.previewImgRelativePath + ')'"></div>
   </div>
   <div class="cell shrink project-card-header-container">
-    <h4 class="project-title">{{project?.title}}</h4>
-    <p class="project-short-description">{{project?.shortDescription}}</p>
+    <h4 class="project-title">{{ project?.title }}</h4>
+    <p class="project-short-description">{{ project?.shortDescription }}</p>
   </div>
   <div class="cell auto project-card-body-container grid-y align-middle align-center">
     <div class="cell project-card-logo-container {{ project?.name }}" *ngIf="project && project.svgLogoName.length">
-      <mat-icon svgIcon="{{project?.svgLogoName}}" class="project-card-logo {{ project?.name }}"></mat-icon>
+      <mat-icon svgIcon="{{ project?.svgLogoName }}" class="project-card-logo {{ project?.name }}"></mat-icon>
     </div>
   </div>
   <div class="cell shrink grid-x project-card-footer-container">
     <div class="cell shrink project-tag" *ngFor="let tag of project?.tags">
-      {{tag}}
+      {{ tag }}
     </div>
   </div>
 </div>

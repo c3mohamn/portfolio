@@ -1,8 +1,10 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
-import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+
 import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { RouterStateService } from '../../../services/router-state.service';
 
 @Component({
@@ -40,7 +42,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.routeService
       .getCurrentPageTitle()
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(data => {
+      .subscribe((data) => {
         if (data) {
           this.currentPageTitle = data.toLowerCase();
         }

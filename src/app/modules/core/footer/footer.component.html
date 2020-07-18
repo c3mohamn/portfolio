@@ -1,10 +1,10 @@
 <div class="footer-container grid-y align-center align-middle">
   <div class="grid-x footer-social-icons align-center align-middle">
-    <div class="cell footer-social-icon-container" *ngFor="let item of socialMediaList" title="{{item.title}}">
-      <a href="{{item.link}}" target="{{item.media !== 'microsoft-outlook' ? '_blank' : ''}}" rel="noopener"
+    <div class="cell footer-social-icon-container" *ngFor="let item of socialMediaList" title="{{ item.title }}">
+      <a href="{{ item.link }}" target="{{ item.media !== 'microsoft-outlook' ? '_blank' : '' }}" rel="noopener"
         aria-label="Go to Nasir's social media profile page" alt="social media icon">
-        <mat-icon svgIcon="{{item.media}}" class="footer-social-icon" *appShellNoRender></mat-icon>
-        <img src="assets/icons/placeholder.svg" *appShellRender>
+        <mat-icon svgIcon="{{ item.media }}" class="footer-social-icon" *appShellNoRender></mat-icon>
+        <img src="assets/icons/placeholder.svg" *appShellRender />
       </a>
     </div>
   </div>

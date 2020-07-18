@@ -1,11 +1,13 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { MetaTagService } from 'src/app/services/meta-tag/meta-tag.service';
-import { ProjectService } from '../../services/project.service';
-import { Project } from '../../models/project.model';
-import { projects } from '../../data/projects';
 import { RouterStateService } from 'src/app/services/router-state.service';
+
+import { Component, OnDestroy, OnInit } from '@angular/core';
+
+import { projects } from '../../data/projects';
+import { Project } from '../../models/project.model';
+import { ProjectService } from '../../services/project.service';
 
 @Component({
   selector: 'nm-project',
@@ -37,7 +39,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
     this.routeService
       .getCurrentParams()
       .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(data => {
+      .subscribe((data) => {
         this.projectName = data && data.project;
         this.project = this.projectService.getProject(this.projectName);
         if (this.project) {

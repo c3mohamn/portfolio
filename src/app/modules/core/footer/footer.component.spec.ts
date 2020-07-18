@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatIconModule } from '@angular/material/icon';
 
 import { FooterComponent } from './footer.component';
-import { MatIconModule } from '@angular/material/icon';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;

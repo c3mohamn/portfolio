@@ -3,19 +3,18 @@
   <div class="nm-section">
     <h4 class="nm-header-1">This website</h4>
     <div class="nm-body medium-small">
-      <b>No paid services, no templates. </b>This website was created by me using Angular.
-      <br><br>
+      <b>No paid services, no templates. </b> <br /><br />
       Here is a list of technologies, languages, and tools that I used.
-      <br><br>
+      <br /><br />
       <i><small>Click on the icons for info!</small></i>
     </div>
     <div class="cell grid-x grid-margin-x grid-margin-y nm-body">
       <div class="cell about-icon-container" *ngFor="let icon of iconList" title="{{ icon.title }}"
         (click)="showDescriptionFor(icon)" [ngClass]="{ selected: selected === icon.cssClass }">
-        <mat-icon svgIcon="{{icon.cssClass}}" class="about-icon {{icon.cssClass}}" *appShellNoRender></mat-icon>
-        <img src="assets/icons/placeholder.svg" *appShellRender>
+        <mat-icon svgIcon="{{ icon.cssClass }}" class="about-icon {{ icon.cssClass }}" *appShellNoRender></mat-icon>
+        <img src="assets/icons/placeholder.svg" *appShellRender />
         <div class="text-center about-icon-caption">
-          {{icon.title}}
+          {{ icon.title }}
         </div>
       </div>
     </div>
@@ -38,8 +37,7 @@
         </li>
         <li>
           <a href="https://simpleicons.org/" target="_blank" rel="noopener" aria-label="Go to Simple Icons webpage"
-            title="Link to Simple Icons webpage">Simple
-            Icons</a>
+            title="Link to Simple Icons webpage">Simple Icons</a>
         </li>
         <li>
           <a href="https://worldvectorlogo.com" target="_blank" rel="noopener"

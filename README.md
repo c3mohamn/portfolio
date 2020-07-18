@@ -19,7 +19,7 @@ Current Angular version is 9.1.4.
 - [`Nodejs`](https://nodejs.org)
 - [`Vscode`](https://code.visualstudio.com/)
 - [`Travis CI`](https://travis-ci.org/)
-- [`Google Analytics`](https://analytics.google.com) 
+- [`Google Analytics`](https://analytics.google.com)
 - [`Zurb Foundation`](https://foundation.zurb.com/)
 - [`Heroku`](https://heroku.com)
 - [`Clourflare`](https://www.cloudflare.com/)

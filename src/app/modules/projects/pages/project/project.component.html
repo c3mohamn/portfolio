@@ -1,12 +1,14 @@
 <div class="project-container grid-y grid-margin-y" *ngIf="project">
   <div class="cell project-header grid-x grid-margin-x align-middle">
-    <div class="cell shrink" [routerLink]="[ '' ]">
+    <div class="cell shrink" [routerLink]="['']">
       <mat-icon svgIcon="arrow-back" class="back-arrow" *appShellNoRender></mat-icon>
-      <img src="assets/icons/placeholder.svg" *appShellRender>
+      <img src="assets/icons/placeholder.svg" *appShellRender />
     </div>
     <div class="cell auto"></div>
     <div class="cell shrink">
-      <h1 class="projects-header margin-right-1"><small>{{project?.title}}</small></h1>
+      <h1 class="projects-header margin-right-1">
+        <small>{{ project?.title }}</small>
+      </h1>
     </div>
   </div>
 
@@ -36,5 +38,7 @@
   </div>
 </div>
 <div *ngIf="!project" class="text-right">
-  <h3 class="not-found-text">Project <q>{{projectName}}</q> not found.</h3>
+  <h3 class="not-found-text">
+    Project <q>{{ projectName }}</q> not found.
+  </h3>
 </div>

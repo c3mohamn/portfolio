@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
 import { MetaTagService } from 'src/app/services/meta-tag/meta-tag.service';
-import { TechIcon } from '../../models/tech-icon.model';
+
+import { Component, OnInit } from '@angular/core';
+
 import { iconList } from '../../data/about-website';
+import { TechIcon } from '../../models/tech-icon.model';
 
 @Component({
   selector: 'nm-about',

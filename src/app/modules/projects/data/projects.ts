@@ -1,7 +1,7 @@
 import { Project } from '../models/project.model';
-import { warmainsProject } from './project-warmains';
-import { telegramBotProject } from './project-telegram-bot';
 import { adminPanelProject } from './project-admin-panel';
+import { telegramBotProject } from './project-telegram-bot';
+import { warmainsProject } from './project-warmains';
 
 export const projects: Project[] = [
   warmainsProject,
