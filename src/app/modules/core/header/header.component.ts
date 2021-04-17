@@ -57,7 +57,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.ngUnsubscribe.complete();
   }
 
-  scroll = (event: any): void => {
+  scroll(event: any): void {
     const scrollOffset = event.srcElement.scrollTop;
     // scroll down past content, change header style
     if (scrollOffset > 100) {
@@ -65,7 +65,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     } else {
       this.isScrolledDown = false;
     }
-  };
+  }
 
   navigate(page: string): void {
     this.router.navigate([page]);

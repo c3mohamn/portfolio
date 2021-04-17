@@ -1,7 +1,9 @@
 <div class="project-card-container grid-y">
   <div *ngIf="project && project.previewImgRelativePath">
-    <div class="project-card-preview-container"
-      [style.backgroundImage]="'url(' + project?.previewImgRelativePath + ')'"></div>
+    <div
+      class="project-card-preview-container"
+      [style.backgroundImage]="'url(' + project?.previewImgRelativePath + ')'"
+    ></div>
   </div>
   <div class="cell shrink project-card-header-container">
     <h4 class="project-title">{{ project?.title }}</h4>
