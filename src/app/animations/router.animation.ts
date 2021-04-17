@@ -3,46 +3,28 @@ import { animate, group, query, style, transition, trigger } from '@angular/anim
 export const slideLeft = [
   query(':enter, :leave', style({ position: 'absolute', width: '100%', height: '100%' }), { optional: true }),
   group([
-    query(
-      ':enter',
-      [style({ transform: 'translateX(-200%)' }), animate('.3s ease-in', style({ transform: 'translateX(0%)' }))],
-      {
-        optional: true
-      }
-    ),
-    query(
-      ':leave',
-      [style({ transform: 'translateX(0%)' }), animate('.3s ease-in', style({ transform: 'translateX(200%)' }))],
-      {
-        optional: true
-      }
-    )
+    query(':enter', [style({ transform: 'translateX(-200%)' }), animate('.3s ease-in', style({ transform: 'translateX(0%)' }))], {
+      optional: true
+    }),
+    query(':leave', [style({ transform: 'translateX(0%)' }), animate('.3s ease-in', style({ transform: 'translateX(200%)' }))], {
+      optional: true
+    })
   ])
 ];
 
 export const slideRight = [
   query(':enter, :leave', style({ position: 'absolute', width: '100%', height: '100%' }), { optional: true }),
   group([
-    query(
-      ':enter',
-      [style({ transform: 'translateX(200%)' }), animate('.3s ease-in', style({ transform: 'translateX(0%)' }))],
-      {
-        optional: true
-      }
-    ),
-    query(
-      ':leave',
-      [style({ transform: 'translateX(0%)' }), animate('.3s ease-in', style({ transform: 'translateX(-200%)' }))],
-      {
-        optional: true
-      }
-    )
+    query(':enter', [style({ transform: 'translateX(200%)' }), animate('.3s ease-in', style({ transform: 'translateX(0%)' }))], {
+      optional: true
+    }),
+    query(':leave', [style({ transform: 'translateX(0%)' }), animate('.3s ease-in', style({ transform: 'translateX(-200%)' }))], {
+      optional: true
+    })
   ])
 ];
 
-export const routerTransition = [
-  trigger('routerTransition', [transition(':increment', slideRight), transition(':decrement', slideLeft)])
-];
+export const routerTransition = [trigger('routerTransition', [transition(':increment', slideRight), transition(':decrement', slideLeft)])];
 
 export const fade = [
   trigger('routerTransition', [

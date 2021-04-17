@@ -10,8 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   socialMediaList: SocialMediaLink[] = socialMedia;
+  year: number;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.year = new Date().getFullYear();
+  }
 }

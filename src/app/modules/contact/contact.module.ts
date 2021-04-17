@@ -10,14 +10,6 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [ContactComponent],
-  imports: [
-    CommonModule,
-    ContactRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule
-  ]
+  imports: [CommonModule, ContactRoutingModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatButtonModule]
 })
 export class ContactModule {}

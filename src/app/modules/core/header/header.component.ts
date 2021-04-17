@@ -13,7 +13,6 @@ import { RouterStateService } from '../../../services/router-state.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  private ngUnsubscribe: Subject<any> = new Subject();
   showMobileMenu = false;
   isSmallScreen = false;
   isScrolledDown = false;
@@ -25,12 +24,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
     { name: 'contact', url: '/contact' }
   ];
   isBrowser: boolean;
+  private ngUnsubscribe: Subject<any> = new Subject();
 
-  constructor(
-    private router: Router,
-    private routeService: RouterStateService,
-    @Inject(PLATFORM_ID) private platformId
-  ) {
+  constructor(private router: Router, private routeService: RouterStateService, @Inject(PLATFORM_ID) private platformId) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
@@ -57,7 +53,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.ngUnsubscribe.complete();
   }
 
-  scroll = (event: any): void => {
+  scroll(event: any): void {
     const scrollOffset = event.srcElement.scrollTop;
     // scroll down past content, change header style
     if (scrollOffset > 100) {
@@ -65,7 +61,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     } else {
       this.isScrolledDown = false;
     }
-  };
+  }
 
   navigate(page: string): void {
     this.router.navigate([page]);
