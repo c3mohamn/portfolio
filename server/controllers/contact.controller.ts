@@ -6,14 +6,11 @@ import Joi from 'joi';
 const router = express.Router();
 
 router.get('', (req: Request, res: Response) => {
-  // console.log('get /contact');
   res.status(200).send({ message: 'Get works!' });
 });
 
 router.post('/send', async (req: Request, res: Response) => {
   const form: ContactForm = req.body.form;
-  // console.log('post /contact/send');
-  // console.log(form);
 
   const { error } = validateForm(form);
   if (error) {
@@ -44,14 +41,14 @@ router.post('/send', async (req: Request, res: Response) => {
 });
 
 function validateForm(form: ContactForm) {
-  const schema = {
+  const schema = Joi.object({
     email: Joi.string().required().min(1).max(150).email(),
     phone: Joi.string().max(20),
     message: Joi.string().required().max(1000),
     name: Joi.string().max(150)
-  };
+  });
 
-  return Joi.validate(form, schema);
+  return schema.validate(form);
 }
 
 export default router;

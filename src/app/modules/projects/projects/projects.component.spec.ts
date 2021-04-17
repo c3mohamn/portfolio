@@ -20,13 +20,7 @@ describe('ProjectsComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        imports: [
-          RouterTestingModule,
-          StoreModule.forRoot(reducers),
-          BrowserAnimationsModule,
-          NgxPageScrollCoreModule,
-          MatIconModule
-        ],
+        imports: [RouterTestingModule, StoreModule.forRoot(reducers), BrowserAnimationsModule, NgxPageScrollCoreModule, MatIconModule],
         declarations: [ProjectsComponent, ProjectCardComponent, ProjectComponent, NgxPageScrollDirective],
         providers: [RouterStateService]
       }).compileComponents();

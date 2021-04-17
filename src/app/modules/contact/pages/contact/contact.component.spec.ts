@@ -15,15 +15,7 @@ describe('ContactComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        imports: [
-          HttpClientModule,
-          FormsModule,
-          ReactiveFormsModule,
-          BrowserAnimationsModule,
-          MatFormFieldModule,
-          MatInputModule,
-          MatButtonModule
-        ],
+        imports: [HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, MatFormFieldModule, MatInputModule, MatButtonModule],
         declarations: [ContactComponent]
       }).compileComponents();
     })

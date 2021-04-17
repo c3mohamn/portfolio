@@ -13,7 +13,6 @@ import { RouterStateService } from '../../../services/router-state.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  private ngUnsubscribe: Subject<any> = new Subject();
   showMobileMenu = false;
   isSmallScreen = false;
   isScrolledDown = false;
@@ -25,12 +24,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
     { name: 'contact', url: '/contact' }
   ];
   isBrowser: boolean;
+  private ngUnsubscribe: Subject<any> = new Subject();
 
-  constructor(
-    private router: Router,
-    private routeService: RouterStateService,
-    @Inject(PLATFORM_ID) private platformId
-  ) {
+  constructor(private router: Router, private routeService: RouterStateService, @Inject(PLATFORM_ID) private platformId) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 

@@ -14,14 +14,7 @@ import { ProjectService } from './services/project.service';
 
 @NgModule({
   declarations: [ProjectsComponent, ProjectCardComponent, ProjectComponent],
-  imports: [
-    CommonModule,
-    SharedModule,
-    ProjectsRoutingModule,
-    NgxPageScrollModule,
-    MatIconModule,
-    NgxPageScrollCoreModule.forRoot({ duration: 500 })
-  ],
+  imports: [CommonModule, SharedModule, ProjectsRoutingModule, NgxPageScrollModule, MatIconModule, NgxPageScrollCoreModule.forRoot({ duration: 500 })],
   providers: [ProjectService]
 })
 export class ProjectsModule {}

@@ -15,25 +15,12 @@ import { ProjectService } from '../../services/project.service';
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent implements OnInit, OnDestroy {
-  private ngUnsubscribe: Subject<any> = new Subject();
   projects: Project[] = projects;
   project: Project;
   projectName: string;
-  defaultText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Id optio, ab repudiandae quo perspiciatis dolores
-  laudantium nesciunt dicta consectetur deserunt officiis doloremque sunt! Doloremque, iure tenetur? Amet sunt
-  reprehenderit eum.`;
-  defaultListText = `
-  <ul>
-  <li>${this.defaultText}</li>
-  <li>${this.defaultText}</li>
-  <li>${this.defaultText}</li>
-</ul>`;
+  private ngUnsubscribe: Subject<any> = new Subject();
 
-  constructor(
-    private routeService: RouterStateService,
-    private metaTagService: MetaTagService,
-    private projectService: ProjectService
-  ) {}
+  constructor(private routeService: RouterStateService, private metaTagService: MetaTagService, private projectService: ProjectService) {}
 
   ngOnInit() {
     this.routeService

@@ -18,10 +18,7 @@ export class MatCustomIconService {
    * @param name Name of icon
    */
   addCustomIcon(name: string): void {
-    this.matIconRegistry.addSvgIcon(
-      name,
-      this.domSanitizer.bypassSecurityTrustResourceUrl(`../../assets/icons/${name}.svg`)
-    );
+    this.matIconRegistry.addSvgIcon(name, this.domSanitizer.bypassSecurityTrustResourceUrl(`../../assets/icons/${name}.svg`));
   }
 
   /**
