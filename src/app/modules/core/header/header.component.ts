@@ -1,8 +1,7 @@
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { RouterStateService } from '../../../services/router-state.service';
@@ -23,18 +22,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     { name: 'resume', url: '/resume' },
     { name: 'contact', url: '/contact' }
   ];
-  isBrowser: boolean;
   private ngUnsubscribe: Subject<any> = new Subject();
 
-  constructor(private router: Router, private routeService: RouterStateService, @Inject(PLATFORM_ID) private platformId) {
-    this.isBrowser = isPlatformBrowser(this.platformId);
-  }
+  constructor(private router: Router, private routeService: RouterStateService) {}
 
   ngOnInit() {
-    if (this.isBrowser) {
-      window.addEventListener('scroll', this.scroll, true);
-    }
-
     this.routeService
       .getCurrentPageTitle()
       .pipe(takeUntil(this.ngUnsubscribe))
@@ -46,15 +38,12 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.isBrowser) {
-      window.removeEventListener('scroll', this.scroll, true);
-    }
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
   }
 
-  scroll(event: any): void {
-    const scrollOffset = event.srcElement.scrollTop;
+  @HostListener('body:scroll', ['$event.srcElement.scrollTop'])
+  onScroll(scrollOffset: number) {
     // scroll down past content, change header style
     if (scrollOffset > 100) {
       this.isScrolledDown = true;
