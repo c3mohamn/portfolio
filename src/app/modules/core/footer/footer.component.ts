@@ -1,4 +1,4 @@
-import { socialMedia } from 'src/app/data/social-media-list';
+import { socialMedia } from 'src/app/constants/social-media.constant';
 import { SocialMediaLink } from 'src/app/models/social-media.model';
 
 import { Component, OnInit } from '@angular/core';

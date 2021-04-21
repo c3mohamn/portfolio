@@ -1,6 +1,6 @@
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { socialMedia } from 'src/app/data/social-media-list';
+import { socialMedia } from 'src/app/constants/social-media.constant';
 import { SocialMediaLink } from 'src/app/models/social-media.model';
 import { MetaTagService } from 'src/app/services/meta-tag/meta-tag.service';
 
