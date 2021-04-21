@@ -4,7 +4,7 @@ export const resume: Resume = {
   name: 'Nasir Mohammad',
   title: 'Software Developer',
   email: 'nasir.m23@hotmail.com',
-  summary: `I am a graduate from the University of Toronto where I studied Computer Science. My profressional experiences have primarily been in web technologies, but I am a problem solver first.
+  summary: `I am a graduate from the University of Toronto where I studied Computer Science. My professional experiences have primarily been in web technologies, but I am a problem solver first.
   Always keen to learn and grow, then apply that knowledge to the projects I work on. I have a lot of experience being part of a team: in sports, games, and work.
   I know what it means to put the team's interest ahead of your own as both a leader and a follower.`,
   experiences: [
