@@ -9,15 +9,18 @@ export const resume: Resume = {
   I know what it means to put the team's interest ahead of your own as both a leader and a follower.`,
   experiences: [
     {
-      title: 'Software Developer',
+      title: 'Senior Software Developer',
       company: 'Home Depot Canada',
       startDate: 'October 2019',
       endDate: 'Present',
       bullets: [
-        `Improved Home Depot's store localization flow, increasing % of users accurately assigned to nearest store`,
-        `Build and maintain reusable, responsive, and accessible components consumed by multiple Angular projects.`,
-        `Automating and updating front-end angular components to improve Home Depot’s website performance and user experience.`,
-        `Take part in an agile work environment, attending stand-ups and sprint planning meetings.`
+        'Build and maintain re-usable components consumed by multiple Angular projects',
+        'Collaborate with several teams to solve problems - including UI, mobile, backend, and product',
+        'Write clean and organized documentation for architectural designs, features, standards, and guides',
+        'Present and demo successfully deployed projects to both a technical and non-technical audience',
+        "Boost Home Depot's website performance by removing redundancies, decreasing bundle size, improving load events, and updating dependencies",
+        "Improve Home Depot's store localization ﬂow to more accurately assign user's to their nearest store",
+        'Implement solutions to automate manual work ﬂows that sped up the process and eliminated human errors'
       ]
     },
     {
@@ -26,10 +29,10 @@ export const resume: Resume = {
       startDate: 'June 2017',
       endDate: 'August 2018',
       bullets: [
-        `Implemented an automated test strategy for Reportin’s API on .NET Core and achieved a test coverage of 87%.`,
-        `Independently created an admin panel for a waitlist of over 500 users to allow the marketing team to send invites and modify Sendgrid templates.`,
-        `Built an interactive Telegram bot integrated with our waitlist API encourage social engagement of Reportin’s platform.`,
-        `Incorporated an Agile workflow using Jira and daily scrum meetings.`
+        "Implemented an automated test strategy for Reportin’s API on .NET Core, increasing test coverage by 87%",
+        'Independently created an admin panel for a product waitlist that allowed the marketing team to modify UI and email templates',
+        'Built an interactive Telegram bot integrated with our waitlist API encouraging social engagement of Reportin’s platform',
+        'Incorporated an Agile workﬂow using Jira and daily scrum meetings'
       ]
     }
   ],
@@ -38,9 +41,9 @@ export const resume: Resume = {
     `Officer in a large MMORPG guild with over 900 players. In charge of organizing and leading large groups of players from South America to East Asia in order to achieve the common goal of defeating monsters and dragons.`
   ],
   skills: [
-    'Java, C/C#, Python, HTML/CSS/JS, TS, SQL',
-    'Git, Jira, Visual Studio, Azure, Postman',
-    'Angular, React, .NET Core, Node, Travis CI, Redux, Foundation, Bootstrap, Angular Material'
+    'Java, C/C#, Python, HTML/CSS/Javascript, Typescript',
+    'Git, Jira, Visual Studio, Postman',
+    'Angular, React, .NET Core, Node, Travis CI, Redux, Foundation, Bootstrap'
   ],
   lastModified: 'April 20, 2021'
 };
