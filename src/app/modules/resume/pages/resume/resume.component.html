@@ -9,18 +9,8 @@
     </div>
     <div class="cell auto"></div>
     <div class="cell shrink">
-      <a mat-fab target="_blank" rel="noopener" matTooltip="View Resume as PDF" href="assets/files/nasir_mohammad_cv_web.pdf" aria-label="Open Nasir Resume pdf"
-        >PDF</a
-      >
-      <a
-        mat-fab
-        class="margin-left-1"
-        rel="noopener"
-        href="assets/files/nasir_mohammad_cv_web.docx"
-        aria-label="Open Nasir Resume docx"
-        matTooltip="View Resume as DOCX"
-        >DOCX</a
-      >
+      <a mat-fab target="_blank" rel="noopener" matTooltip="View Resume as PDF"
+        href="assets/files/nasir_mohammad_cv_web.pdf" aria-label="Open Nasir Resume pdf">PDF</a>
     </div>
   </div>
   <!-- Main Column -->
@@ -38,12 +28,8 @@
       <!-- Home Depot -->
       <ng-container *ngFor="let experience of resume.experiences">
         <h5 class="nm-header-2">
-          <small
-            >{{ experience.title }},
-            <i
-              ><span class="resume-experience-company">{{ experience.company }}</span></i
-            ></small
-          >
+          <small>{{ experience.title }},
+            <i><span class="resume-experience-company">{{ experience.company }}</span></i></small>
         </h5>
         <p class="resume-date">{{ experience.startDate }} - {{ experience.endDate }}</p>
         <ul class="list">
