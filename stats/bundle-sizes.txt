@@ -1,0 +1,12 @@
+## This file is auto-generated whenever a build occurs. 
+## It should show differences in bundle size upon commits.Date: 2022-05-07
+
+common-es2015.03dacf77a26464961b36.js - 13.27kbs
+main-es2015.3f1a74b7ba8fb08cc4c1.js - 241.81kbs
+modules-about-about-module-es2015.d4ecfaaca4701b8f6244.js - 128.4kbs
+modules-contact-contact-module-es2015.1b189f37505987982a2b.js - 73.51kbs
+modules-projects-projects-module-es2015.2ad552c64b2d20993001.js - 143kbs
+modules-resume-resume-module-es2015.4190eb333cda13ce7e04.js - 170.66kbs
+polyfills-es2015.0c6017a50d4bce28d22a.js - 36.19kbs
+runtime-es2015.3298e1a6ab12ef5c4e17.js - 2.53kbs
+vendor-es2015.62265199f25fff8c0dfd.js - 431.69kbs

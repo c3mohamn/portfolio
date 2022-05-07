@@ -21,7 +21,8 @@
     "prerender": "ng run portfolio:prerender",
     "build:prod": "npm run client:prod && npm run ssr:prod",
     "prettier": "npx prettier --write .",
-    "heroku-postbuild": "npm run build:prod"
+    "heroku-postbuild": "npm run build:prod",
+    "source-maps": "source-map-explorer dist/browser/*es2015*.js --html source-maps/result.html"
   },
   "private": true,
   "dependencies": {
@@ -57,6 +58,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.0",
+    "@angular-eslint/builder": "3.0.0",
+    "@angular-eslint/eslint-plugin": "3.0.0",
+    "@angular-eslint/eslint-plugin-template": "3.0.0",
+    "@angular-eslint/schematics": "3.0.0",
+    "@angular-eslint/template-parser": "3.0.0",
     "@angular/cli": "^11.0.0",
     "@angular/compiler-cli": "^11.0.0",
     "@angular/language-service": "^11.0.0",
@@ -68,6 +74,12 @@
     "@types/jasminewd2": "^2.0.8",
     "@types/joi": "^14.3.4",
     "@types/node": "^12.20.10",
+    "@typescript-eslint/eslint-plugin": "4.16.1",
+    "@typescript-eslint/parser": "4.16.1",
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-jsdoc": "latest",
+    "eslint-plugin-prefer-arrow": "latest",
     "foundation-sites": "^6.6.3",
     "jasmine-core": "^3.7.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -78,19 +90,9 @@
     "karma-jasmine-html-reporter": "^1.5.4",
     "prettier": "^2.2.1",
     "protractor": "^7.0.0",
+    "source-map-explorer": "^2.5.2",
     "ts-node": "^8.10.2",
-    "typescript": "~4.1.0",
-    "eslint": "^7.6.0",
-    "@angular-eslint/builder": "3.0.0",
-    "@angular-eslint/eslint-plugin": "3.0.0",
-    "@angular-eslint/eslint-plugin-template": "3.0.0",
-    "@angular-eslint/schematics": "3.0.0",
-    "@angular-eslint/template-parser": "3.0.0",
-    "@typescript-eslint/eslint-plugin": "4.16.1",
-    "@typescript-eslint/parser": "4.16.1",
-    "eslint-plugin-import": "latest",
-    "eslint-plugin-jsdoc": "latest",
-    "eslint-plugin-prefer-arrow": "latest"
+    "typescript": "~4.1.0"
   },
   "homepage": "https://github.com/c3mohamn/portfolio#readme",
   "repository": {
